@@ -1,6 +1,6 @@
-**Requirements Document**
+# Requirements Document
 
-1 **Introduction**
+## Introduction
 
 This project is a web application for better organisation of task management in teams, communities or companies. Also this application allows to make an overall rating between team members, which is based on an amount of completed tasks. And for this reason it also helps to motivate your team. Name "TeamsRate" was chosen for this project based on its goals.
 
@@ -9,9 +9,9 @@ This project allows users to do different operations with tasks: adding, editing
 - to make a chat between users, or group of users
 - to view the page of the specific user
 
-**2 User Requirements**
+## User Requirements
 
-_2.1 Software Interfaces_
+### _Software Interfaces_
 
 - API for registration in a system - Google+ and GitHub.
 - Frameworks:
@@ -23,7 +23,7 @@ _2.1 Software Interfaces_
 - Database:
   - PostgreSQL
 
-_2.2 User Interfaces_
+### _User Interfaces_
 
 The interface of this web application is displayed in the attached mockups. Mockups have following pages:
 
@@ -35,17 +35,17 @@ The interface of this web application is displayed in the attached mockups. Mock
 - Group members page
 - Group settings page
 
-_2.3 User Characteristics_
+### _User Characteristics_
 
 This web application should perfectly approach for not very big groups of people (5-10), who are working on the same project. It helps to create task easily, and then just watch it status until finish. It excludes all comprehensive tools and features, that it counterpart have. So, it means that this project will be very useful for startups, small companies and communities. The user's age is limited only by the ability of a user to use computer and browser. So, nowadays an indicative limits to users age are from 7 to 65 years old.
 
-_2.4 Assumptions and Dependencies_
+### _Assumptions and Dependencies_
 
 Because of the big amount of data, this system needs to make database backups periodically. Also if there will be discovered more comfortable ways to manage tasks - it can lead to some changes in design.
 
-**3 System Requirements**
+## System Requirements
 
-_3.1 Functional Requirements_
+### _Functional Requirements_
 
 - User registration
   - via email and password
@@ -73,8 +73,9 @@ _3.1 Functional Requirements_
   - Viewing a task list with filter
   - Viewing rating
 
-_3.2 Non-Functional Requirements_
-3.2.1 Software quality attributes
+### _Non-Functional Requirements_
+
+####Software quality attributes
 
 - Security
   - Only administrators can add, edit and remove tasks from a group
