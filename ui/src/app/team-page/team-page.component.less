@@ -1,0 +1,88 @@
+@import "../../styles/_mixins.less";
+
+.team__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    margin-bottom: 20px;
+}
+
+.team__photoWrap {
+    margin-right: 25px;
+
+    img {
+        width: 160px;
+        height: 160px;
+        vertical-align: bottom;
+        border: 4px solid white;
+    }
+}
+
+.team__info {
+    margin-right: auto;
+    padding-right: 20px;
+
+    h3 {
+        margin: 0 0 20px;
+        font-size: 2em;
+        color: #16a085;
+    }
+
+    .infoLine {
+        margin-bottom: 10px;
+        color: #a5a5a5;
+
+        a {
+            color: #16a085;
+            display: inline-block;
+            border-bottom: 1px solid #16a085;
+        }
+    }
+}
+
+.team__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 150px;
+
+    .stats__item {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 1.2em;
+        color: #828282;
+
+        .stats__name {
+            width: 50%;
+        }
+
+        .stats__value {
+            width: 50%;
+            color: #16a085;
+
+            &.new {
+                color: #d25252;
+            }
+
+            &.current {
+                color: #36332E;
+            }
+
+            &.done {
+                color: #16a085;
+            }
+        }
+    }
+} 
+
+.panel {
+    margin-bottom: 20px;
+}
+
+.addTask {
+    display: inline-block;
+    
+    .buttonGreen();
+}

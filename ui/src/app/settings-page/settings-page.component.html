@@ -1,0 +1,93 @@
+<app-header [activeMenuItem]="'settings'"></app-header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="sectionBlock bio">
+                    <div class="sectionBlock__header">
+                        bio
+                    </div>
+                    <form action="#" class="sectionBlock__form">
+                        <div class="sectionBlock__body clearfix">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_name">name</label>
+                                        <input type="text" id="user_name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user_surname">surname</label>
+                                        <input type="text" id="user_surname" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_age">age</label>
+                                        <input type="number" id="user_age" min=0 max=100 class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_country">country</label>
+                                        <input type="text" id="user_country" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_city">city</label>
+                                        <input type="text" id="user_city" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sectionBlock__footer">
+                            <div class="sectionBlock__actions">
+                                <button type="reset" class="sectionBlock__btn">clear</button>
+                                <button type="submit" class="sectionBlock__btn">confirm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="sectionBlock contacts">
+                    <div class="sectionBlock__header">
+                        contacts
+                    </div>
+                    <form action="" class="sectionBlock__form">
+                        <div class="sectionBlock__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact_vk">vk</label>
+                                        <input type="text" id="contact_vk" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact_fb">facebook</label>
+                                        <input type="text" id="contact_fb" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact_google">google+</label>
+                                        <input type="text" id="contact_google" class="form-control">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="sectionBlock__footer">
+                            <div class="sectionBlock__actions">
+                                <button type="reset" class="sectionBlock__btn">clear</button>
+                                <button type="submit" class="sectionBlock__btn">confirm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+            </div>  
+        </div>      
+    </div>
+</main>

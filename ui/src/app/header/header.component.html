@@ -1,0 +1,33 @@
+<header class="headerWrap">
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a routerLink="/" class="logo__link">TeamsRate</a>
+			</div>
+			<div class="headerMenu">
+				<ul class="headerMenu__ul">
+					<li class="headerMenu__li">
+						<a routerLink="/search" class="headerMenu__link" [class.active]="menu.search.active">search</a>
+					</li>
+					<li class="headerMenu__li">
+						<a routerLink="/settings" class="headerMenu__link" [class.active]="menu.settings.active">settings</a>
+					</li>
+					<li class="headerMenu__li">
+						<a routerLink="/exit" class="headerMenu__link" [class.active]="menu.exit.active">exit</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<nav class="mainNav">
+		<div class="mainNav__item">
+			<a routerLink="/feed" class="mainNav__link" [class.active]="menu.feed.active">feed</a>
+		</div>
+		<div class="mainNav__item">
+			<a routerLink="/todo" class="mainNav__link" [class.active]="menu.todos.active">todo</a>
+		</div>
+		<div class="mainNav__item">
+			<a routerLink="/teams" class="mainNav__link" [class.active]="menu.teams.active">teams</a>
+		</div>
+	</nav>
+</header>

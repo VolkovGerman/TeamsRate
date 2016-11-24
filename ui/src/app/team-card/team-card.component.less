@@ -1,0 +1,82 @@
+@import "../../styles/_mixins.less";
+@import "../../styles/_variables.less";
+
+.teamCard {
+    margin-bottom: 30px;
+
+    background-color: white;
+
+    &__header {
+        background-color: @lightGreen;
+    }
+
+    &__name {
+
+        a {
+            display: block;
+
+            padding: 10px 15px;
+
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    &__body {
+        padding: 15px;
+
+        border-left: 1px solid @borderColor;
+        border-right: 1px solid @borderColor;
+    }
+
+    &__descr {
+        margin-bottom: 15px;
+
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    &__members {
+
+        .memberLink {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .memberPhoto {
+            width: 32px;
+            height: 32px;
+
+            vertical-align: middle;
+        }
+
+        .moreMembers {
+            display: inline-block;
+
+            color: #86a586;
+            
+            border-bottom: 1px solid #86a586;
+        }
+
+    }
+
+    &__footer {
+        padding: 15px;
+
+        border: 1px solid @borderColor;
+        border-top: 1px solid @lightBorderColor;
+    }
+
+    &__actions {
+        text-align: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        min-width: 160px;
+
+        .buttonStyles();
+    }
+}

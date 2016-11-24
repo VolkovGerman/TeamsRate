@@ -1,0 +1,36 @@
+@import "_variables.less";
+
+.buttonStyles() {
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    font-size: 1.1em;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: #5eb3a3;
+    border: 1px solid #fff;
+    outline: none;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: lighten(@green, 5%);
+    }
+
+    &:active {
+        background-color: @green;
+    }
+
+    &:focus {
+        border: 1px solid #888888;
+    }
+
+}
+
+.buttonGreen() {
+    padding: 10px 20px;
+    background-color: #16a085;
+    color: white;
+    border-radius: 5px;
+}

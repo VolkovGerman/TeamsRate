@@ -1,0 +1,183 @@
+.sectionBlock {
+    margin-bottom: 20px;
+
+    background-color: white;
+
+    &__header {
+        padding: 15px 40px;
+        font-size: 1.2em;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: @lightGreen;
+    }
+
+    &__body {
+        padding: 20px 40px;
+
+        border-left: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+
+        & + .sectionBlock__footer {
+            border-top: none;
+        }
+    }
+
+    &__footer {
+        padding: 15px 40px;
+
+        border: 1px solid #e0e0e0;
+    }
+
+    &__actions {
+        text-align: center;
+
+        button {
+            margin-right: 15px;
+
+            min-width: 120px;
+
+            .buttonStyles();
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.taskList {
+    display: table;
+    margin: 0 auto; 
+
+    width: 100%;
+
+    background-color: #fff;
+
+    &__header {
+        display: table-header-group;
+
+        font-size: 1.2em;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #5eb3a3;
+
+        & > div {
+            display: table-cell;
+
+            padding: 15px 20px;
+        }
+    }
+
+    .task {
+        display: table-row;
+
+        & > div {
+            display: table-cell;
+
+            padding: 15px 20px;
+
+            border-bottom: 1px solid #efefef;
+
+            &:first-child {
+                border-left: 1px solid #d2d2d2;
+            }
+
+            &:last-child {
+                border-right: 1px solid #d2d2d2;
+            }
+        }
+
+        &:last-child > div {
+            border-bottom: 1px solid #d2d2d2;
+        }
+
+        &__text {
+            width: 40%;
+
+            font-size: 1.2em;
+        }
+
+        &__team {
+            width: 15%;
+        }
+
+        &__deadline {
+            width: 10%;
+        }
+
+        &__points {
+            width: 10%;
+        }
+
+        &__status {
+            width: 10%;
+            
+            text-transform: uppercase;
+        }
+
+        &__action {
+            width: 15%;
+        }
+    }
+
+    .btn--taskAction {
+        padding: 5px 25px;
+    }
+
+}
+
+.list {
+    display: table;
+
+    width: 100%;
+
+    & > div {
+        display: table-row;
+
+        & > div {
+            display: table-cell;
+            
+            padding: 15px 10px;
+
+            border-bottom: 1px solid @lightBorderColor; 
+        }
+
+        &:last-child > div {
+            border-bottom: none;
+        }
+    }
+}
+
+.usersList {
+    .user {
+        &__name {
+            width: 60%;
+        }
+
+        &__age {
+            width: 20%;
+        }
+
+        &__city {
+            width: 20%;
+        }
+    }
+}
+
+.teamsList {
+    .team {
+        &__name {
+            width: 30%;
+        }
+
+        &__descr {
+            width: 60%;
+        }
+
+        &__members {
+            width: 10%;
+        }
+    }
+}

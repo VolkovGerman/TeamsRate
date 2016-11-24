@@ -1,0 +1,94 @@
+<app-header [activeMenuItem]="'search'"></app-header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sectionBlock searchPanel">
+                    <div class="sectionBlock__header">
+                        Options
+                    </div>
+                    <div class="sectionBlock__body">
+                        <div class="form-group">
+                            <div class="radio">
+                                <label><input type="radio" name="tab" value="users" (click)="triggerTab('users')" checked>users</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="tab" value="teams" (click)="triggerTab('teams')">teams</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="searchText">Search</label>
+                            <input type="text" id="searchText" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="users" *ngIf="activeTab == 'users'">
+                    <div class="sectionBlock">
+                        <div class="sectionBlock__header">
+                            Users
+                        </div>
+                        <div class="sectionBlock__body">
+                            <div class="usersList list">
+                                <div class="user" *ngFor="let user of users">
+                                    <div class="user__name">
+                                        <a href="#">{{user.name}} {{user.surname}}</a>
+                                    </div>
+                                    <div class="user__age">19</div>
+                                    <div class="user__city">
+                                        Minsk, Belarus
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teams" *ngIf="activeTab == 'teams'">
+                    <div class="sectionBlock">
+                        <div class="sectionBlock__header">
+                            Teams
+                        </div>
+                        <div class="sectionBlock__body">
+                            <div class="teamsList list">
+                                <div class="team">
+                                    <div class="team__name">
+                                        <a href="#">OneWayUp</a>
+                                    </div>
+                                    <div class="team__descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="team__members">
+                                        19
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="team__name">
+                                        <a href="#">StoryTeller</a>
+                                    </div>
+                                    <div class="team__descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="team__members">
+                                        19
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="team__name">
+                                        <a href="#">Bayern Munich</a>
+                                    </div>
+                                    <div class="team__descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="team__members">
+                                        19
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

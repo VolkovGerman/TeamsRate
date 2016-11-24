@@ -1,0 +1,81 @@
+@import "../../styles/_mixins.less";
+
+.task {
+    display: flex;
+    flex-wrap: nowrap;
+
+    margin-bottom: 20px;
+
+    min-width: 100%;
+
+    background-color: #ffffff;
+    border: 1px solid #81ccbd;
+    border-radius: 10px;
+
+    &__leftColumn {
+        width: 60%;
+
+        padding: 0 20px;
+    }
+
+    &__rightColumn {
+        width: 40%;
+
+        padding: 0 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 10px 0px 5px;
+        border-bottom: 1px solid #c1c1c1;
+    }
+
+    &__teamName {
+        a {
+            color: black;
+        }
+    }
+
+    &__status {
+        color: #16a085;
+    }
+
+    &__text {
+        padding: 10px 0px;
+    }
+
+    &__info {
+        padding: 5px 0px;
+    }
+
+    &__infoTable {
+        width: 100%;
+
+        td {
+            padding: 2px;
+            width: 50%;
+
+            font-size: 0.9em;
+            text-align: center;
+
+            &:first-child {
+                font-weight: bold;
+                color: #9e9e9e;
+            }
+        }
+    }
+
+    &__actions {
+        padding: 0px 0px 10px;
+    }
+
+    &__btn {
+        display: block;
+
+        width: 100%;
+
+        .buttonStyles();
+    }
+}
