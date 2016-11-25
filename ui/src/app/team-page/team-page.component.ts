@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-page.component.less']
 })
 export class TeamPageComponent implements OnInit {
-  createBlockVisible: boolean;
+  activeTab: string;
 
   constructor() {
-    this.createBlockVisible = false;
+    this.activeTab = 'tasks';
   }
 
   ngOnInit() {
   }
 
-  createTaskBlock__toogleVisibility() {
-    this.createBlockVisible = !this.createBlockVisible;
+  activateTab(tabName: string) {
+    this.activeTab = tabName;
 
     return false;
   }

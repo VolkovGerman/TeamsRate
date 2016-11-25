@@ -7,8 +7,6 @@ import dao.UserDAO
 import play.api.i18n.{I18nSupport, Lang, Messages, MessagesApi}
 import javax.inject.Inject
 
-import akka.stream.actor.ActorPublisherMessage.Request
-import akka.util.LineNumbers.Result
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.mvc.Action
 import play.api.mvc.Controller
@@ -39,12 +37,11 @@ class UserController @Inject() (userDAO: UserDAO) (val messagesApi: MessagesApi)
     (JsPath \ "password").read[String]
   )(User.apply _)
 
-  // REST
-
   def all = Action.async { implicit request => {
-      userDAO.all().map { case (users) => Ok(Json.toJson(users)).withHeaders(
+      userDAO.all().map { case (users) => Ok(Json.toJson(users)) }
+        /*.withHeaders(
         "Access-Control-Allow-Origin" -> "*"   // Added this header
-      ) }
+      ) }*/
     }
   }
 

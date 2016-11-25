@@ -1,8 +1,7 @@
-<app-header></app-header>
+<app-header [activeMenuItem]="'teams'"></app-header>
 <main>
     <div class="container">
-		<div class="pageName">team page</div>
-		<div class="itemsList">
+			<!--
 			<div class="team">
 				<div class="team__header">
 					<div class="team__photoWrap">
@@ -42,6 +41,125 @@
 					<app-task></app-task>
 				</div>
 			</div>
-		</div>
+			-->
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="teamMenu">
+						<div class="teamMenu__imageWrap">
+							<div class="teamMenu__image">
+								<img src="images/profile.jpg" alt="Team Photo" width="200" height="200">
+							</div>
+							<div class="teamMenu__name">
+								OneWayUp
+							</div>
+						</div>
+						<div class="teamMenu__actions">
+							<a href="#" class="teamMenu__action">add task</a>
+						</div>
+						<div class="teamMenu__sections">
+							<a href="#" class="teamMenu__section" [class.active]="activeTab == 'tasks'" (click)="activateTab('tasks')">tasks</a>
+							<a href="#" class="teamMenu__section" [class.active]="activeTab == 'members'" (click)="activateTab('members')">members</a>
+							<a href="#" class="teamMenu__section" (click)="activateTab('settings')">settings</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="teamTodo" *ngIf="activeTab == 'tasks'">
+						<div class="teamTodo__panel panel">
+							<div class="panel__item active">
+								new 
+								<span class="panel__count">9</span>
+							</div>
+							<div class="panel__item">
+								running
+								<span class="panel__count">5</span>
+							</div>
+							<div class="panel__item">
+								done
+								<span class="panel__count">2</span>
+							</div>
+						</div>
+						<div class="taskList taskList--team">
+							<div class="taskList__header">
+								<div class="task__text">task</div>
+								<div class="task__deadline">deadline</div>
+								<div class="task__points">points</div>
+								<div class="task__actions">action</div>
+							</div>
+							<div class="task">
+								<div class="task__text">
+									make a pineapple
+								</div>
+								<div class="task__deadline">
+									05.04.2016
+								</div>
+								<div class="task__points">
+									15
+								</div>
+								<div class="task__actions">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMembers" *ngIf="activeTab == 'members'">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="sectionBlock">
+									<div class="sectionBlock__header">
+										Users
+									</div>
+									<div class="sectionBlock__body">
+										<div class="usersList list">
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="sectionBlock">
+									<div class="sectionBlock__header">
+										Admins
+									</div>
+									<div class="sectionBlock__body">
+										<div class="usersList list">
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+											<div class="user">
+												<div class="user__name">
+													<a href="#">German Volkov</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
 </main>

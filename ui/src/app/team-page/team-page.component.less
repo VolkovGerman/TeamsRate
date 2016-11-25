@@ -1,88 +1,160 @@
 @import "../../styles/_mixins.less";
+@import "../../styles/_variables.less";
 
-.team__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-
-    margin-bottom: 20px;
-}
-
-.team__photoWrap {
-    margin-right: 25px;
-
-    img {
-        width: 160px;
-        height: 160px;
-        vertical-align: bottom;
-        border: 4px solid white;
-    }
-}
-
-.team__info {
-    margin-right: auto;
-    padding-right: 20px;
-
-    h3 {
-        margin: 0 0 20px;
-        font-size: 2em;
-        color: #16a085;
-    }
-
-    .infoLine {
-        margin-bottom: 10px;
-        color: #a5a5a5;
-
-        a {
-            color: #16a085;
-            display: inline-block;
-            border-bottom: 1px solid #16a085;
-        }
-    }
-}
-
-.team__stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-width: 150px;
-
-    .stats__item {
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-        font-size: 1.2em;
-        color: #828282;
-
-        .stats__name {
-            width: 50%;
-        }
-
-        .stats__value {
-            width: 50%;
-            color: #16a085;
-
-            &.new {
-                color: #d25252;
-            }
-
-            &.current {
-                color: #36332E;
-            }
-
-            &.done {
-                color: #16a085;
-            }
-        }
-    }
-} 
-
-.panel {
-    margin-bottom: 20px;
-}
-
-.addTask {
-    display: inline-block;
+.teamTodo {
     
-    .buttonGreen();
+    .panel{
+        display: flex;
+        flex-direction: row;
+
+        border: 1px solid @borderColor;
+        border-radius: 0;
+        box-shadow: none;
+
+        &__item {
+            display: block;
+
+            padding: 10px;
+
+            flex-grow: 1;
+
+            text-align: center;
+            text-decoration: none;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e6e6e6;
+            }
+
+            &.active {
+                background-color: #e6e6e6;
+            }
+        }
+
+        &__count {
+            color: #a9a9a9;
+        }
+    }
+
+}
+
+.teamMenu {
+
+    &__imageWrap{
+        position: relative;
+        background-color: #fff;
+        min-height: 200px;
+
+        border: 1px solid @borderColor;
+    }
+
+    &__image img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__name {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        padding: 15px;
+
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: #fff;
+
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__actions {
+        padding: 15px;
+
+        text-align: center;
+
+        background-color: #fff;
+
+        border: 1px solid @borderColor;
+        border-top: none;
+        border-bottom: 1px solid @borderColor;
+    }
+
+    &__action {
+        display: inline-block;
+
+        margin-bottom: 10px;
+        padding: 5px 10px;
+
+        background-color: #e8e8e8;
+
+        color: #656565;
+        text-decoration: none;
+
+        &:hover {
+            color: #131313;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    
+    &__sections {
+        background-color: #fff;
+
+        border: 1px solid @borderColor;
+        border-top: none; 
+    }
+
+    &__section {
+        display: block;
+
+        padding: 10px 25px;
+
+        color: #656565;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #bde8e0;
+            color: #131313;
+        }
+
+        &.active {
+            background-color: #bde8e0;
+            color: #131313;
+        }
+    }
+
+}
+
+.taskList--team {
+
+    .taskList__header > div {
+        padding: 10px 20px;
+
+        font-size: 1em;
+    }
+
+    .task > div {
+        padding: 10px 20px;
+    }
+}
+
+.teamMembers {
+
+    .sectionBlock {
+
+        &__header {
+            font-size: 1.2em;
+            padding: 10px 20px;
+        }
+
+        &__body {
+            padding: 10px 20px;
+        }
+
+    }
+
 }
