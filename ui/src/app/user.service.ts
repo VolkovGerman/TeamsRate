@@ -7,7 +7,7 @@ import { User } from './shared/User';
 
 @Injectable()
 export class UserService implements OnInit {
-  private usersUrl = 'http://localhost:9000/users/all';  // URL to web api
+  private baseUrl = 'http://localhost:9000';
 
   constructor(private http: Http) { } 
 
@@ -16,12 +16,16 @@ export class UserService implements OnInit {
   }
 
   getUsers(): Promise<User[]> {
-
-    return this.http.get(this.usersUrl)
+    return this.http.get(this.baseUrl + '/users/all')
                .toPromise()
                .then(response => response.json())
                .catch(this.handleError);
   }
+
+  /*login(): Promise<number> {
+
+    
+  }*/
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

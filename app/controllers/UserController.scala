@@ -13,6 +13,8 @@ import play.api.mvc.Controller
 import play.api.libs.json._
 import play.api.libs.functional.syntax._
 
+import scala.concurrent.Future
+
 
 /**
   * Created by volkov97 on 24.9.16.
@@ -21,62 +23,59 @@ import play.api.libs.functional.syntax._
 @Singleton
 class UserController @Inject() (userDAO: UserDAO) (val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
+  // JSON Results
+  val resOk = Json.obj("status" -> "ok")
+  val resError = Json.obj("status" -> "error")
+
   implicit val userWrites: Writes[User] = (
-    (JsPath \ "id").write[Int] and
+    (JsPath \ "id").write[Long] and
     (JsPath \ "name").write[String] and
     (JsPath \ "surname").write[String] and
-    (JsPath \ "email").write[String] and
-    (JsPath \ "password").write[String]
+    (JsPath \ "vk_id").write[String]
   ) (unlift(User.unapply))
 
   implicit val userReads: Reads[User] = (
-    (JsPath \ "id").read[Int] and
+    (JsPath \ "id").read[Long] and
     (JsPath \ "name").read[String] and
     (JsPath \ "surname").read[String] and
-    (JsPath \ "email").read[String] and
-    (JsPath \ "password").read[String]
+    (JsPath \ "vk_id").read[String]
   )(User.apply _)
 
-  def all = Action.async { implicit request => {
-      userDAO.all().map { case (users) => Ok(Json.toJson(users)) }
-        /*.withHeaders(
-        "Access-Control-Allow-Origin" -> "*"   // Added this header
-      ) }*/
+  // REST
+
+  // GET /users
+  def getAll = Action.async {
+    userDAO.getAll().map {
+      case users => Ok(Json.toJson(users))
     }
   }
 
-  def addUser = Action.async(parse.json) {
-    implicit request => {
-      request.body.validate[User] match {
-        case s: JsSuccess[User] => {
-          userDAO.insert(s.get).map(_ => Ok(Json.obj("status" -> "ok")))
-        }/*
-        case e: JsError => {
-          Ok(Json.obj("status" -> "error"))
-        }*/
+  // GET /users/:id
+  def get(id: Long) = Action.async {
+    userDAO.findById(id).map { user => Ok(Json.toJson(user)) }
+  }
+
+  // POST /users
+  def add = Action.async(parse.json) {
+    implicit request => request.body.validate[User] match {
+      case s: JsSuccess[User] => userDAO.insertIfNotExists(s.get) map {
+        userID => Ok(Json.obj("status" -> "ok", "id" -> userID))
       }
-
+      case e: JsError => Future.successful(Ok(resError))
     }
   }
-
-  def updateUser(id: Int) = Action.async(parse.json) {
-    implicit request => {
-      request.body.validate[User] match {
-        case s: JsSuccess[User] => {
-          userDAO.updateUser(id, s.get).map(_ => Ok(Json.obj("status" -> "ok")))
-        }/*
-        case e: JsError => {
-          Ok(Json.obj("status" -> "error"))
-        }*/
+  /*
+    // PUT /user/:id
+    def update(id: Long) = Action.async(parse.json) {
+      implicit request => request.body.validate[User] match {
+        case s: JsSuccess[User] => userDAO.updateUser(id, s.get).map(_ => Ok(resOk))
+        case e: JsError => Future.successful(Ok(resError))
       }
-
     }
-  }
 
-  def deleteUser(id: Int) = Action.async {
-    implicit request => {
-      userDAO.delete(id).map(_ => Ok(Json.obj("status" -> "ok")))
+    // DELETE /user/:id
+    def delete(id: Long) = Action.async {
+        userDAO.delete(id).map(_ => Ok(resOk))
     }
-  }
-
+    */
 }
