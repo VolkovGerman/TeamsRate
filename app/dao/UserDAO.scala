@@ -1,6 +1,5 @@
 package dao
 
-import java.util.Date
 import javax.inject.{Inject, Singleton}
 import models.User
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
@@ -58,14 +57,19 @@ class UserDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     db.run(action)
   }
 
-
   // Insert new users.
   def insert(users: Seq[User]): Future[Unit] =
     db.run(this.users ++= users).map(_ => ())
 
   // Update a user.
-  def update(id: Long, user: User): Future[Unit] =
-    db.run(users.filter(_.id === id).update(user)).map(_ => ())
+  def update(id: Long, user: User): Future[Unit] = {
+    val action = users.filter(_.id === id)
+      .map(user => (user.name, user.surname))
+      .update(user.name, user.surname)
+      .map(_ => ())
+
+    db.run(action)
+  }
 
   // Delete a user.
   def delete(id: Long): Future[Unit] =

@@ -2,35 +2,18 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-
-#GET     /                               controllers.ApplicationController.welcome
-#GET     /login                          controllers.ApplicationController.loginPage
-#POST    /login                          controllers.ApplicationController.login
-#GET     /registration                   controllers.ApplicationController.registrationPage
-#POST    /registration                   controllers.ApplicationController.registration
-#GET     /logout                         controllers.ApplicationController.logout
-
-#GET		/feed					         controllers.UserController.feed
-#GET     /groups                         controllers.UserController.groupList
-#GET     /todo                           controllers.UserController.todo
-#GET     /settings                       controllers.UserController.settings
-
-#GET     /group:id                       controllers.GroupController.index(id: Long)
-#GET     /group:id/members               controllers.GroupController.members(id: Long)
-#GET     /group:id/settings              controllers.GroupController.settings(id: Long)
-
-# Tasks
-#GET    /newTask                  	    controllers.TasksController.newTask(name: String, descr: String)
-#GET    /deleteTask/:id       		    controllers.TasksController.deleteTask(id: Long)
-#GET    /editTask                        controllers.TasksController.updateTask(id: Long, field: String, value: String)
-
 # REST
 GET     /users                           controllers.UserController.getAll
 GET     /users/:id                       controllers.UserController.get(id: Long)
 POST    /users                           controllers.UserController.add
-#PUT     /users/:id                       controllers.UserController.update(id: Long)
-#DELETE  /users/:id                       controllers.UserController.delete(id: Long)
+PUT     /users/:id                       controllers.UserController.update(id: Long)
+DELETE  /users/:id                       controllers.UserController.delete(id: Long)
+
+GET     /teams                           controllers.TeamController.getAll
+GET     /teams/:id                       controllers.TeamController.get(id: Long)
+POST    /teams                           controllers.TeamController.add
+PUT     /teams/:id                       controllers.TeamController.update(id: Long)
+DELETE  /teams/:id                       controllers.TeamController.delete(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                   controllers.Assets.versioned(path="/public", file: Asset)

@@ -45,9 +45,7 @@ class UserController @Inject() (userDAO: UserDAO) (val messagesApi: MessagesApi)
 
   // GET /users
   def getAll = Action.async {
-    userDAO.getAll().map {
-      case users => Ok(Json.toJson(users))
-    }
+    userDAO.getAll().map(users => Ok(Json.toJson(users)))
   }
 
   // GET /users/:id
@@ -58,24 +56,22 @@ class UserController @Inject() (userDAO: UserDAO) (val messagesApi: MessagesApi)
   // POST /users
   def add = Action.async(parse.json) {
     implicit request => request.body.validate[User] match {
-      case s: JsSuccess[User] => userDAO.insertIfNotExists(s.get) map {
-        userID => Ok(Json.obj("status" -> "ok", "id" -> userID))
-      }
+      case s: JsSuccess[User] => userDAO.insertIfNotExists(s.get)
+        .map(userID => Ok(Json.obj("status" -> "ok", "id" -> userID)))
       case e: JsError => Future.successful(Ok(resError))
     }
   }
-  /*
-    // PUT /user/:id
-    def update(id: Long) = Action.async(parse.json) {
-      implicit request => request.body.validate[User] match {
-        case s: JsSuccess[User] => userDAO.updateUser(id, s.get).map(_ => Ok(resOk))
-        case e: JsError => Future.successful(Ok(resError))
-      }
-    }
 
-    // DELETE /user/:id
-    def delete(id: Long) = Action.async {
-        userDAO.delete(id).map(_ => Ok(resOk))
+  // PUT /user/:id
+  def update(id: Long) = Action.async(parse.json) {
+    implicit request => request.body.validate[User] match {
+      case s: JsSuccess[User] => userDAO.update(id, s.get).map(_ => Ok(resOk))
+      case e: JsError => Future.successful(Ok(resError))
     }
-    */
+  }
+
+  // DELETE /user/:id
+  def delete(id: Long) = Action.async {
+      userDAO.delete(id).map(_ => Ok(resOk))
+  }
 }
