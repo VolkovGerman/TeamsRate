@@ -11,6 +11,7 @@ DELETE  /users/:id                       controllers.UserController.delete(id: L
 
 GET     /teams                           controllers.TeamController.getAll
 GET     /teams/:id                       controllers.TeamController.get(id: Long)
+GET     /users/:id/teams                 controllers.TeamController.getFromUser(id: Long)
 POST    /teams                           controllers.TeamController.add
 PUT     /teams/:id                       controllers.TeamController.update(id: Long)
 DELETE  /teams/:id                       controllers.TeamController.delete(id: Long)

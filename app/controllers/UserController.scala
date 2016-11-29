@@ -3,7 +3,7 @@ package controllers
 import javax.inject._
 
 import models.User
-import dao.UserDAO
+import dao.{UserDAO, MemberDAO}
 import play.api.i18n.{I18nSupport, Lang, Messages, MessagesApi}
 import javax.inject.Inject
 
@@ -21,7 +21,8 @@ import scala.concurrent.Future
   */
 
 @Singleton
-class UserController @Inject() (userDAO: UserDAO) (val messagesApi: MessagesApi) extends Controller with I18nSupport {
+class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO) (val messagesApi: MessagesApi)
+  extends Controller with I18nSupport {
 
   // JSON Results
   val resOk = Json.obj("status" -> "ok")

@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject.{Inject, Singleton}
 
-import dao.TeamDAO
+import dao.{TeamDAO, MemberDAO}
 import models.{Team}
 import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.functional.syntax._
@@ -16,7 +16,8 @@ import ExecutionContext.Implicits.global
   * Created by volkov97 on 24.9.16.
   */
 @Singleton
-class TeamController @Inject() (teamDAO: TeamDAO) (val messagesApi: MessagesApi) extends Controller with I18nSupport {
+class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO) (val messagesApi: MessagesApi)
+  extends Controller with I18nSupport {
 
   // JSON Results
   val resOk = Json.obj("status" -> "ok")
@@ -46,6 +47,11 @@ class TeamController @Inject() (teamDAO: TeamDAO) (val messagesApi: MessagesApi)
   // GET /teams/:id
   def get(id: Long) = Action.async {
     teamDAO.findById(id).map { team => Ok(Json.toJson(team)) }
+  }
+
+  // GET /users/:id/teams
+  def getFromUser(id: Long) = Action.async {
+    memberDAO.getTeamsForUser(id).map { teams => Ok(Json.toJson(teams)) }
   }
 
   // POST /teams
