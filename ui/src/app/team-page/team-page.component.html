@@ -1,48 +1,6 @@
 <app-header [activeMenuItem]="'teams'"></app-header>
 <main>
     <div class="container">
-			<!--
-			<div class="team">
-				<div class="team__header">
-					<div class="team__photoWrap">
-						<img src="images/profile.jpg" alt="Team Photo" width="200" height="200">
-					</div>
-					<div class="team__info">
-						<h3>OneWayUp</h3>
-						<div class="infoLine admin">
-							admin
-							<a href="#">Volkov German</a>
-						</div>
-						<div class="infoLine membersCount">
-							size
-							<a href="#">3 members</a>
-						</div>
-					</div>
-					<div class="team__stats stats">
-						<div class="stats__item">
-							<div class="stats__name">new</div>
-							<div class="stats__value new">3</div>
-						</div>
-						<div class="stats__item">
-							<div class="stats__name">current</div>
-							<div class="stats__value current">9</div>
-						</div>
-						<div class="stats__item">
-							<div class="stats__name">done</div>
-							<div class="stats__value done">15</div>
-						</div>
-					</div>
-				</div>
-				<div class="team__body">
-					<div class="panel">
-						<a href="#" class="addTask" (click)="createTaskBlock__toogleVisibility()">add task</a>
-					</div>
-					<app-create-task *ngIf="createBlockVisible"></app-create-task>
-					<app-task></app-task>
-				</div>
-			</div>
-			-->
-
 			<div class="row">
 				<div class="col-md-3">
 					<div class="teamMenu">
@@ -80,25 +38,13 @@
 								<span class="panel__count">2</span>
 							</div>
 						</div>
-						<div class="taskList taskList--team">
-							<div class="taskList__header">
-								<div class="task__text">task</div>
-								<div class="task__deadline">deadline</div>
-								<div class="task__points">points</div>
-								<div class="task__actions">action</div>
-							</div>
-							<div class="task">
+						<div class="taskList">
+							<div class="task" *ngFor="let task of tasks; let i = index" (click)="onTaskSelect(task)">
+								<div class="task__number">
+									{{i}}
+								</div>
 								<div class="task__text">
-									make a pineapple
-								</div>
-								<div class="task__deadline">
-									05.04.2016
-								</div>
-								<div class="task__points">
-									15
-								</div>
-								<div class="task__actions">
-
+									{{task.text}}
 								</div>
 							</div>
 						</div>

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Task } from '../shared/Task';
 
 @Component({
   selector: 'app-task',
@@ -6,11 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./task.component.less']
 })
 export class TaskComponent implements OnInit {
-  @Input() status : string;
+  @Input() task: Task;
+  @Output() taskClose = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {
+  }
+
+  close() {
+    this.taskClose.emit();
   }
 
 }

@@ -48,82 +48,39 @@
 }
 
 .taskList {
-    display: table;
-    margin: 0 auto; 
-
-    width: 100%;
-
     background-color: #fff;
-
-    &__header {
-        display: table-header-group;
-
-        font-size: 1.2em;
-        color: #fff;
-        text-transform: uppercase;
-        background-color: #5eb3a3;
-
-        & > div {
-            display: table-cell;
-
-            padding: 15px 20px;
-        }
-    }
+    border: 1px solid @borderColor;
 
     .task {
-        display: table-row;
+        display: flex;
+        align-items: center;
 
-        & > div {
-            display: table-cell;
+        font-size: 1.2em;
 
-            padding: 15px 20px;
+        border-bottom: 1px solid @lightBorderColor;
 
-            border-bottom: 1px solid #efefef;
+        cursor: pointer;
 
-            &:first-child {
-                border-left: 1px solid #d2d2d2;
-            }
+        &:last-child {
+            border-bottom: none;
+        } 
 
-            &:last-child {
-                border-right: 1px solid #d2d2d2;
-            }
+        &:hover {
+            background-color: #c3e2dc;
         }
 
-        &:last-child > div {
-            border-bottom: 1px solid #d2d2d2;
+        &__number {
+            min-width: 60px;
+
+            text-align: center;
+            color: #9e9e9e;
         }
 
         &__text {
-            width: 40%;
+            flex-grow: 1;
 
-            font-size: 1.2em;
+            padding: 10px 10px 10px 0;
         }
-
-        &__team {
-            width: 15%;
-        }
-
-        &__deadline {
-            width: 10%;
-        }
-
-        &__points {
-            width: 10%;
-        }
-
-        &__status {
-            width: 10%;
-            
-            text-transform: uppercase;
-        }
-
-        &__action {
-            width: 15%;
-        }
-    }
-
-    .btn--taskAction {
-        padding: 5px 25px;
     }
 
 }

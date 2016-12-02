@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 declare var OAuth;
 
@@ -9,36 +9,34 @@ declare var OAuth;
   styleUrls: ['./welcome-page.component.less']
 })
 export class WelcomePageComponent implements OnInit {
+  authButton_google: Boolean;
 
-  constructor(private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.authButton_google = false;
+  }
 
   ngOnInit() {
   }
 
   auth() {
+    let that = this;
+
     OAuth.initialize('BqvOnNnWfVNBT6eESGzK0zuBtCo');
-    OAuth.popup('vk')
-      .done((result) => {
-        console.log(result); 
+    OAuth.popup('google').done((result) => {
+      console.log(result); 
 
-        let access_token = result.access_token;
-        let user_id = result.user_id;
-        let fields = 'bdate,sex';
-        let version = '5.60';
+      result.me().done(function(data) {
+        console.log(data);
 
-        var query = `https://api.vk.com/method/users.get?access_token=${access_token}&user_ids=${user_id}&fields=${fields}&v=${version}`;
-
-        result.get(query)
-          .done((data) => {
-            console.log(data);
-          })
-          .fail((err) => {
-            console.log(err);
-          })
+        that.router.navigate(['/feed']);
       })
-      .fail(function (err) {
-        console.log(err);
-      });
+    });
+  }
+
+  authClick() {
+    this.authButton_google = !this.authButton_google;
+
+    this.auth();
 
     return false;
   }

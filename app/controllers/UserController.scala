@@ -2,8 +2,8 @@ package controllers
 
 import javax.inject._
 
-import models.User
-import dao.{UserDAO, MemberDAO}
+import models.{Task, Team, User}
+import dao.{MemberDAO, TaskDAO, UserDAO}
 import play.api.i18n.{I18nSupport, Lang, Messages, MessagesApi}
 import javax.inject.Inject
 
@@ -21,7 +21,7 @@ import scala.concurrent.Future
   */
 
 @Singleton
-class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO) (val messagesApi: MessagesApi)
+class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO, taskDAO: TaskDAO) (val messagesApi: MessagesApi)
   extends Controller with I18nSupport {
 
   // JSON Results
@@ -42,6 +42,42 @@ class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO) (val mes
     (JsPath \ "vk_id").read[String]
   )(User.apply _)
 
+  implicit val teamWrites: Writes[Team] = (
+    (JsPath \ "id").write[Long] and
+    (JsPath \ "name").write[String] and
+    (JsPath \ "descr").write[String] and
+    (JsPath \ "creator_id").write[Long]
+  ) (unlift(Team.unapply))
+
+  implicit val teamReads: Reads[Team] = (
+    (JsPath \ "id").read[Long] and
+    (JsPath \ "name").read[String] and
+    (JsPath \ "descr").read[String] and
+    (JsPath \ "creator_id").read[Long]
+  )(Team.apply _)
+
+  implicit val taskWrites: Writes[Task] = (
+    (JsPath \ "id").write[Long] and
+    (JsPath \ "team_id").write[Long] and
+    (JsPath \ "creator_id").write[Long] and
+    (JsPath \ "performer_id").write[Long] and
+    (JsPath \ "text").write[String] and
+    (JsPath \ "deadline").write[String] and
+    (JsPath \ "status").write[Long] and
+    (JsPath \ "points").write[Long]
+  ) (unlift(Task.unapply))
+
+  implicit val taskReads: Reads[Task] = (
+    (JsPath \ "id").read[Long] and
+    (JsPath \ "team_id").read[Long] and
+    (JsPath \ "creator_id").read[Long] and
+    (JsPath \ "performer_id").read[Long] and
+    (JsPath \ "text").read[String] and
+    (JsPath \ "deadline").read[String] and
+    (JsPath \ "status").read[Long] and
+    (JsPath \ "points").read[Long]
+  )(Task.apply _)
+
   // REST
 
   // GET /users
@@ -52,6 +88,16 @@ class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO) (val mes
   // GET /users/:id
   def get(id: Long) = Action.async {
     userDAO.findById(id).map { user => Ok(Json.toJson(user)) }
+  }
+
+  // GET /users/:id/teams
+  def getTeams(id: Long) = Action.async {
+    memberDAO.getTeamsForUser(id).map { teams => Ok(Json.toJson(teams)) }
+  }
+
+  // GET /users/:id/tasks
+  def getTasks(id: Long) = Action.async {
+    taskDAO.getUserTasks(id).map { tasks => Ok(Json.toJson(tasks)) }
   }
 
   // POST /users

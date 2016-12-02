@@ -2081,7 +2081,7 @@ var DomAdapter = (function () {
 "use strict";
 "use strict";
 var root_1 = __webpack_require__(57);
-var toSubscriber_1 = __webpack_require__(688);
+var toSubscriber_1 = __webpack_require__(689);
 var observable_1 = __webpack_require__(225);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
@@ -3836,7 +3836,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var isFunction_1 = __webpack_require__(376);
 var Subscription_1 = __webpack_require__(221);
-var Observer_1 = __webpack_require__(674);
+var Observer_1 = __webpack_require__(675);
 var rxSubscriber_1 = __webpack_require__(226);
 /**
  * Implements the {@link Observer} interface and extends the
@@ -5167,7 +5167,7 @@ function escapeRegExp(s) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_concatAll__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every__ = __webpack_require__(372);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__ = __webpack_require__(683);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__);
@@ -5324,7 +5324,7 @@ var ctx      = __webpack_require__(73)
   , IObject  = __webpack_require__(95)
   , toObject = __webpack_require__(31)
   , toLength = __webpack_require__(25)
-  , asc      = __webpack_require__(514);
+  , asc      = __webpack_require__(515);
 module.exports = function(TYPE, $create){
   var IS_MAP        = TYPE == 1
     , IS_FILTER     = TYPE == 2
@@ -5388,7 +5388,7 @@ module.exports = __webpack_require__(17) ? function(object, key, value){
 var Map     = __webpack_require__(355)
   , $export = __webpack_require__(1)
   , shared  = __webpack_require__(139)('metadata')
-  , store   = shared.store || (shared.store = new (__webpack_require__(635)));
+  , store   = shared.store || (shared.store = new (__webpack_require__(636)));
 
 var getOrCreateMetadataMap = function(target, targetKey, create){
   var targetMetadata = store.get(target);
@@ -8582,7 +8582,7 @@ var Observable_1 = __webpack_require__(14);
 var Subscriber_1 = __webpack_require__(32);
 var Subscription_1 = __webpack_require__(221);
 var ObjectUnsubscribedError_1 = __webpack_require__(374);
-var SubjectSubscription_1 = __webpack_require__(675);
+var SubjectSubscription_1 = __webpack_require__(676);
 var rxSubscriber_1 = __webpack_require__(226);
 /**
  * @class SubjectSubscriber<T>
@@ -11849,7 +11849,7 @@ var XSRFStrategy = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_mergeAll__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_reduce__ = __webpack_require__(684);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_reduce__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_reduce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_operator_reduce__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__apply_redirects__ = __webpack_require__(478);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__config__ = __webpack_require__(479);
@@ -28888,11 +28888,11 @@ exports.OuterSubscriber = OuterSubscriber;
 "use strict";
 "use strict";
 var isArray_1 = __webpack_require__(228);
-var isObject_1 = __webpack_require__(686);
+var isObject_1 = __webpack_require__(687);
 var isFunction_1 = __webpack_require__(376);
-var tryCatch_1 = __webpack_require__(689);
+var tryCatch_1 = __webpack_require__(690);
 var errorObject_1 = __webpack_require__(375);
-var UnsubscriptionError_1 = __webpack_require__(685);
+var UnsubscriptionError_1 = __webpack_require__(686);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -29046,7 +29046,7 @@ exports.Subscription = Subscription;
 
 "use strict";
 "use strict";
-var FromObservable_1 = __webpack_require__(678);
+var FromObservable_1 = __webpack_require__(679);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
@@ -29192,7 +29192,7 @@ var isArray_1 = __webpack_require__(228);
 var isPromise_1 = __webpack_require__(377);
 var Observable_1 = __webpack_require__(14);
 var iterator_1 = __webpack_require__(224);
-var InnerSubscriber_1 = __webpack_require__(672);
+var InnerSubscriber_1 = __webpack_require__(673);
 var observable_1 = __webpack_require__(225);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
@@ -41873,6 +41873,7 @@ var SafeResourceUrlImpl = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(482);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["c"]; });
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -42432,7 +42433,7 @@ function provideRouterInitializer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap__ = __webpack_require__(371);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__ = __webpack_require__(680);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__ = __webpack_require__(681);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll__);
@@ -42598,8 +42599,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(660),
-            styles: [__webpack_require__(648)]
+            template: __webpack_require__(661),
+            styles: [__webpack_require__(649)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -42626,14 +42627,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FeedPageComponent = (function () {
     function FeedPageComponent() {
+        this.tasks = [
+            {
+                id: 1,
+                text: 'do dishes',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            },
+            {
+                id: 2,
+                text: 'win a game of thrones',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            },
+            {
+                id: 3,
+                text: 'go to the shop',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            }
+        ];
     }
     FeedPageComponent.prototype.ngOnInit = function () {
+    };
+    FeedPageComponent.prototype.onTaskSelect = function (task) {
+        this.selectedTask = task;
     };
     FeedPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-feed-page',
-            template: __webpack_require__(662),
-            styles: [__webpack_require__(650)]
+            template: __webpack_require__(663),
+            styles: [__webpack_require__(651)]
         }), 
         __metadata('design:paramtypes', [])
     ], FeedPageComponent);
@@ -42647,7 +42677,7 @@ var FeedPageComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__(493);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SearchPageComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -42678,8 +42708,8 @@ var SearchPageComponent = (function () {
     SearchPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-search-page',
-            template: __webpack_require__(664),
-            styles: [__webpack_require__(652)],
+            template: __webpack_require__(665),
+            styles: [__webpack_require__(653)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]) === 'function' && _a) || Object])
@@ -42714,8 +42744,8 @@ var SettingsPageComponent = (function () {
     SettingsPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-settings-page',
-            template: __webpack_require__(665),
-            styles: [__webpack_require__(653)]
+            template: __webpack_require__(666),
+            styles: [__webpack_require__(654)]
         }), 
         __metadata('design:paramtypes', [])
     ], SettingsPageComponent);
@@ -42753,8 +42783,8 @@ var TeamPageComponent = (function () {
     TeamPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-team-page',
-            template: __webpack_require__(668),
-            styles: [__webpack_require__(656)]
+            template: __webpack_require__(669),
+            styles: [__webpack_require__(657)]
         }), 
         __metadata('design:paramtypes', [])
     ], TeamPageComponent);
@@ -42787,8 +42817,8 @@ var TeamsListPageComponent = (function () {
     TeamsListPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-teams-list-page',
-            template: __webpack_require__(669),
-            styles: [__webpack_require__(657)]
+            template: __webpack_require__(670),
+            styles: [__webpack_require__(658)]
         }), 
         __metadata('design:paramtypes', [])
     ], TeamsListPageComponent);
@@ -42815,15 +42845,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TodosPageComponent = (function () {
     function TodosPageComponent() {
-        this.taskStatus = "in progress";
+        this.tasks = [
+            {
+                id: 1,
+                text: 'do dishes',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            },
+            {
+                id: 2,
+                text: 'win a game of thrones',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            },
+            {
+                id: 3,
+                text: 'go to the shop',
+                deadline: '01.12.2016',
+                status: 'new',
+                points: 20,
+                team: "OneWayUp"
+            }
+        ];
     }
     TodosPageComponent.prototype.ngOnInit = function () {
+    };
+    TodosPageComponent.prototype.onTaskSelect = function (task) {
+        this.selectedTask = task;
     };
     TodosPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-todos-page',
-            template: __webpack_require__(670),
-            styles: [__webpack_require__(658)]
+            template: __webpack_require__(671),
+            styles: [__webpack_require__(659)]
         }), 
         __metadata('design:paramtypes', [])
     ], TodosPageComponent);
@@ -42851,44 +42909,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var WelcomePageComponent = (function () {
-    function WelcomePageComponent(router) {
+    function WelcomePageComponent(route, router) {
+        this.route = route;
         this.router = router;
+        this.authButton_google = false;
     }
     WelcomePageComponent.prototype.ngOnInit = function () {
     };
     WelcomePageComponent.prototype.auth = function () {
+        var that = this;
         OAuth.initialize('BqvOnNnWfVNBT6eESGzK0zuBtCo');
-        OAuth.popup('vk')
-            .done(function (result) {
+        OAuth.popup('google').done(function (result) {
             console.log(result);
-            var access_token = result.access_token;
-            var user_id = result.user_id;
-            var fields = 'bdate,sex';
-            var version = '5.60';
-            var query = "https://api.vk.com/method/users.get?access_token=" + access_token + "&user_ids=" + user_id + "&fields=" + fields + "&v=" + version;
-            result.get(query)
-                .done(function (data) {
+            result.me().done(function (data) {
                 console.log(data);
-            })
-                .fail(function (err) {
-                console.log(err);
+                that.router.navigate(['/feed']);
             });
-        })
-            .fail(function (err) {
-            console.log(err);
         });
+    };
+    WelcomePageComponent.prototype.authClick = function () {
+        this.authButton_google = !this.authButton_google;
+        this.auth();
         return false;
     };
     WelcomePageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-welcome-page',
-            template: __webpack_require__(671),
-            styles: [__webpack_require__(659)]
+            template: __webpack_require__(672),
+            styles: [__webpack_require__(660)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], WelcomePageComponent);
     return WelcomePageComponent;
-    var _a;
+    var _a, _b;
 }());
 
 
@@ -42969,7 +43022,7 @@ module.exports = function(that, callbackfn, aLen, memo, isRight){
 'use strict';
 var aFunction  = __webpack_require__(62)
   , isObject   = __webpack_require__(7)
-  , invoke     = __webpack_require__(518)
+  , invoke     = __webpack_require__(519)
   , arraySlice = [].slice
   , factories  = {};
 
@@ -43732,9 +43785,9 @@ var global         = __webpack_require__(11)
   , uid            = __webpack_require__(99)
   , wks            = __webpack_require__(8)
   , wksExt         = __webpack_require__(352)
-  , wksDefine      = __webpack_require__(522)
-  , keyOf          = __webpack_require__(519)
-  , enumKeys       = __webpack_require__(517)
+  , wksDefine      = __webpack_require__(523)
+  , keyOf          = __webpack_require__(520)
+  , enumKeys       = __webpack_require__(518)
   , isArray        = __webpack_require__(208)
   , anObject       = __webpack_require__(4)
   , toIObject      = __webpack_require__(30)
@@ -44050,7 +44103,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(14);
 var ScalarObservable_1 = __webpack_require__(368);
 var EmptyObservable_1 = __webpack_require__(366);
-var isScheduler_1 = __webpack_require__(687);
+var isScheduler_1 = __webpack_require__(688);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -44824,11 +44877,11 @@ webpackEmptyContext.id = 378;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(495);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(459);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(489);
 
 
@@ -55998,7 +56051,7 @@ function sanitizeStyle(value) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatAll__ = __webpack_require__(370);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatAll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__ = __webpack_require__(682);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__);
@@ -56837,16 +56890,16 @@ function compare(path, params, segment) {
 /* unused harmony reexport NavigationCancel */
 /* unused harmony reexport NavigationEnd */
 /* unused harmony reexport NavigationError */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__router__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__router__["a"]; });
 /* unused harmony reexport RoutesRecognized */
 /* unused harmony reexport NavigationStart */
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__router_module__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_4__router_module__["b"]; });
 /* unused harmony reexport provideRoutes */
 /* unused harmony reexport RouterOutletMap */
 /* unused harmony reexport PreloadAllModules */
 /* unused harmony reexport PreloadingStrategy */
 /* unused harmony reexport NoPreloading */
-/* unused harmony reexport ActivatedRoute */
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_7__router_state__["b"]; });
 /* unused harmony reexport ActivatedRouteSnapshot */
 /* unused harmony reexport RouterState */
 /* unused harmony reexport RouterStateSnapshot */
@@ -57232,8 +57285,8 @@ var AppRoutingModule = (function () {
     }
     AppRoutingModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["H" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]]
         }), 
         __metadata('design:paramtypes', [])
     ], AppRoutingModule);
@@ -57259,8 +57312,8 @@ var AppRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__todos_page_todos_page_component__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__settings_page_settings_page_component__ = __webpack_require__(322);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__(485);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__task_task_component__ = __webpack_require__(490);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__team_card_team_card_component__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__task_task_component__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__team_card_team_card_component__ = __webpack_require__(492);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search_page_search_page_component__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__create_task_create_task_component__ = __webpack_require__(487);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
@@ -57349,8 +57402,8 @@ var CreateTaskComponent = (function () {
     CreateTaskComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-create-task',
-            template: __webpack_require__(661),
-            styles: [__webpack_require__(649)]
+            template: __webpack_require__(662),
+            styles: [__webpack_require__(650)]
         }), 
         __metadata('design:paramtypes', [])
     ], CreateTaskComponent);
@@ -57415,8 +57468,8 @@ var HeaderComponent = (function () {
     HeaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-header',
-            template: __webpack_require__(663),
-            styles: [__webpack_require__(651)]
+            template: __webpack_require__(664),
+            styles: [__webpack_require__(652)]
         }), 
         __metadata('design:paramtypes', [])
     ], HeaderComponent);
@@ -57442,7 +57495,21 @@ var HeaderComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return Task; });
+var Task = (function () {
+    function Task() {
+    }
+    return Task;
+}());
+
+
+/***/ },
+/* 491 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_Task__ = __webpack_require__(490);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TaskComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57454,29 +57521,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TaskComponent = (function () {
     function TaskComponent() {
+        this.taskClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* EventEmitter */]();
     }
     TaskComponent.prototype.ngOnInit = function () {
     };
+    TaskComponent.prototype.close = function () {
+        this.taskClose.emit();
+    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Input */])(), 
-        __metadata('design:type', String)
-    ], TaskComponent.prototype, "status", void 0);
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_Task__["a" /* Task */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_Task__["a" /* Task */]) === 'function' && _a) || Object)
+    ], TaskComponent.prototype, "task", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Output */])(), 
+        __metadata('design:type', Object)
+    ], TaskComponent.prototype, "taskClose", void 0);
     TaskComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-task',
-            template: __webpack_require__(666),
-            styles: [__webpack_require__(654)]
+            template: __webpack_require__(667),
+            styles: [__webpack_require__(655)]
         }), 
         __metadata('design:paramtypes', [])
     ], TaskComponent);
     return TaskComponent;
+    var _a;
 }());
 
 
 /***/ },
-/* 491 */
+/* 492 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57500,8 +57577,8 @@ var TeamCardComponent = (function () {
     TeamCardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
             selector: 'app-team-card',
-            template: __webpack_require__(667),
-            styles: [__webpack_require__(655)]
+            template: __webpack_require__(668),
+            styles: [__webpack_require__(656)]
         }), 
         __metadata('design:paramtypes', [])
     ], TeamCardComponent);
@@ -57510,13 +57587,13 @@ var TeamCardComponent = (function () {
 
 
 /***/ },
-/* 492 */
+/* 493 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(676);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(677);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57563,7 +57640,7 @@ var UserService = (function () {
 
 
 /***/ },
-/* 493 */
+/* 494 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57578,41 +57655,41 @@ var environment = {
 
 
 /***/ },
-/* 494 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(508);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(509);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(501);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(502);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(498);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(504);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(502);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(503);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(501);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(499);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(500);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(507);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(508);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(497);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(496);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(505);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(506);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(499);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(506);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(507);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(504);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(505);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(510);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(691);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(692);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -57633,55 +57710,55 @@ var environment = {
 
 
 /***/ },
-/* 495 */
-/***/ function(module, exports, __webpack_require__) {
-
-__webpack_require__(142);
-__webpack_require__(532);
-__webpack_require__(530);
-__webpack_require__(536);
-__webpack_require__(533);
-__webpack_require__(539);
-__webpack_require__(541);
-__webpack_require__(529);
-__webpack_require__(535);
-__webpack_require__(526);
-__webpack_require__(540);
-__webpack_require__(524);
-__webpack_require__(538);
-__webpack_require__(537);
-__webpack_require__(531);
-__webpack_require__(534);
-__webpack_require__(523);
-__webpack_require__(525);
-__webpack_require__(528);
-__webpack_require__(527);
-__webpack_require__(542);
-__webpack_require__(354);
-module.exports = __webpack_require__(10).Array;
-
-/***/ },
 /* 496 */
 /***/ function(module, exports, __webpack_require__) {
 
+__webpack_require__(142);
+__webpack_require__(533);
+__webpack_require__(531);
+__webpack_require__(537);
+__webpack_require__(534);
+__webpack_require__(540);
+__webpack_require__(542);
+__webpack_require__(530);
+__webpack_require__(536);
+__webpack_require__(527);
+__webpack_require__(541);
+__webpack_require__(525);
+__webpack_require__(539);
+__webpack_require__(538);
+__webpack_require__(532);
+__webpack_require__(535);
+__webpack_require__(524);
+__webpack_require__(526);
+__webpack_require__(529);
+__webpack_require__(528);
 __webpack_require__(543);
-__webpack_require__(545);
-__webpack_require__(544);
-__webpack_require__(547);
-__webpack_require__(546);
-module.exports = Date;
+__webpack_require__(354);
+module.exports = __webpack_require__(10).Array;
 
 /***/ },
 /* 497 */
 /***/ function(module, exports, __webpack_require__) {
 
+__webpack_require__(544);
+__webpack_require__(546);
+__webpack_require__(545);
 __webpack_require__(548);
-__webpack_require__(550);
-__webpack_require__(549);
-module.exports = __webpack_require__(10).Function;
+__webpack_require__(547);
+module.exports = Date;
 
 /***/ },
 /* 498 */
+/***/ function(module, exports, __webpack_require__) {
+
+__webpack_require__(549);
+__webpack_require__(551);
+__webpack_require__(550);
+module.exports = __webpack_require__(10).Function;
+
+/***/ },
+/* 499 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(141);
@@ -57691,10 +57768,9 @@ __webpack_require__(355);
 module.exports = __webpack_require__(10).Map;
 
 /***/ },
-/* 499 */
+/* 500 */
 /***/ function(module, exports, __webpack_require__) {
 
-__webpack_require__(551);
 __webpack_require__(552);
 __webpack_require__(553);
 __webpack_require__(554);
@@ -57711,16 +57787,16 @@ __webpack_require__(564);
 __webpack_require__(565);
 __webpack_require__(566);
 __webpack_require__(567);
+__webpack_require__(568);
 module.exports = __webpack_require__(10).Math;
 
 /***/ },
-/* 500 */
+/* 501 */
 /***/ function(module, exports, __webpack_require__) {
 
-__webpack_require__(568);
-__webpack_require__(578);
-__webpack_require__(579);
 __webpack_require__(569);
+__webpack_require__(579);
+__webpack_require__(580);
 __webpack_require__(570);
 __webpack_require__(571);
 __webpack_require__(572);
@@ -57729,73 +57805,74 @@ __webpack_require__(574);
 __webpack_require__(575);
 __webpack_require__(576);
 __webpack_require__(577);
+__webpack_require__(578);
 module.exports = __webpack_require__(10).Number;
-
-/***/ },
-/* 501 */
-/***/ function(module, exports, __webpack_require__) {
-
-__webpack_require__(362);
-__webpack_require__(581);
-__webpack_require__(583);
-__webpack_require__(582);
-__webpack_require__(585);
-__webpack_require__(587);
-__webpack_require__(592);
-__webpack_require__(586);
-__webpack_require__(584);
-__webpack_require__(594);
-__webpack_require__(593);
-__webpack_require__(589);
-__webpack_require__(590);
-__webpack_require__(588);
-__webpack_require__(580);
-__webpack_require__(591);
-__webpack_require__(595);
-__webpack_require__(141);
-
-module.exports = __webpack_require__(10).Object;
 
 /***/ },
 /* 502 */
 /***/ function(module, exports, __webpack_require__) {
 
+__webpack_require__(362);
+__webpack_require__(582);
+__webpack_require__(584);
+__webpack_require__(583);
+__webpack_require__(586);
+__webpack_require__(588);
+__webpack_require__(593);
+__webpack_require__(587);
+__webpack_require__(585);
+__webpack_require__(595);
+__webpack_require__(594);
+__webpack_require__(590);
+__webpack_require__(591);
+__webpack_require__(589);
+__webpack_require__(581);
+__webpack_require__(592);
 __webpack_require__(596);
-module.exports = __webpack_require__(10).parseFloat;
+__webpack_require__(141);
+
+module.exports = __webpack_require__(10).Object;
 
 /***/ },
 /* 503 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(597);
-module.exports = __webpack_require__(10).parseInt;
+module.exports = __webpack_require__(10).parseFloat;
 
 /***/ },
 /* 504 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(598);
-__webpack_require__(599);
-__webpack_require__(600);
-__webpack_require__(601);
-__webpack_require__(602);
-__webpack_require__(605);
-__webpack_require__(603);
-__webpack_require__(604);
-__webpack_require__(606);
-__webpack_require__(607);
-__webpack_require__(608);
-__webpack_require__(609);
-__webpack_require__(611);
-__webpack_require__(610);
-module.exports = __webpack_require__(10).Reflect;
+module.exports = __webpack_require__(10).parseInt;
 
 /***/ },
 /* 505 */
 /***/ function(module, exports, __webpack_require__) {
 
+__webpack_require__(599);
+__webpack_require__(600);
+__webpack_require__(601);
+__webpack_require__(602);
+__webpack_require__(603);
+__webpack_require__(606);
+__webpack_require__(604);
+__webpack_require__(605);
+__webpack_require__(607);
+__webpack_require__(608);
+__webpack_require__(609);
+__webpack_require__(610);
 __webpack_require__(612);
+__webpack_require__(611);
+module.exports = __webpack_require__(10).Reflect;
+
+/***/ },
+/* 506 */
+/***/ function(module, exports, __webpack_require__) {
+
 __webpack_require__(613);
+__webpack_require__(614);
 __webpack_require__(356);
 __webpack_require__(357);
 __webpack_require__(358);
@@ -57804,7 +57881,7 @@ __webpack_require__(360);
 module.exports = __webpack_require__(10).RegExp;
 
 /***/ },
-/* 506 */
+/* 507 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(141);
@@ -57814,31 +57891,31 @@ __webpack_require__(361);
 module.exports = __webpack_require__(10).Set;
 
 /***/ },
-/* 507 */
+/* 508 */
 /***/ function(module, exports, __webpack_require__) {
 
-__webpack_require__(623);
-__webpack_require__(627);
-__webpack_require__(634);
-__webpack_require__(142);
-__webpack_require__(618);
-__webpack_require__(619);
 __webpack_require__(624);
 __webpack_require__(628);
-__webpack_require__(630);
-__webpack_require__(614);
+__webpack_require__(635);
+__webpack_require__(142);
+__webpack_require__(619);
+__webpack_require__(620);
+__webpack_require__(625);
+__webpack_require__(629);
+__webpack_require__(631);
 __webpack_require__(615);
 __webpack_require__(616);
 __webpack_require__(617);
-__webpack_require__(620);
+__webpack_require__(618);
 __webpack_require__(621);
 __webpack_require__(622);
-__webpack_require__(625);
+__webpack_require__(623);
 __webpack_require__(626);
-__webpack_require__(629);
-__webpack_require__(631);
+__webpack_require__(627);
+__webpack_require__(630);
 __webpack_require__(632);
 __webpack_require__(633);
+__webpack_require__(634);
 __webpack_require__(357);
 __webpack_require__(358);
 __webpack_require__(359);
@@ -57846,7 +57923,7 @@ __webpack_require__(360);
 module.exports = __webpack_require__(10).String;
 
 /***/ },
-/* 508 */
+/* 509 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(362);
@@ -57854,23 +57931,23 @@ __webpack_require__(141);
 module.exports = __webpack_require__(10).Symbol;
 
 /***/ },
-/* 509 */
+/* 510 */
 /***/ function(module, exports, __webpack_require__) {
 
-__webpack_require__(636);
 __webpack_require__(637);
-__webpack_require__(639);
 __webpack_require__(638);
-__webpack_require__(641);
 __webpack_require__(640);
+__webpack_require__(639);
 __webpack_require__(642);
+__webpack_require__(641);
 __webpack_require__(643);
 __webpack_require__(644);
+__webpack_require__(645);
 module.exports = __webpack_require__(10).Reflect;
 
 
 /***/ },
-/* 510 */
+/* 511 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57902,7 +57979,7 @@ module.exports = [].copyWithin || function copyWithin(target/*= 0*/, start/*= 0,
 };
 
 /***/ },
-/* 511 */
+/* 512 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57923,7 +58000,7 @@ module.exports = function fill(value /*, start = 0, end = @length */){
 };
 
 /***/ },
-/* 512 */
+/* 513 */
 /***/ function(module, exports, __webpack_require__) {
 
 var forOf = __webpack_require__(135);
@@ -57936,7 +58013,7 @@ module.exports = function(iter, ITERATOR){
 
 
 /***/ },
-/* 513 */
+/* 514 */
 /***/ function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(7)
@@ -57957,18 +58034,18 @@ module.exports = function(original){
 };
 
 /***/ },
-/* 514 */
+/* 515 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(513);
+var speciesConstructor = __webpack_require__(514);
 
 module.exports = function(original, length){
   return new (speciesConstructor(original))(length);
 };
 
 /***/ },
-/* 515 */
+/* 516 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58057,7 +58134,7 @@ module.exports = {
 };
 
 /***/ },
-/* 516 */
+/* 517 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58072,7 +58149,7 @@ module.exports = function(hint){
 };
 
 /***/ },
-/* 517 */
+/* 518 */
 /***/ function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
@@ -58092,7 +58169,7 @@ module.exports = function(it){
 };
 
 /***/ },
-/* 518 */
+/* 519 */
 /***/ function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -58113,7 +58190,7 @@ module.exports = function(fn, args, that){
 };
 
 /***/ },
-/* 519 */
+/* 520 */
 /***/ function(module, exports, __webpack_require__) {
 
 var getKeys   = __webpack_require__(75)
@@ -58128,7 +58205,7 @@ module.exports = function(object, el){
 };
 
 /***/ },
-/* 520 */
+/* 521 */
 /***/ function(module, exports, __webpack_require__) {
 
 // all object keys, includes non-enumerable and symbols
@@ -58143,7 +58220,7 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it){
 };
 
 /***/ },
-/* 521 */
+/* 522 */
 /***/ function(module, exports) {
 
 // 7.2.9 SameValue(x, y)
@@ -58152,7 +58229,7 @@ module.exports = Object.is || function is(x, y){
 };
 
 /***/ },
-/* 522 */
+/* 523 */
 /***/ function(module, exports, __webpack_require__) {
 
 var global         = __webpack_require__(11)
@@ -58166,18 +58243,18 @@ module.exports = function(name){
 };
 
 /***/ },
-/* 523 */
+/* 524 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 var $export = __webpack_require__(1);
 
-$export($export.P, 'Array', {copyWithin: __webpack_require__(510)});
+$export($export.P, 'Array', {copyWithin: __webpack_require__(511)});
 
 __webpack_require__(94)('copyWithin');
 
 /***/ },
-/* 524 */
+/* 525 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58193,18 +58270,18 @@ $export($export.P + $export.F * !__webpack_require__(29)([].every, true), 'Array
 });
 
 /***/ },
-/* 525 */
+/* 526 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 var $export = __webpack_require__(1);
 
-$export($export.P, 'Array', {fill: __webpack_require__(511)});
+$export($export.P, 'Array', {fill: __webpack_require__(512)});
 
 __webpack_require__(94)('fill');
 
 /***/ },
-/* 526 */
+/* 527 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58220,7 +58297,7 @@ $export($export.P + $export.F * !__webpack_require__(29)([].filter, true), 'Arra
 });
 
 /***/ },
-/* 527 */
+/* 528 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58240,7 +58317,7 @@ $export($export.P + $export.F * forced, 'Array', {
 __webpack_require__(94)(KEY);
 
 /***/ },
-/* 528 */
+/* 529 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58260,7 +58337,7 @@ $export($export.P + $export.F * forced, 'Array', {
 __webpack_require__(94)(KEY);
 
 /***/ },
-/* 529 */
+/* 530 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58277,7 +58354,7 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 });
 
 /***/ },
-/* 530 */
+/* 531 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58321,7 +58398,7 @@ $export($export.S + $export.F * !__webpack_require__(341)(function(iter){ Array.
 
 
 /***/ },
-/* 531 */
+/* 532 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58342,7 +58419,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(29)($nati
 });
 
 /***/ },
-/* 532 */
+/* 533 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
@@ -58351,7 +58428,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Array', {isArray: __webpack_require__(208)});
 
 /***/ },
-/* 533 */
+/* 534 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58369,7 +58446,7 @@ $export($export.P + $export.F * (__webpack_require__(95) != Object || !__webpack
 });
 
 /***/ },
-/* 534 */
+/* 535 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58397,7 +58474,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(29)($nati
 });
 
 /***/ },
-/* 535 */
+/* 536 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58413,7 +58490,7 @@ $export($export.P + $export.F * !__webpack_require__(29)([].map, true), 'Array',
 });
 
 /***/ },
-/* 536 */
+/* 537 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58438,7 +58515,7 @@ $export($export.S + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 537 */
+/* 538 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58454,7 +58531,7 @@ $export($export.P + $export.F * !__webpack_require__(29)([].reduceRight, true), 
 });
 
 /***/ },
-/* 538 */
+/* 539 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58470,7 +58547,7 @@ $export($export.P + $export.F * !__webpack_require__(29)([].reduce, true), 'Arra
 });
 
 /***/ },
-/* 539 */
+/* 540 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58504,7 +58581,7 @@ $export($export.P + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 540 */
+/* 541 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58520,7 +58597,7 @@ $export($export.P + $export.F * !__webpack_require__(29)([].some, true), 'Array'
 });
 
 /***/ },
-/* 541 */
+/* 542 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58549,13 +58626,13 @@ $export($export.P + $export.F * (fails(function(){
 });
 
 /***/ },
-/* 542 */
+/* 543 */
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(216)('Array');
 
 /***/ },
-/* 543 */
+/* 544 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
@@ -58564,7 +58641,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Date', {now: function(){ return new Date().getTime(); }});
 
 /***/ },
-/* 544 */
+/* 545 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58598,7 +58675,7 @@ $export($export.P + $export.F * (fails(function(){
 });
 
 /***/ },
-/* 545 */
+/* 546 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58618,16 +58695,16 @@ $export($export.P + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 546 */
+/* 547 */
 /***/ function(module, exports, __webpack_require__) {
 
 var TO_PRIMITIVE = __webpack_require__(8)('toPrimitive')
   , proto        = Date.prototype;
 
-if(!(TO_PRIMITIVE in proto))__webpack_require__(46)(proto, TO_PRIMITIVE, __webpack_require__(516));
+if(!(TO_PRIMITIVE in proto))__webpack_require__(46)(proto, TO_PRIMITIVE, __webpack_require__(517));
 
 /***/ },
-/* 547 */
+/* 548 */
 /***/ function(module, exports, __webpack_require__) {
 
 var DateProto    = Date.prototype
@@ -58643,7 +58720,7 @@ if(new Date(NaN) + '' != INVALID_DATE){
 }
 
 /***/ },
-/* 548 */
+/* 549 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
@@ -58652,7 +58729,7 @@ var $export = __webpack_require__(1);
 $export($export.P, 'Function', {bind: __webpack_require__(330)});
 
 /***/ },
-/* 549 */
+/* 550 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58671,7 +58748,7 @@ if(!(HAS_INSTANCE in FunctionProto))__webpack_require__(15).f(FunctionProto, HAS
 }});
 
 /***/ },
-/* 550 */
+/* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
 var dP         = __webpack_require__(15).f
@@ -58701,7 +58778,7 @@ NAME in FProto || __webpack_require__(17) && dP(FProto, NAME, {
 });
 
 /***/ },
-/* 551 */
+/* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.3 Math.acosh(x)
@@ -58724,7 +58801,7 @@ $export($export.S + $export.F * !($acosh
 });
 
 /***/ },
-/* 552 */
+/* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.5 Math.asinh(x)
@@ -58739,7 +58816,7 @@ function asinh(x){
 $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', {asinh: asinh});
 
 /***/ },
-/* 553 */
+/* 554 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.7 Math.atanh(x)
@@ -58754,7 +58831,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 });
 
 /***/ },
-/* 554 */
+/* 555 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.9 Math.cbrt(x)
@@ -58768,7 +58845,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 555 */
+/* 556 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.11 Math.clz32(x)
@@ -58781,7 +58858,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 556 */
+/* 557 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.12 Math.cosh(x)
@@ -58795,7 +58872,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 557 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.14 Math.expm1(x)
@@ -58805,7 +58882,7 @@ var $export = __webpack_require__(1)
 $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', {expm1: $expm1});
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
@@ -58836,7 +58913,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
@@ -58866,7 +58943,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 560 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.18 Math.imul(x, y)
@@ -58888,7 +58965,7 @@ $export($export.S + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 561 */
+/* 562 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.21 Math.log10(x)
@@ -58901,7 +58978,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 562 */
+/* 563 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.20 Math.log1p(x)
@@ -58910,7 +58987,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Math', {log1p: __webpack_require__(343)});
 
 /***/ },
-/* 563 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.22 Math.log2(x)
@@ -58923,7 +59000,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 564 */
+/* 565 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.28 Math.sign(x)
@@ -58932,7 +59009,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Math', {sign: __webpack_require__(213)});
 
 /***/ },
-/* 565 */
+/* 566 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.30 Math.sinh(x)
@@ -58952,7 +59029,7 @@ $export($export.S + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 566 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.33 Math.tanh(x)
@@ -58969,7 +59046,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 567 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.2.2.34 Math.trunc(x)
@@ -58982,7 +59059,7 @@ $export($export.S, 'Math', {
 });
 
 /***/ },
-/* 568 */
+/* 569 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59057,7 +59134,7 @@ if(!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')){
 }
 
 /***/ },
-/* 569 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.1 Number.EPSILON
@@ -59066,7 +59143,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Number', {EPSILON: Math.pow(2, -52)});
 
 /***/ },
-/* 570 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.2 Number.isFinite(number)
@@ -59080,7 +59157,7 @@ $export($export.S, 'Number', {
 });
 
 /***/ },
-/* 571 */
+/* 572 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
@@ -59089,7 +59166,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Number', {isInteger: __webpack_require__(338)});
 
 /***/ },
-/* 572 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.4 Number.isNaN(number)
@@ -59102,7 +59179,7 @@ $export($export.S, 'Number', {
 });
 
 /***/ },
-/* 573 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.5 Number.isSafeInteger(number)
@@ -59117,7 +59194,7 @@ $export($export.S, 'Number', {
 });
 
 /***/ },
-/* 574 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
@@ -59126,7 +59203,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Number', {MAX_SAFE_INTEGER: 0x1fffffffffffff});
 
 /***/ },
-/* 575 */
+/* 576 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
@@ -59135,7 +59212,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Number', {MIN_SAFE_INTEGER: -0x1fffffffffffff});
 
 /***/ },
-/* 576 */
+/* 577 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export     = __webpack_require__(1)
@@ -59144,7 +59221,7 @@ var $export     = __webpack_require__(1)
 $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', {parseFloat: $parseFloat});
 
 /***/ },
-/* 577 */
+/* 578 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export   = __webpack_require__(1)
@@ -59153,7 +59230,7 @@ var $export   = __webpack_require__(1)
 $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', {parseInt: $parseInt});
 
 /***/ },
-/* 578 */
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59272,7 +59349,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 });
 
 /***/ },
-/* 579 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59296,7 +59373,7 @@ $export($export.P + $export.F * ($fails(function(){
 });
 
 /***/ },
-/* 580 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
@@ -59305,7 +59382,7 @@ var $export = __webpack_require__(1);
 $export($export.S + $export.F, 'Object', {assign: __webpack_require__(344)});
 
 /***/ },
-/* 581 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(1)
@@ -59313,7 +59390,7 @@ var $export = __webpack_require__(1)
 $export($export.S, 'Object', {create: __webpack_require__(74)});
 
 /***/ },
-/* 582 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(1);
@@ -59321,7 +59398,7 @@ var $export = __webpack_require__(1);
 $export($export.S + $export.F * !__webpack_require__(17), 'Object', {defineProperties: __webpack_require__(345)});
 
 /***/ },
-/* 583 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(1);
@@ -59329,7 +59406,7 @@ var $export = __webpack_require__(1);
 $export($export.S + $export.F * !__webpack_require__(17), 'Object', {defineProperty: __webpack_require__(15).f});
 
 /***/ },
-/* 584 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
@@ -59343,7 +59420,7 @@ __webpack_require__(37)('freeze', function($freeze){
 });
 
 /***/ },
-/* 585 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
@@ -59357,7 +59434,7 @@ __webpack_require__(37)('getOwnPropertyDescriptor', function(){
 });
 
 /***/ },
-/* 586 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
@@ -59366,7 +59443,7 @@ __webpack_require__(37)('getOwnPropertyNames', function(){
 });
 
 /***/ },
-/* 587 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
@@ -59380,7 +59457,7 @@ __webpack_require__(37)('getPrototypeOf', function(){
 });
 
 /***/ },
-/* 588 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.11 Object.isExtensible(O)
@@ -59393,7 +59470,7 @@ __webpack_require__(37)('isExtensible', function($isExtensible){
 });
 
 /***/ },
-/* 589 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.12 Object.isFrozen(O)
@@ -59406,7 +59483,7 @@ __webpack_require__(37)('isFrozen', function($isFrozen){
 });
 
 /***/ },
-/* 590 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.13 Object.isSealed(O)
@@ -59419,15 +59496,15 @@ __webpack_require__(37)('isSealed', function($isSealed){
 });
 
 /***/ },
-/* 591 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.3.10 Object.is(value1, value2)
 var $export = __webpack_require__(1);
-$export($export.S, 'Object', {is: __webpack_require__(521)});
+$export($export.S, 'Object', {is: __webpack_require__(522)});
 
 /***/ },
-/* 592 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
@@ -59441,7 +59518,7 @@ __webpack_require__(37)('keys', function(){
 });
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.15 Object.preventExtensions(O)
@@ -59455,7 +59532,7 @@ __webpack_require__(37)('preventExtensions', function($preventExtensions){
 });
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.2.17 Object.seal(O)
@@ -59469,7 +59546,7 @@ __webpack_require__(37)('seal', function($seal){
 });
 
 /***/ },
-/* 595 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
@@ -59477,7 +59554,7 @@ var $export = __webpack_require__(1);
 $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(215).set});
 
 /***/ },
-/* 596 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export     = __webpack_require__(1)
@@ -59486,7 +59563,7 @@ var $export     = __webpack_require__(1)
 $export($export.G + $export.F * (parseFloat != $parseFloat), {parseFloat: $parseFloat});
 
 /***/ },
-/* 597 */
+/* 598 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export   = __webpack_require__(1)
@@ -59495,7 +59572,7 @@ var $export   = __webpack_require__(1)
 $export($export.G + $export.F * (parseInt != $parseInt), {parseInt: $parseInt});
 
 /***/ },
-/* 598 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
@@ -59516,7 +59593,7 @@ $export($export.S + $export.F * !__webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 599 */
+/* 600 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
@@ -59568,7 +59645,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 });
 
 /***/ },
-/* 600 */
+/* 601 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
@@ -59595,7 +59672,7 @@ $export($export.S + $export.F * __webpack_require__(6)(function(){
 });
 
 /***/ },
-/* 601 */
+/* 602 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
@@ -59611,7 +59688,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 602 */
+/* 603 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59643,7 +59720,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 603 */
+/* 604 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
@@ -59658,7 +59735,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 604 */
+/* 605 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.8 Reflect.getPrototypeOf(target)
@@ -59673,7 +59750,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 605 */
+/* 606 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
@@ -59699,7 +59776,7 @@ function get(target, propertyKey/*, receiver*/){
 $export($export.S, 'Reflect', {get: get});
 
 /***/ },
-/* 606 */
+/* 607 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.9 Reflect.has(target, propertyKey)
@@ -59712,7 +59789,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 607 */
+/* 608 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.10 Reflect.isExtensible(target)
@@ -59728,16 +59805,16 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 608 */
+/* 609 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.11 Reflect.ownKeys(target)
 var $export = __webpack_require__(1);
 
-$export($export.S, 'Reflect', {ownKeys: __webpack_require__(520)});
+$export($export.S, 'Reflect', {ownKeys: __webpack_require__(521)});
 
 /***/ },
-/* 609 */
+/* 610 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.12 Reflect.preventExtensions(target)
@@ -59758,7 +59835,7 @@ $export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 610 */
+/* 611 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
@@ -59778,7 +59855,7 @@ if(setProto)$export($export.S, 'Reflect', {
 });
 
 /***/ },
-/* 611 */
+/* 612 */
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
@@ -59814,7 +59891,7 @@ function set(target, propertyKey, V/*, receiver*/){
 $export($export.S, 'Reflect', {set: set});
 
 /***/ },
-/* 612 */
+/* 613 */
 /***/ function(module, exports, __webpack_require__) {
 
 var global            = __webpack_require__(11)
@@ -59862,7 +59939,7 @@ if(__webpack_require__(17) && (!CORRECT_NEW || __webpack_require__(6)(function()
 __webpack_require__(216)('RegExp');
 
 /***/ },
-/* 613 */
+/* 614 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59893,7 +59970,7 @@ if(__webpack_require__(6)(function(){ return $toString.call({source: 'a', flags:
 }
 
 /***/ },
-/* 614 */
+/* 615 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59906,7 +59983,7 @@ __webpack_require__(21)('anchor', function(createHTML){
 });
 
 /***/ },
-/* 615 */
+/* 616 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59919,7 +59996,7 @@ __webpack_require__(21)('big', function(createHTML){
 });
 
 /***/ },
-/* 616 */
+/* 617 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59932,7 +60009,7 @@ __webpack_require__(21)('blink', function(createHTML){
 });
 
 /***/ },
-/* 617 */
+/* 618 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59945,7 +60022,7 @@ __webpack_require__(21)('bold', function(createHTML){
 });
 
 /***/ },
-/* 618 */
+/* 619 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59960,7 +60037,7 @@ $export($export.P, 'String', {
 });
 
 /***/ },
-/* 619 */
+/* 620 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59986,7 +60063,7 @@ $export($export.P + $export.F * __webpack_require__(205)(ENDS_WITH), 'String', {
 });
 
 /***/ },
-/* 620 */
+/* 621 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59999,7 +60076,7 @@ __webpack_require__(21)('fixed', function(createHTML){
 });
 
 /***/ },
-/* 621 */
+/* 622 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60012,7 +60089,7 @@ __webpack_require__(21)('fontcolor', function(createHTML){
 });
 
 /***/ },
-/* 622 */
+/* 623 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60025,7 +60102,7 @@ __webpack_require__(21)('fontsize', function(createHTML){
 });
 
 /***/ },
-/* 623 */
+/* 624 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export        = __webpack_require__(1)
@@ -60053,7 +60130,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 });
 
 /***/ },
-/* 624 */
+/* 625 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60071,7 +60148,7 @@ $export($export.P + $export.F * __webpack_require__(205)(INCLUDES), 'String', {
 });
 
 /***/ },
-/* 625 */
+/* 626 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60084,7 +60161,7 @@ __webpack_require__(21)('italics', function(createHTML){
 });
 
 /***/ },
-/* 626 */
+/* 627 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60097,7 +60174,7 @@ __webpack_require__(21)('link', function(createHTML){
 });
 
 /***/ },
-/* 627 */
+/* 628 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export   = __webpack_require__(1)
@@ -60120,7 +60197,7 @@ $export($export.S, 'String', {
 });
 
 /***/ },
-/* 628 */
+/* 629 */
 /***/ function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(1);
@@ -60131,7 +60208,7 @@ $export($export.P, 'String', {
 });
 
 /***/ },
-/* 629 */
+/* 630 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60144,7 +60221,7 @@ __webpack_require__(21)('small', function(createHTML){
 });
 
 /***/ },
-/* 630 */
+/* 631 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60168,7 +60245,7 @@ $export($export.P + $export.F * __webpack_require__(205)(STARTS_WITH), 'String',
 });
 
 /***/ },
-/* 631 */
+/* 632 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60181,7 +60258,7 @@ __webpack_require__(21)('strike', function(createHTML){
 });
 
 /***/ },
-/* 632 */
+/* 633 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60194,7 +60271,7 @@ __webpack_require__(21)('sub', function(createHTML){
 });
 
 /***/ },
-/* 633 */
+/* 634 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60207,7 +60284,7 @@ __webpack_require__(21)('sup', function(createHTML){
 });
 
 /***/ },
-/* 634 */
+/* 635 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60220,7 +60297,7 @@ __webpack_require__(140)('trim', function($trim){
 });
 
 /***/ },
-/* 635 */
+/* 636 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60229,7 +60306,7 @@ var each         = __webpack_require__(44)(0)
   , redefine     = __webpack_require__(20)
   , meta         = __webpack_require__(55)
   , assign       = __webpack_require__(344)
-  , weak         = __webpack_require__(515)
+  , weak         = __webpack_require__(516)
   , isObject     = __webpack_require__(7)
   , getWeak      = meta.getWeak
   , isExtensible = Object.isExtensible
@@ -60282,7 +60359,7 @@ if(new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7){
 }
 
 /***/ },
-/* 636 */
+/* 637 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata                  = __webpack_require__(47)
@@ -60295,7 +60372,7 @@ metadata.exp({defineMetadata: function defineMetadata(metadataKey, metadataValue
 }});
 
 /***/ },
-/* 637 */
+/* 638 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata               = __webpack_require__(47)
@@ -60315,11 +60392,11 @@ metadata.exp({deleteMetadata: function deleteMetadata(metadataKey, target /*, ta
 }});
 
 /***/ },
-/* 638 */
+/* 639 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Set                     = __webpack_require__(361)
-  , from                    = __webpack_require__(512)
+  , from                    = __webpack_require__(513)
   , metadata                = __webpack_require__(47)
   , anObject                = __webpack_require__(4)
   , getPrototypeOf          = __webpack_require__(48)
@@ -60339,7 +60416,7 @@ metadata.exp({getMetadataKeys: function getMetadataKeys(target /*, targetKey */)
 }});
 
 /***/ },
-/* 639 */
+/* 640 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata               = __webpack_require__(47)
@@ -60361,7 +60438,7 @@ metadata.exp({getMetadata: function getMetadata(metadataKey, target /*, targetKe
 }});
 
 /***/ },
-/* 640 */
+/* 641 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata                = __webpack_require__(47)
@@ -60374,7 +60451,7 @@ metadata.exp({getOwnMetadataKeys: function getOwnMetadataKeys(target /*, targetK
 }});
 
 /***/ },
-/* 641 */
+/* 642 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata               = __webpack_require__(47)
@@ -60388,7 +60465,7 @@ metadata.exp({getOwnMetadata: function getOwnMetadata(metadataKey, target /*, ta
 }});
 
 /***/ },
-/* 642 */
+/* 643 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata               = __webpack_require__(47)
@@ -60409,7 +60486,7 @@ metadata.exp({hasMetadata: function hasMetadata(metadataKey, target /*, targetKe
 }});
 
 /***/ },
-/* 643 */
+/* 644 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata               = __webpack_require__(47)
@@ -60423,7 +60500,7 @@ metadata.exp({hasOwnMetadata: function hasOwnMetadata(metadataKey, target /*, ta
 }});
 
 /***/ },
-/* 644 */
+/* 645 */
 /***/ function(module, exports, __webpack_require__) {
 
 var metadata                  = __webpack_require__(47)
@@ -60443,9 +60520,9 @@ metadata.exp({metadata: function metadata(metadataKey, metadataValue){
 }});
 
 /***/ },
-/* 645 */,
 /* 646 */,
-/* 647 */
+/* 647 */,
+/* 648 */
 /***/ function(module, exports) {
 
 // shim for using process in browser
@@ -60631,34 +60708,28 @@ process.umask = function() { return 0; };
 
 
 /***/ },
-/* 648 */
+/* 649 */
 /***/ function(module, exports) {
 
 module.exports = "h1 {\n  color: red;\n}\n"
 
 /***/ },
-/* 649 */
+/* 650 */
 /***/ function(module, exports) {
 
 module.exports = ".createTask {\n  margin-bottom: 20px;\n  border: 1px solid #81ccbd;\n  border-radius: 10px;\n  background-color: white;\n}\n.createTask__header {\n  padding: 10px 15px 5px;\n  font-size: 1.2em;\n  color: green;\n  border-bottom: 1px solid black;\n}\n.createTask__form {\n  padding: 10px 0;\n}\n"
 
 /***/ },
-/* 650 */
-/***/ function(module, exports) {
-
-module.exports = ""
-
-/***/ },
 /* 651 */
 /***/ function(module, exports) {
 
-module.exports = ".headerWrap {\n  min-height: 80px;\n  background-color: #16a085;\n}\n.header {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n.logo {\n  line-height: 80px;\n  font-size: 32px;\n  text-transform: uppercase;\n}\n.logo a {\n  color: white;\n  text-decoration: none;\n}\n.logo a:hover {\n  color: #d5f6ff;\n}\n.headerMenu {\n  flex-grow: 1;\n}\n.headerMenu__ul {\n  float: right;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  font-size: 0;\n}\n.headerMenu__li {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 80px;\n}\n.headerMenu__li a {\n  display: block;\n  padding: 0 20px;\n  font-size: 1.2em;\n  color: white;\n  text-transform: uppercase;\n  text-decoration: none;\n  outline: none;\n  transition: background-color 0.3s, color 0.3s;\n}\n.headerMenu__li a:hover,\n.headerMenu__li a:focus {\n  background-color: #2e8271;\n}\n.headerMenu__li a.active {\n  color: #fff;\n  background-color: #2e8271;\n}\n.mainNav {\n  display: flex;\n  flex-wrap: wrap;\n  background-color: #f5f5f5;\n}\n.mainNav__item {\n  flex-grow: 1;\n  text-align: center;\n}\n.mainNav__item a {\n  display: block;\n  padding: 10px;\n  font-size: 1.2em;\n  color: #252525;\n  letter-spacing: 1px;\n  text-decoration: none;\n  transition: background-color 0.3s;\n  outline: none;\n}\n.mainNav__item a:hover,\n.mainNav__item a:focus {\n  color: #fff;\n  background-color: #16a085;\n}\n.mainNav__item a.active {\n  color: #fff;\n  background-color: #16a085;\n}\n"
+module.exports = ""
 
 /***/ },
 /* 652 */
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".headerWrap {\n  min-height: 80px;\n  background-color: #16a085;\n}\n.header {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n.logo {\n  line-height: 80px;\n  font-size: 32px;\n  text-transform: uppercase;\n}\n.logo a {\n  color: white;\n  text-decoration: none;\n}\n.logo a:hover {\n  color: #d5f6ff;\n}\n.headerMenu {\n  flex-grow: 1;\n}\n.headerMenu__ul {\n  float: right;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  font-size: 0;\n}\n.headerMenu__li {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 80px;\n}\n.headerMenu__li a {\n  display: block;\n  padding: 0 20px;\n  font-size: 1.2em;\n  color: white;\n  text-transform: uppercase;\n  text-decoration: none;\n  outline: none;\n  transition: background-color 0.3s, color 0.3s;\n}\n.headerMenu__li a:hover,\n.headerMenu__li a:focus {\n  background-color: #2e8271;\n}\n.headerMenu__li a.active {\n  color: #fff;\n  background-color: #2e8271;\n}\n.mainNav {\n  display: flex;\n  flex-wrap: wrap;\n  background-color: #f5f5f5;\n}\n.mainNav__item {\n  flex-grow: 1;\n  text-align: center;\n}\n.mainNav__item a {\n  display: block;\n  padding: 10px;\n  font-size: 1.2em;\n  color: #252525;\n  letter-spacing: 1px;\n  text-decoration: none;\n  transition: background-color 0.3s;\n  outline: none;\n}\n.mainNav__item a:hover,\n.mainNav__item a:focus {\n  color: #fff;\n  background-color: #16a085;\n}\n.mainNav__item a.active {\n  color: #fff;\n  background-color: #16a085;\n}\n"
 
 /***/ },
 /* 653 */
@@ -60670,112 +60741,118 @@ module.exports = ""
 /* 654 */
 /***/ function(module, exports) {
 
-module.exports = ".task {\n  display: flex;\n  flex-wrap: nowrap;\n  margin-bottom: 20px;\n  min-width: 100%;\n  background-color: #ffffff;\n  border: 1px solid #81ccbd;\n  border-radius: 10px;\n}\n.task__leftColumn {\n  width: 60%;\n  padding: 0 20px;\n}\n.task__rightColumn {\n  width: 40%;\n  padding: 0 20px;\n}\n.task__header {\n  display: flex;\n  justify-content: space-between;\n  padding: 10px 0px 5px;\n  border-bottom: 1px solid #c1c1c1;\n}\n.task__teamName a {\n  color: black;\n}\n.task__status {\n  color: #16a085;\n}\n.task__text {\n  padding: 10px 0px;\n}\n.task__info {\n  padding: 5px 0px;\n}\n.task__infoTable {\n  width: 100%;\n}\n.task__infoTable td {\n  padding: 2px;\n  width: 50%;\n  font-size: 0.9em;\n  text-align: center;\n}\n.task__infoTable td:first-child {\n  font-weight: bold;\n  color: #9e9e9e;\n}\n.task__actions {\n  padding: 0px 0px 10px;\n}\n.task__btn {\n  display: block;\n  width: 100%;\n  box-sizing: border-box;\n  padding: 5px 10px;\n  font-size: 1.1em;\n  text-align: center;\n  color: #ffffff;\n  background-color: #5eb3a3;\n  border: 1px solid #fff;\n  outline: none;\n  transition: background-color 0.3s;\n}\n.task__btn:hover {\n  background-color: #19b698;\n}\n.task__btn:active {\n  background-color: #16a085;\n}\n.task__btn:focus {\n  border: 1px solid #888888;\n}\n"
+module.exports = ""
 
 /***/ },
 /* 655 */
 /***/ function(module, exports) {
 
-module.exports = ".teamCard {\n  margin-bottom: 30px;\n  background-color: white;\n}\n.teamCard__header {\n  background-color: #5eb3a3;\n}\n.teamCard__name a {\n  display: block;\n  padding: 10px 15px;\n  font-size: 1.4em;\n  font-weight: bold;\n  text-align: center;\n  color: #fff;\n}\n.teamCard__body {\n  padding: 15px;\n  border-left: 1px solid #d2d2d2;\n  border-right: 1px solid #d2d2d2;\n}\n.teamCard__descr {\n  margin-bottom: 15px;\n  font-size: 0.9em;\n  text-align: justify;\n}\n.teamCard__members .memberLink {\n  display: inline-block;\n  margin-right: 10px;\n}\n.teamCard__members .memberPhoto {\n  width: 32px;\n  height: 32px;\n  vertical-align: middle;\n}\n.teamCard__members .moreMembers {\n  display: inline-block;\n  color: #86a586;\n  border-bottom: 1px solid #86a586;\n}\n.teamCard__footer {\n  padding: 15px;\n  border: 1px solid #d2d2d2;\n  border-top: 1px solid #efefef;\n}\n.teamCard__actions {\n  text-align: center;\n}\n.teamCard__btn {\n  display: inline-block;\n  min-width: 160px;\n  box-sizing: border-box;\n  padding: 5px 10px;\n  font-size: 1.1em;\n  text-align: center;\n  color: #ffffff;\n  background-color: #5eb3a3;\n  border: 1px solid #fff;\n  outline: none;\n  transition: background-color 0.3s;\n}\n.teamCard__btn:hover {\n  background-color: #19b698;\n}\n.teamCard__btn:active {\n  background-color: #16a085;\n}\n.teamCard__btn:focus {\n  border: 1px solid #888888;\n}\n"
+module.exports = ".taskWrap {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.4);\n}\n.task {\n  position: relative;\n  margin: 0 auto;\n  max-width: 400px;\n  min-width: 320px;\n  background-color: #fff;\n  border: 1px solid #c1c1c1;\n}\n.task__close {\n  display: block;\n  position: absolute;\n  top: -20px;\n  right: -20px;\n  width: 40px;\n  height: 40px;\n  font-size: 0;\n  background-color: #fff;\n  border: 1px solid #de4848;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: transform 0.2s;\n}\n.task__close:before,\n.task__close:after {\n  content: '';\n  position: absolute;\n  left: 9px;\n  top: 18px;\n  width: 20px;\n  height: 1px;\n  background-color: #de4848;\n}\n.task__close:before {\n  transform: rotate(45deg);\n}\n.task__close:after {\n  transform: rotate(-45deg);\n}\n.task__close:hover {\n  transform: scale(1.2);\n}\n.task__team {\n  padding: 10px 20px;\n  text-transform: uppercase;\n  border-bottom: 1px solid #dedede;\n}\n.task__text {\n  padding: 10px 20px;\n  font-size: 1.2em;\n  text-align: justify;\n}\n.task__status {\n  padding: 10px 20px;\n}\n.task__options {\n  border-top: 1px solid #dedede;\n  border-bottom: 1px solid #dedede;\n}\n.task__options .option {\n  display: flex;\n  padding: 5px 0;\n  color: #2c5d4b;\n}\n.task__options .option__name,\n.task__options .option__value {\n  flex-grow: 1;\n  flex-basis: 0;\n  text-align: center;\n  text-transform: uppercase;\n}\n.task__options .option--inline {\n  display: block;\n  color: #1f1f1f;\n  text-transform: uppercase;\n  text-align: center;\n  border-top: 1px solid #dedede;\n}\n.task__actions {\n  padding: 15px 10px;\n  text-align: center;\n}\n.task__actions .action {\n  display: inline-block;\n  margin-right: 25px;\n  min-width: 120px;\n  box-sizing: border-box;\n  padding: 5px 10px;\n  font-size: 1.1em;\n  text-align: center;\n  color: #ffffff;\n  background-color: #5eb3a3;\n  border: 1px solid #fff;\n  outline: none;\n  transition: background-color 0.3s;\n}\n.task__actions .action:hover {\n  background-color: #19b698;\n}\n.task__actions .action:active {\n  background-color: #16a085;\n}\n.task__actions .action:focus {\n  border: 1px solid #888888;\n}\n.task__actions .action:last-child {\n  margin-right: 0;\n}\n"
 
 /***/ },
 /* 656 */
 /***/ function(module, exports) {
 
-module.exports = ".teamTodo .panel {\n  display: flex;\n  flex-direction: row;\n  border: 1px solid #d2d2d2;\n  border-radius: 0;\n  box-shadow: none;\n}\n.teamTodo .panel__item {\n  display: block;\n  padding: 10px;\n  flex-grow: 1;\n  text-align: center;\n  text-decoration: none;\n  cursor: pointer;\n}\n.teamTodo .panel__item:hover {\n  background-color: #e6e6e6;\n}\n.teamTodo .panel__item.active {\n  background-color: #e6e6e6;\n}\n.teamTodo .panel__count {\n  color: #a9a9a9;\n}\n.teamMenu__imageWrap {\n  position: relative;\n  background-color: #fff;\n  min-height: 200px;\n  border: 1px solid #d2d2d2;\n}\n.teamMenu__image img {\n  width: 100%;\n  height: auto;\n}\n.teamMenu__name {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  padding: 15px;\n  font-size: 1.2em;\n  text-transform: uppercase;\n  color: #fff;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.teamMenu__actions {\n  padding: 15px;\n  text-align: center;\n  background-color: #fff;\n  border: 1px solid #d2d2d2;\n  border-top: none;\n  border-bottom: 1px solid #d2d2d2;\n}\n.teamMenu__action {\n  display: inline-block;\n  margin-bottom: 10px;\n  padding: 5px 10px;\n  background-color: #e8e8e8;\n  color: #656565;\n  text-decoration: none;\n}\n.teamMenu__action:hover {\n  color: #131313;\n}\n.teamMenu__action:last-child {\n  margin-bottom: 0px;\n}\n.teamMenu__sections {\n  background-color: #fff;\n  border: 1px solid #d2d2d2;\n  border-top: none;\n}\n.teamMenu__section {\n  display: block;\n  padding: 10px 25px;\n  color: #656565;\n  text-decoration: none;\n}\n.teamMenu__section:hover {\n  background-color: #bde8e0;\n  color: #131313;\n}\n.teamMenu__section.active {\n  background-color: #bde8e0;\n  color: #131313;\n}\n.taskList--team .taskList__header > div {\n  padding: 10px 20px;\n  font-size: 1em;\n}\n.taskList--team .task > div {\n  padding: 10px 20px;\n}\n.teamMembers .sectionBlock__header {\n  font-size: 1.2em;\n  padding: 10px 20px;\n}\n.teamMembers .sectionBlock__body {\n  padding: 10px 20px;\n}\n"
+module.exports = ".teamCard {\n  margin-bottom: 30px;\n  background-color: white;\n}\n.teamCard__header {\n  background-color: #5eb3a3;\n}\n.teamCard__name a {\n  display: block;\n  padding: 10px 15px;\n  font-size: 1.4em;\n  font-weight: bold;\n  text-align: center;\n  color: #fff;\n}\n.teamCard__body {\n  padding: 15px;\n  border-left: 1px solid #d2d2d2;\n  border-right: 1px solid #d2d2d2;\n}\n.teamCard__descr {\n  margin-bottom: 15px;\n  font-size: 0.9em;\n  text-align: justify;\n}\n.teamCard__members .memberLink {\n  display: inline-block;\n  margin-right: 10px;\n}\n.teamCard__members .memberPhoto {\n  width: 32px;\n  height: 32px;\n  vertical-align: middle;\n}\n.teamCard__members .moreMembers {\n  display: inline-block;\n  color: #86a586;\n  border-bottom: 1px solid #86a586;\n}\n.teamCard__footer {\n  padding: 15px;\n  border: 1px solid #d2d2d2;\n  border-top: 1px solid #efefef;\n}\n.teamCard__actions {\n  text-align: center;\n}\n.teamCard__btn {\n  display: inline-block;\n  min-width: 160px;\n  box-sizing: border-box;\n  padding: 5px 10px;\n  font-size: 1.1em;\n  text-align: center;\n  color: #ffffff;\n  background-color: #5eb3a3;\n  border: 1px solid #fff;\n  outline: none;\n  transition: background-color 0.3s;\n}\n.teamCard__btn:hover {\n  background-color: #19b698;\n}\n.teamCard__btn:active {\n  background-color: #16a085;\n}\n.teamCard__btn:focus {\n  border: 1px solid #888888;\n}\n"
 
 /***/ },
 /* 657 */
 /***/ function(module, exports) {
 
-module.exports = ".addGroup {\n  display: inline-block;\n  padding: 10px 20px;\n  background-color: #16a085;\n  color: white;\n  border-radius: 5px;\n}\n.createTeamWrap {\n  margin-bottom: 30px;\n}\n.btnCreateTeam {\n  display: block;\n  padding: 10px 20px;\n  font-size: 1.2em;\n  color: #1c846f;\n  text-align: center;\n  text-decoration: none;\n  background-color: #ffffff;\n  border: 1px solid #d2d2d2;\n  transition: background-color 0.5s;\n}\n.btnCreateTeam:hover {\n  background-color: #5eb3a3;\n  color: #fff;\n  border: 1px solid #fff;\n}\n"
+module.exports = ".teamTodo .panel {\n  display: flex;\n  flex-direction: row;\n  border: 1px solid #d2d2d2;\n  border-radius: 0;\n  box-shadow: none;\n}\n.teamTodo .panel__item {\n  display: block;\n  padding: 10px;\n  flex-grow: 1;\n  text-align: center;\n  text-decoration: none;\n  cursor: pointer;\n}\n.teamTodo .panel__item:hover {\n  background-color: #e6e6e6;\n}\n.teamTodo .panel__item.active {\n  background-color: #e6e6e6;\n}\n.teamTodo .panel__count {\n  color: #a9a9a9;\n}\n.teamMenu__imageWrap {\n  position: relative;\n  background-color: #fff;\n  min-height: 200px;\n  border: 1px solid #d2d2d2;\n}\n.teamMenu__image img {\n  width: 100%;\n  height: auto;\n}\n.teamMenu__name {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  padding: 15px;\n  font-size: 1.2em;\n  text-transform: uppercase;\n  color: #fff;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.teamMenu__actions {\n  padding: 15px;\n  text-align: center;\n  background-color: #fff;\n  border: 1px solid #d2d2d2;\n  border-top: none;\n  border-bottom: 1px solid #d2d2d2;\n}\n.teamMenu__action {\n  display: inline-block;\n  margin-bottom: 10px;\n  padding: 5px 10px;\n  background-color: #e8e8e8;\n  color: #656565;\n  text-decoration: none;\n}\n.teamMenu__action:hover {\n  color: #131313;\n}\n.teamMenu__action:last-child {\n  margin-bottom: 0px;\n}\n.teamMenu__sections {\n  background-color: #fff;\n  border: 1px solid #d2d2d2;\n  border-top: none;\n}\n.teamMenu__section {\n  display: block;\n  padding: 10px 25px;\n  color: #656565;\n  text-decoration: none;\n}\n.teamMenu__section:hover {\n  background-color: #bde8e0;\n  color: #131313;\n}\n.teamMenu__section.active {\n  background-color: #bde8e0;\n  color: #131313;\n}\n.taskList--team .taskList__header > div {\n  padding: 10px 20px;\n  font-size: 1em;\n}\n.taskList--team .task > div {\n  padding: 10px 20px;\n}\n.teamMembers .sectionBlock__header {\n  font-size: 1.2em;\n  padding: 10px 20px;\n}\n.teamMembers .sectionBlock__body {\n  padding: 10px 20px;\n}\n"
 
 /***/ },
 /* 658 */
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".addGroup {\n  display: inline-block;\n  padding: 10px 20px;\n  background-color: #16a085;\n  color: white;\n  border-radius: 5px;\n}\n.createTeamWrap {\n  margin-bottom: 30px;\n}\n.btnCreateTeam {\n  display: block;\n  padding: 10px 20px;\n  font-size: 1.2em;\n  color: #1c846f;\n  text-align: center;\n  text-decoration: none;\n  background-color: #ffffff;\n  border: 1px solid #d2d2d2;\n  transition: background-color 0.5s;\n}\n.btnCreateTeam:hover {\n  background-color: #5eb3a3;\n  color: #fff;\n  border: 1px solid #fff;\n}\n"
 
 /***/ },
 /* 659 */
 /***/ function(module, exports) {
 
-module.exports = ".welcome {\n  text-align: center;\n}\n.welcome__header {\n  padding-top: 50px;\n  padding-bottom: 100px;\n}\n.welcome__logo {\n  margin-bottom: 40px;\n  color: #5d9a77;\n  font-size: 5em;\n  font-weight: bold;\n}\n.welcome__logo .prefix {\n  color: #bbbbbb;\n}\n.welcome__words {\n  color: #555555;\n  font-size: 3em;\n  font-weight: bold;\n}\n.welcome__actions {\n  margin-bottom: 40px;\n}\n.welcome__action {\n  display: inline-block;\n  width: 300px;\n  margin-right: 50px;\n  padding: 8px 0;\n  font-size: 2em;\n  font-weight: bold;\n  color: #888888;\n  text-transform: capitalize;\n  text-decoration: none;\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid #c7c7c7;\n  transition: 0.3s;\n}\n.welcome__action:last-child {\n  margin-right: 0;\n}\n.welcome__action:hover {\n  color: #5d9a77;\n  text-decoration: none;\n}\n"
+module.exports = ""
 
 /***/ },
 /* 660 */
 /***/ function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n\n\n"
+module.exports = ".welcome {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  height: 100vh;\n  text-align: center;\n  background: #02AAB0;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(right, #02AAB0, #00CDAC);\n  background: -o-linear-gradient(right, #02AAB0, #00CDAC);\n  background: linear-gradient(to left, #02AAB0, #00CDAC);\n}\n.welcome__logo {\n  color: #fff;\n  font-size: 5em;\n  font-weight: bold;\n}\n.welcome__logo .prefix {\n  color: #eaeaea;\n}\n.welcome__words {\n  color: #fff;\n  font-size: 3em;\n  font-weight: bold;\n}\n.welcome__actions .authBtn {\n  display: block;\n  background-color: #fff;\n  border-radius: 50%;\n  transition: transform 0.4s;\n}\n.welcome__actions .authBtn:hover {\n  transform: scale(1.4);\n}\n.welcome__actions .authBtn.loading {\n  -webkit-animation: spin 2s linear infinite;\n  -moz-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n.welcome__actions .authBtn.loading:hover {\n  transform: none;\n}\n@keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n.welcome__actions .authBtn img {\n  position: relative;\n  top: -2px;\n  width: 100px;\n  height: 100px;\n  vertical-align: middle;\n}\n.welcome__action {\n  display: inline-block;\n  width: 300px;\n  margin-right: 50px;\n  padding: 8px 0;\n  font-size: 2em;\n  font-weight: bold;\n  color: #888888;\n  text-transform: capitalize;\n  text-decoration: none;\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid #c7c7c7;\n  transition: 0.3s;\n}\n.welcome__action:last-child {\n  margin-right: 0;\n}\n.welcome__action:hover {\n  color: black;\n  text-decoration: none;\n}\n"
 
 /***/ },
 /* 661 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"createTask\">\n\t<div class=\"createTask__header\">\n\t\tCreate task\n\t</div>\n\t<form action=\"#\" class=\"createTask__form\">\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"deadline\">deadline</label>\n\t\t\t<input type=\"date\" id=\"deadline\" class=\"deadline__input\">\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"taskText\">task</label>\n\t\t\t<textarea type=\"text\" id=\"taskText\" class=\"taskText__input\" rows=\"3\"></textarea>\n\t\t</div>\n\t\t<button type=\"submit\" class=\"createTask\">create</button>\n\t</form>\n</div>"
+module.exports = "<router-outlet></router-outlet>\n\n\n"
 
 /***/ },
 /* 662 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'feed'\"></app-header>\n<main class=\"main\">\n    <div class=\"container\">\n        <div class=\"taskList\">\n            <div class=\"taskList__header\">\n                <div class=\"task__text\">task</div>\n                <div class=\"task__team\">team</div>\n                <div class=\"task__deadline\">deadline</div>\n                <div class=\"task__points\">points</div>\n                <div class=\"task__status\">status</div>\n                <div class=\"task__actions\">action</div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">do dive dishes</div>\n                <div class=\"task__team\">OneWayUp</div>\n                <div class=\"task__deadline\">15.04.2016</div>\n                <div class=\"task__points\">10</div>\n                <div class=\"task__status\">new</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--takeTask\">take</button>\n                </div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">go for a walk</div>\n                <div class=\"task__team\">Bayern Munich</div>\n                <div class=\"task__deadline\">09.01.2016</div>\n                <div class=\"task__points\">100</div>\n                <div class=\"task__status\">new</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--takeTask\">take</button>\n                </div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">make a pineapple</div>\n                <div class=\"task__team\">Apple</div>\n                <div class=\"task__deadline\">05.04.2016</div>\n                <div class=\"task__points\">1</div>\n                <div class=\"task__status\">new</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--takeTask\">take</button>\n                </div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">win a challenge</div>\n                <div class=\"task__team\">OneWayUp</div>\n                <div class=\"task__deadline\">31.04.2016</div>\n                <div class=\"task__points\">2</div>\n                <div class=\"task__status\">new</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--takeTask\">take</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>"
+module.exports = "<div class=\"createTask\">\n\t<div class=\"createTask__header\">\n\t\tCreate task\n\t</div>\n\t<form action=\"#\" class=\"createTask__form\">\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"deadline\">deadline</label>\n\t\t\t<input type=\"date\" id=\"deadline\" class=\"deadline__input\">\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"taskText\">task</label>\n\t\t\t<textarea type=\"text\" id=\"taskText\" class=\"taskText__input\" rows=\"3\"></textarea>\n\t\t</div>\n\t\t<button type=\"submit\" class=\"createTask\">create</button>\n\t</form>\n</div>"
 
 /***/ },
 /* 663 */
 /***/ function(module, exports) {
 
-module.exports = "<header class=\"headerWrap\">\n\t<div class=\"container\">\n\t\t<div class=\"header\">\n\t\t\t<div class=\"logo\">\n\t\t\t\t<a routerLink=\"/\" class=\"logo__link\">TeamsRate</a>\n\t\t\t</div>\n\t\t\t<div class=\"headerMenu\">\n\t\t\t\t<ul class=\"headerMenu__ul\">\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/search\" class=\"headerMenu__link\" [class.active]=\"menu.search.active\">search</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/settings\" class=\"headerMenu__link\" [class.active]=\"menu.settings.active\">settings</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/exit\" class=\"headerMenu__link\" [class.active]=\"menu.exit.active\">exit</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<nav class=\"mainNav\">\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/feed\" class=\"mainNav__link\" [class.active]=\"menu.feed.active\">feed</a>\n\t\t</div>\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/todo\" class=\"mainNav__link\" [class.active]=\"menu.todos.active\">todo</a>\n\t\t</div>\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/teams\" class=\"mainNav__link\" [class.active]=\"menu.teams.active\">teams</a>\n\t\t</div>\n\t</nav>\n</header>"
+module.exports = "<app-header [activeMenuItem]=\"'feed'\"></app-header>\n<main class=\"main\">\n    <div class=\"container\">\n        <div class=\"taskList\">\n            <div class=\"task\" *ngFor=\"let task of tasks; let i = index\" (click)=\"onTaskSelect(task)\">\n                <div class=\"task__number\">\n                    {{i}}\n                </div>\n                <div class=\"task__text\">\n                    {{task.text}}\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n<app-task *ngIf=\"selectedTask\" [task]=\"selectedTask\" (taskClose)=\"selectedTask = null\"></app-task>"
 
 /***/ },
 /* 664 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'search'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-4\">\n                <div class=\"sectionBlock searchPanel\">\n                    <div class=\"sectionBlock__header\">\n                        Options\n                    </div>\n                    <div class=\"sectionBlock__body\">\n                        <div class=\"form-group\">\n                            <div class=\"radio\">\n                                <label><input type=\"radio\" name=\"tab\" value=\"users\" (click)=\"triggerTab('users')\" checked>users</label>\n                            </div>\n                            <div class=\"radio\">\n                                <label><input type=\"radio\" name=\"tab\" value=\"teams\" (click)=\"triggerTab('teams')\">teams</label>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <label for=\"searchText\">Search</label>\n                            <input type=\"text\" id=\"searchText\" class=\"form-control\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-8\">\n                <div class=\"users\" *ngIf=\"activeTab == 'users'\">\n                    <div class=\"sectionBlock\">\n                        <div class=\"sectionBlock__header\">\n                            Users\n                        </div>\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"usersList list\">\n                                <div class=\"user\" *ngFor=\"let user of users\">\n                                    <div class=\"user__name\">\n                                        <a href=\"#\">{{user.name}} {{user.surname}}</a>\n                                    </div>\n                                    <div class=\"user__age\">19</div>\n                                    <div class=\"user__city\">\n                                        Minsk, Belarus\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"teams\" *ngIf=\"activeTab == 'teams'\">\n                    <div class=\"sectionBlock\">\n                        <div class=\"sectionBlock__header\">\n                            Teams\n                        </div>\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"teamsList list\">\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">OneWayUp</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">StoryTeller</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">Bayern Munich</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n"
+module.exports = "<header class=\"headerWrap\">\n\t<div class=\"container\">\n\t\t<div class=\"header\">\n\t\t\t<div class=\"logo\">\n\t\t\t\t<a routerLink=\"/\" class=\"logo__link\">TeamsRate</a>\n\t\t\t</div>\n\t\t\t<div class=\"headerMenu\">\n\t\t\t\t<ul class=\"headerMenu__ul\">\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/search\" class=\"headerMenu__link\" [class.active]=\"menu.search.active\">search</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/settings\" class=\"headerMenu__link\" [class.active]=\"menu.settings.active\">settings</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"headerMenu__li\">\n\t\t\t\t\t\t<a routerLink=\"/exit\" class=\"headerMenu__link\" [class.active]=\"menu.exit.active\">exit</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<nav class=\"mainNav\">\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/feed\" class=\"mainNav__link\" [class.active]=\"menu.feed.active\">feed</a>\n\t\t</div>\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/todo\" class=\"mainNav__link\" [class.active]=\"menu.todos.active\">todo</a>\n\t\t</div>\n\t\t<div class=\"mainNav__item\">\n\t\t\t<a routerLink=\"/teams\" class=\"mainNav__link\" [class.active]=\"menu.teams.active\">teams</a>\n\t\t</div>\n\t</nav>\n</header>"
 
 /***/ },
 /* 665 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'settings'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <div class=\"sectionBlock bio\">\n                    <div class=\"sectionBlock__header\">\n                        bio\n                    </div>\n                    <form action=\"#\" class=\"sectionBlock__form\">\n                        <div class=\"sectionBlock__body clearfix\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_name\">name</label>\n                                        <input type=\"text\" id=\"user_name\" class=\"form-control\">\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <label for=\"user_surname\">surname</label>\n                                        <input type=\"text\" id=\"user_surname\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_age\">age</label>\n                                        <input type=\"number\" id=\"user_age\" min=0 max=100 class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_country\">country</label>\n                                        <input type=\"text\" id=\"user_country\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_city\">city</label>\n                                        <input type=\"text\" id=\"user_city\" class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"sectionBlock__footer\">\n                            <div class=\"sectionBlock__actions\">\n                                <button type=\"reset\" class=\"sectionBlock__btn\">clear</button>\n                                <button type=\"submit\" class=\"sectionBlock__btn\">confirm</button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n            <div class=\"col-md-6\">\n                <div class=\"sectionBlock contacts\">\n                    <div class=\"sectionBlock__header\">\n                        contacts\n                    </div>\n                    <form action=\"\" class=\"sectionBlock__form\">\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_vk\">vk</label>\n                                        <input type=\"text\" id=\"contact_vk\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_fb\">facebook</label>\n                                        <input type=\"text\" id=\"contact_fb\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_google\">google+</label>\n                                        <input type=\"text\" id=\"contact_google\" class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>    \n                        </div>\n                        <div class=\"sectionBlock__footer\">\n                            <div class=\"sectionBlock__actions\">\n                                <button type=\"reset\" class=\"sectionBlock__btn\">clear</button>\n                                <button type=\"submit\" class=\"sectionBlock__btn\">confirm</button>\n                            </div>\n                        </div>\n                    </form>\n                </div> \n            </div>  \n        </div>      \n    </div>\n</main>\n"
+module.exports = "<app-header [activeMenuItem]=\"'search'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-4\">\n                <div class=\"sectionBlock searchPanel\">\n                    <div class=\"sectionBlock__header\">\n                        Options\n                    </div>\n                    <div class=\"sectionBlock__body\">\n                        <div class=\"form-group\">\n                            <div class=\"radio\">\n                                <label><input type=\"radio\" name=\"tab\" value=\"users\" (click)=\"triggerTab('users')\" checked>users</label>\n                            </div>\n                            <div class=\"radio\">\n                                <label><input type=\"radio\" name=\"tab\" value=\"teams\" (click)=\"triggerTab('teams')\">teams</label>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <label for=\"searchText\">Search</label>\n                            <input type=\"text\" id=\"searchText\" class=\"form-control\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-8\">\n                <div class=\"users\" *ngIf=\"activeTab == 'users'\">\n                    <div class=\"sectionBlock\">\n                        <div class=\"sectionBlock__header\">\n                            Users\n                        </div>\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"usersList list\">\n                                <div class=\"user\" *ngFor=\"let user of users\">\n                                    <div class=\"user__name\">\n                                        <a href=\"#\">{{user.name}} {{user.surname}}</a>\n                                    </div>\n                                    <div class=\"user__age\">19</div>\n                                    <div class=\"user__city\">\n                                        Minsk, Belarus\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"teams\" *ngIf=\"activeTab == 'teams'\">\n                    <div class=\"sectionBlock\">\n                        <div class=\"sectionBlock__header\">\n                            Teams\n                        </div>\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"teamsList list\">\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">OneWayUp</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">StoryTeller</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                                <div class=\"team\">\n                                    <div class=\"team__name\">\n                                        <a href=\"#\">Bayern Munich</a>\n                                    </div>\n                                    <div class=\"team__descr\">\n                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    </div>\n                                    <div class=\"team__members\">\n                                        19\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n"
 
 /***/ },
 /* 666 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"task\">\n\t<div class=\"task__leftColumn\">\n\t\t<div class=\"task__header\">\n\t\t\t<div class=\"task__teamName\">\n\t\t\t\t<a routerLink=\"/team/11\">OneWayUp</a>\n\t\t\t</div>\n\t\t\t<div class=\"task__status\">{{status}}</div>\n\t\t</div>\n\t\t<div class=\"task__text\">\n\t\t\tbuy sweets in the shop\n\t\t</div>\n\t</div>\n\t<div class=\"task__rightColumn\">\n\t\t<div class=\"task__info\">\n\t\t\t<table class=\"task__infoTable\">\n\t\t\t\t<tr>\n\t\t\t\t\t<td>points</td>\n\t\t\t\t\t<td>15</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>deadline</td>\n\t\t\t\t\t<td>17.11.2016</td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t</div>\n\t\t<div class=\"task__actions\">\n\t\t\t<a href=\"#\" class=\"task__btn\">take</a>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<app-header [activeMenuItem]=\"'settings'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <div class=\"sectionBlock bio\">\n                    <div class=\"sectionBlock__header\">\n                        bio\n                    </div>\n                    <form action=\"#\" class=\"sectionBlock__form\">\n                        <div class=\"sectionBlock__body clearfix\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_name\">name</label>\n                                        <input type=\"text\" id=\"user_name\" class=\"form-control\">\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <label for=\"user_surname\">surname</label>\n                                        <input type=\"text\" id=\"user_surname\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_age\">age</label>\n                                        <input type=\"number\" id=\"user_age\" min=0 max=100 class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_country\">country</label>\n                                        <input type=\"text\" id=\"user_country\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"user_city\">city</label>\n                                        <input type=\"text\" id=\"user_city\" class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"sectionBlock__footer\">\n                            <div class=\"sectionBlock__actions\">\n                                <button type=\"reset\" class=\"sectionBlock__btn\">clear</button>\n                                <button type=\"submit\" class=\"sectionBlock__btn\">confirm</button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n            <div class=\"col-md-6\">\n                <div class=\"sectionBlock contacts\">\n                    <div class=\"sectionBlock__header\">\n                        contacts\n                    </div>\n                    <form action=\"\" class=\"sectionBlock__form\">\n                        <div class=\"sectionBlock__body\">\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_vk\">vk</label>\n                                        <input type=\"text\" id=\"contact_vk\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_fb\">facebook</label>\n                                        <input type=\"text\" id=\"contact_fb\" class=\"form-control\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <label for=\"contact_google\">google+</label>\n                                        <input type=\"text\" id=\"contact_google\" class=\"form-control\">\n                                    </div>\n                                </div>\n                            </div>    \n                        </div>\n                        <div class=\"sectionBlock__footer\">\n                            <div class=\"sectionBlock__actions\">\n                                <button type=\"reset\" class=\"sectionBlock__btn\">clear</button>\n                                <button type=\"submit\" class=\"sectionBlock__btn\">confirm</button>\n                            </div>\n                        </div>\n                    </form>\n                </div> \n            </div>  \n        </div>      \n    </div>\n</main>\n"
 
 /***/ },
 /* 667 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"teamCard\">\n\t<div class=\"teamCard__header\">\n\t\t<div class=\"teamCard__name\">\n\t\t\t<a routerLink=\"/team/12\">OneWayUp</a>\n\t\t</div>\n\t</div>\n\t<div class=\"teamCard__body\">\n\t\t<div class=\"teamCard__descr\">\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dignissimos, exercitationem ipsum cupiditate.\n\t\t</div>\n\t\t<div class=\"teamCard__members\">\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t\n\t\t\t<a href=\"#\" class=\"moreMembers\">more</a>\n\t\t</div>\n\t</div>\n\t<div class=\"teamCard__footer\">\n\t\t<div class=\"teamCard__actions\">\n\t\t\t<a routerLink=\"/team/12\" class=\"teamCard__btn\">open</a>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div class=\"taskWrap\">\n\t<div class=\"task\">\n\t\t<button class=\"task__close\" (click)=\"close()\">\n\t\t\tclose\n\t\t</button>\n\t\t<div class=\"task__team\">\n\t\t\t{{task.team}}\n\t\t</div>\n\t\t<div class=\"task__text\">\n\t\t\t{{task.text}}\n\t\t</div>\n\t\t<div class=\"task__options\">\n\t\t\t<div class=\"option\">\n\t\t\t\t<div class=\"option__name\">\n\t\t\t\t\tstatus\n\t\t\t\t</div>\n\t\t\t\t<div class=\"option__value\">\n\t\t\t\t\t{{task.status}}\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"option\">\n\t\t\t\t<div class=\"option__name\">\n\t\t\t\t\tdeadline\n\t\t\t\t</div>\n\t\t\t\t<div class=\"option__value\">\n\t\t\t\t\t{{task.deadline}}\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"option option--inline\">\n\t\t\t\t{{task.points}} points\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"task__actions\">\n\t\t\t<button class=\"action action--take\">take</button>\n\t\t\t<button class=\"action action--done\">done</button>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ },
 /* 668 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'teams'\"></app-header>\n<main>\n    <div class=\"container\">\n\t\t\t<!--\n\t\t\t<div class=\"team\">\n\t\t\t\t<div class=\"team__header\">\n\t\t\t\t\t<div class=\"team__photoWrap\">\n\t\t\t\t\t\t<img src=\"images/profile.jpg\" alt=\"Team Photo\" width=\"200\" height=\"200\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"team__info\">\n\t\t\t\t\t\t<h3>OneWayUp</h3>\n\t\t\t\t\t\t<div class=\"infoLine admin\">\n\t\t\t\t\t\t\tadmin\n\t\t\t\t\t\t\t<a href=\"#\">Volkov German</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"infoLine membersCount\">\n\t\t\t\t\t\t\tsize\n\t\t\t\t\t\t\t<a href=\"#\">3 members</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"team__stats stats\">\n\t\t\t\t\t\t<div class=\"stats__item\">\n\t\t\t\t\t\t\t<div class=\"stats__name\">new</div>\n\t\t\t\t\t\t\t<div class=\"stats__value new\">3</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"stats__item\">\n\t\t\t\t\t\t\t<div class=\"stats__name\">current</div>\n\t\t\t\t\t\t\t<div class=\"stats__value current\">9</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"stats__item\">\n\t\t\t\t\t\t\t<div class=\"stats__name\">done</div>\n\t\t\t\t\t\t\t<div class=\"stats__value done\">15</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"team__body\">\n\t\t\t\t\t<div class=\"panel\">\n\t\t\t\t\t\t<a href=\"#\" class=\"addTask\" (click)=\"createTaskBlock__toogleVisibility()\">add task</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<app-create-task *ngIf=\"createBlockVisible\"></app-create-task>\n\t\t\t\t\t<app-task></app-task>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t-->\n\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t<div class=\"teamMenu\">\n\t\t\t\t\t\t<div class=\"teamMenu__imageWrap\">\n\t\t\t\t\t\t\t<div class=\"teamMenu__image\">\n\t\t\t\t\t\t\t\t<img src=\"images/profile.jpg\" alt=\"Team Photo\" width=\"200\" height=\"200\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"teamMenu__name\">\n\t\t\t\t\t\t\t\tOneWayUp\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"teamMenu__actions\">\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__action\">add task</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"teamMenu__sections\">\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" [class.active]=\"activeTab == 'tasks'\" (click)=\"activateTab('tasks')\">tasks</a>\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" [class.active]=\"activeTab == 'members'\" (click)=\"activateTab('members')\">members</a>\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" (click)=\"activateTab('settings')\">settings</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-9\">\n\t\t\t\t\t<div class=\"teamTodo\" *ngIf=\"activeTab == 'tasks'\">\n\t\t\t\t\t\t<div class=\"teamTodo__panel panel\">\n\t\t\t\t\t\t\t<div class=\"panel__item active\">\n\t\t\t\t\t\t\t\tnew \n\t\t\t\t\t\t\t\t<span class=\"panel__count\">9</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"panel__item\">\n\t\t\t\t\t\t\t\trunning\n\t\t\t\t\t\t\t\t<span class=\"panel__count\">5</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"panel__item\">\n\t\t\t\t\t\t\t\tdone\n\t\t\t\t\t\t\t\t<span class=\"panel__count\">2</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"taskList taskList--team\">\n\t\t\t\t\t\t\t<div class=\"taskList__header\">\n\t\t\t\t\t\t\t\t<div class=\"task__text\">task</div>\n\t\t\t\t\t\t\t\t<div class=\"task__deadline\">deadline</div>\n\t\t\t\t\t\t\t\t<div class=\"task__points\">points</div>\n\t\t\t\t\t\t\t\t<div class=\"task__actions\">action</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"task\">\n\t\t\t\t\t\t\t\t<div class=\"task__text\">\n\t\t\t\t\t\t\t\t\tmake a pineapple\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"task__deadline\">\n\t\t\t\t\t\t\t\t\t05.04.2016\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"task__points\">\n\t\t\t\t\t\t\t\t\t15\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"task__actions\">\n\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"teamMembers\" *ngIf=\"activeTab == 'members'\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t<div class=\"sectionBlock\">\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__header\">\n\t\t\t\t\t\t\t\t\t\tUsers\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__body\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"usersList list\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t<div class=\"sectionBlock\">\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__header\">\n\t\t\t\t\t\t\t\t\t\tAdmins\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__body\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"usersList list\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n    </div>\n</main>\n"
+module.exports = "<div class=\"teamCard\">\n\t<div class=\"teamCard__header\">\n\t\t<div class=\"teamCard__name\">\n\t\t\t<a routerLink=\"/team/12\">OneWayUp</a>\n\t\t</div>\n\t</div>\n\t<div class=\"teamCard__body\">\n\t\t<div class=\"teamCard__descr\">\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dignissimos, exercitationem ipsum cupiditate.\n\t\t</div>\n\t\t<div class=\"teamCard__members\">\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t<a href=\"#\" class=\"memberLink\">\n\t\t\t\t<img src=\"images/user.jpg\" alt=\"Member One\" class=\"memberPhoto\">\n\t\t\t</a>\n\t\t\t\n\t\t\t<a href=\"#\" class=\"moreMembers\">more</a>\n\t\t</div>\n\t</div>\n\t<div class=\"teamCard__footer\">\n\t\t<div class=\"teamCard__actions\">\n\t\t\t<a routerLink=\"/team/12\" class=\"teamCard__btn\">open</a>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ },
 /* 669 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'teams'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"itemsList\">\n            <div class=\"createTeamWrap\">\n                <a class=\"btnCreateTeam\" href=\"#\">create team</a>\n            </div>\n            <div class=\"teamCards\">\n                <div class=\"row\">\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                        <app-team-card></app-team-card>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                        <app-team-card></app-team-card>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"itemsListAfter\">\n            <a href=\"#\" class=\"more\">more...</a>\n        </div>\n    </div>\n</main>\n"
+module.exports = "<app-header [activeMenuItem]=\"'teams'\"></app-header>\n<main>\n    <div class=\"container\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t<div class=\"teamMenu\">\n\t\t\t\t\t\t<div class=\"teamMenu__imageWrap\">\n\t\t\t\t\t\t\t<div class=\"teamMenu__image\">\n\t\t\t\t\t\t\t\t<img src=\"images/profile.jpg\" alt=\"Team Photo\" width=\"200\" height=\"200\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"teamMenu__name\">\n\t\t\t\t\t\t\t\tOneWayUp\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"teamMenu__actions\">\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__action\">add task</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"teamMenu__sections\">\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" [class.active]=\"activeTab == 'tasks'\" (click)=\"activateTab('tasks')\">tasks</a>\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" [class.active]=\"activeTab == 'members'\" (click)=\"activateTab('members')\">members</a>\n\t\t\t\t\t\t\t<a href=\"#\" class=\"teamMenu__section\" (click)=\"activateTab('settings')\">settings</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-9\">\n\t\t\t\t\t<div class=\"teamTodo\" *ngIf=\"activeTab == 'tasks'\">\n\t\t\t\t\t\t<div class=\"teamTodo__panel panel\">\n\t\t\t\t\t\t\t<div class=\"panel__item active\">\n\t\t\t\t\t\t\t\tnew \n\t\t\t\t\t\t\t\t<span class=\"panel__count\">9</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"panel__item\">\n\t\t\t\t\t\t\t\trunning\n\t\t\t\t\t\t\t\t<span class=\"panel__count\">5</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"panel__item\">\n\t\t\t\t\t\t\t\tdone\n\t\t\t\t\t\t\t\t<span class=\"panel__count\">2</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"taskList\">\n\t\t\t\t\t\t\t<div class=\"task\" *ngFor=\"let task of tasks; let i = index\" (click)=\"onTaskSelect(task)\">\n\t\t\t\t\t\t\t\t<div class=\"task__number\">\n\t\t\t\t\t\t\t\t\t{{i}}\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"task__text\">\n\t\t\t\t\t\t\t\t\t{{task.text}}\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"teamMembers\" *ngIf=\"activeTab == 'members'\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t<div class=\"sectionBlock\">\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__header\">\n\t\t\t\t\t\t\t\t\t\tUsers\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__body\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"usersList list\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t<div class=\"sectionBlock\">\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__header\">\n\t\t\t\t\t\t\t\t\t\tAdmins\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"sectionBlock__body\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"usersList list\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"user\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"user__name\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">German Volkov</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n    </div>\n</main>\n"
 
 /***/ },
 /* 670 */
 /***/ function(module, exports) {
 
-module.exports = "<app-header [activeMenuItem]=\"'todos'\"></app-header>\n<main class=\"main\">\n    <div class=\"container\">\n        <div class=\"taskList\">\n            <div class=\"taskList__header\">\n                <div class=\"task__text\">task</div>\n                <div class=\"task__team\">team</div>\n                <div class=\"task__deadline\">deadline</div>\n                <div class=\"task__points\">points</div>\n                <div class=\"task__status\">status</div>\n                <div class=\"task__actions\">action</div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">feel energy</div>\n                <div class=\"task__team\">OneWayUp</div>\n                <div class=\"task__deadline\">15.04.2016</div>\n                <div class=\"task__points\">10</div>\n                <div class=\"task__status\">todo</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--doneTask\">done</button>\n                </div>\n            </div>\n            <div class=\"task\">\n                <div class=\"task__text\">return Bastian</div>\n                <div class=\"task__team\">Manchester United</div>\n                <div class=\"task__deadline\">09.01.2016</div>\n                <div class=\"task__points\">100</div>\n                <div class=\"task__status\">todo</div>\n                <div class=\"task__actions\">\n                    <button class=\"btn--taskAction btn--doneTask\">done</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n"
+module.exports = "<app-header [activeMenuItem]=\"'teams'\"></app-header>\n<main>\n    <div class=\"container\">\n        <div class=\"itemsList\">\n            <div class=\"createTeamWrap\">\n                <a class=\"btnCreateTeam\" href=\"#\">create team</a>\n            </div>\n            <div class=\"teamCards\">\n                <div class=\"row\">\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                        <app-team-card></app-team-card>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                        <app-team-card></app-team-card>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <app-team-card></app-team-card>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"itemsListAfter\">\n            <a href=\"#\" class=\"more\">more...</a>\n        </div>\n    </div>\n</main>\n"
 
 /***/ },
 /* 671 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"welcome\">\n\n    <div class=\"welcome__header\">\n        <div class=\"container-fluid\">\n            <div class=\"welcome__logo\">\n                <span class=\"prefix\">It's</span> TeamsRate<span class=\"prefix\">!</span>\n            </div>\n            <div class=\"welcome__actions\">\n                <a class=\"welcome__action\" routerLink=\"/registration\">registration</a>\n                <button class=\"welcome__action\" (click)=\"auth()\">login</button>\n            </div>\n            <div class=\"welcome__words\">\n                Team's management<br>was never so easy!\n            </div>\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<app-header [activeMenuItem]=\"'todos'\"></app-header>\n<main class=\"main\">\n    <div class=\"container\">\n        <div class=\"taskList\">\n            <div class=\"task\" *ngFor=\"let task of tasks; let i = index\" (click)=\"onTaskSelect(task)\">\n                <div class=\"task__number\">\n                    {{i}}\n                </div>\n                <div class=\"task__text\">\n                    {{task.text}}\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n<app-task *ngIf=\"selectedTask\" [task]=\"selectedTask\" (taskClose)=\"selectedTask = null\"></app-task>"
 
 /***/ },
 /* 672 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"welcome\">\n\n    <div class=\"welcome__logo\">\n        <span class=\"prefix\">It's</span> TeamsRate<span class=\"prefix\">!</span>\n    </div>\n    <div class=\"welcome__actions\">\n        <a href=\"#\" class=\"authBtn\" [class.loading]=\"authButton_google\" (click)=\"authClick();\">\n            <img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGZpbGw9IiNjMTFkMWQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU2LjY5MyA1Ni42OTMiIGhlaWdodD0iNTYuNjkzcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1Ni42OTMgNTYuNjkzIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjMuNzYxLDI3Ljk2YzAuNjI5LDAsMS4xNi0wLjI0OCwxLjU3LTAuNzE3YzAuNjQ1LTAuNzMyLDAuOTI4LTEuOTM2LDAuNzYtMy4yMTVjLTAuMzAxLTIuMjg3LTEuOTMyLTQuMTg2LTMuNjM3LTQuMjM2ICAgaC0wLjA2OGMtMC42MDQsMC0xLjE0MSwwLjI0Ni0xLjU1MSwwLjcxNWMtMC42MzcsMC43MjUtMC45MDMsMS44NzEtMC43MzYsMy4xNDZjMC4yOTksMi4yODMsMS45NjUsNC4yNTYsMy42MzUsNC4zMDdIMjMuNzYxeiIvPjxwYXRoIGQ9Ik0yNS42MjIsMzQuODQ3Yy0wLjE2OC0wLjExMy0wLjM0Mi0wLjIzMi0wLjUyMS0wLjM1NWMtMC41MjUtMC4xNjItMS4wODQtMC4yNDYtMS42NTQtMC4yNTRoLTAuMDcyICAgYy0yLjYyNSwwLTQuOTI5LDEuNTkyLTQuOTI5LDMuNDA2YzAsMS45NzEsMS45NzIsMy41MTgsNC40OTEsMy41MThjMy4zMjIsMCw1LjAwNi0xLjE0NSw1LjAwNi0zLjQwNCAgIGMwLTAuMjE1LTAuMDI1LTAuNDM2LTAuMDc2LTAuNjU2QzI3LjY0MiwzNi4yMjIsMjYuODM3LDM1LjY3NSwyNS42MjIsMzQuODQ3eiIvPjxwYXRoIGQ9Ik0yOC4zNDcsNS4xNTdjLTEzLjYwMSwwLTI0LjYyNSwxMS4wMjMtMjQuNjI1LDI0LjYyM3MxMS4wMjUsMjQuNjI1LDI0LjYyNSwyNC42MjVjMTMuNTk4LDAsMjQuNjIzLTExLjAyNSwyNC42MjMtMjQuNjI1ICAgUzQxLjk0NCw1LjE1NywyOC4zNDcsNS4xNTd6IE0yNi4xMDYsNDMuMTc5Yy0wLjk4MiwwLjI4My0yLjA0MSwwLjQyOC0zLjE1NCwwLjQyOGMtMS4yMzgsMC0yLjQzLTAuMTQzLTMuNTQtMC40MjQgICBjLTIuMTUtMC41NDEtMy43NC0xLjU3LTQuNDgtMi44OTVjLTAuMzItMC41NzQtMC40ODItMS4xODQtMC40ODItMS44MTZjMC0wLjY1MiwwLjE1Ni0xLjMxMiwwLjQ2My0xLjk2NyAgIGMxLjE4LTIuNTEsNC4yODMtNC4xOTcsNy43MjItNC4xOTdjMC4wMzUsMCwwLjA2OCwwLDAuMSwwYy0wLjI3OS0wLjQ5Mi0wLjQxNi0xLjAwMi0wLjQxNi0xLjUzN2MwLTAuMjY4LDAuMDM1LTAuNTM5LDAuMTA1LTAuODE0ICAgYy0zLjYwNi0wLjA4NC02LjMwNi0yLjcyNS02LjMwNi02LjIwN2MwLTIuNDYxLDEuOTY1LTQuODU1LDQuNzc2LTUuODI0YzAuODQyLTAuMjkxLDEuNjk5LTAuNDM5LDIuNTQzLTAuNDM5aDcuNzEzICAgYzAuMjY0LDAsMC40OTQsMC4xNywwLjU3NiwwLjQyYzAuMDg0LDAuMjUyLTAuMDA4LDAuNTI1LTAuMjIxLDAuNjhsLTEuNzI1LDEuMjQ4Yy0wLjEwNCwwLjA3NC0wLjIyOSwwLjExNS0wLjM1NywwLjExNWgtMC42MTcgICBjMC43OTksMC45NTUsMS4yNjYsMi4zMTYsMS4yNjYsMy44NDhjMCwxLjY5MS0wLjg1NSwzLjI4OS0yLjQxLDQuNTA2Yy0xLjIwMSwwLjkzNi0xLjI1LDEuMTkxLTEuMjUsMS43MjkgICBjMC4wMTYsMC4yOTUsMC44NTQsMS4yNTIsMS43NzUsMS45MDRjMi4xNTIsMS41MjMsMi45NTMsMy4wMTQsMi45NTMsNS41MDhDMzEuMTQsNDAuMDQsMjkuMTYzLDQyLjI5MiwyNi4xMDYsNDMuMTc5eiAgICBNNDMuNTI4LDI5Ljk0OGMwLDAuMzM0LTAuMjczLDAuNjA1LTAuNjA3LDAuNjA1aC00LjM4M3Y0LjM4NWMwLDAuMzM2LTAuMjcxLDAuNjA3LTAuNjA3LDAuNjA3aC0xLjI0OCAgIGMtMC4zMzYsMC0wLjYwNy0wLjI3MS0wLjYwNy0wLjYwN3YtNC4zODVIMzEuNjljLTAuMzMyLDAtMC42MDUtMC4yNzEtMC42MDUtMC42MDV2LTEuMjVjMC0wLjMzNCwwLjI3My0wLjYwNywwLjYwNS0wLjYwN2g0LjM4NSAgIHYtNC4zODNjMC0wLjMzNiwwLjI3MS0wLjYwNywwLjYwNy0wLjYwN2gxLjI0OGMwLjMzNiwwLDAuNjA3LDAuMjcxLDAuNjA3LDAuNjA3djQuMzgzaDQuMzgzYzAuMzM0LDAsMC42MDcsMC4yNzMsMC42MDcsMC42MDcgICBWMjkuOTQ4eiIvPjwvZz48L3N2Zz4=\" alt=\"Google Plus\">\n        </a>\n    </div>\n    <div class=\"welcome__words\">\n        Team's management<br>was never so easy!\n    </div>\n\n</div>\n"
+
+/***/ },
+/* 673 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60817,7 +60894,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 673 */
+/* 674 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60950,7 +61027,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 674 */
+/* 675 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -60964,7 +61041,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 675 */
+/* 676 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61010,7 +61087,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 676 */
+/* 677 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61021,7 +61098,7 @@ Observable_1.Observable.prototype.toPromise = toPromise_1.toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 677 */
+/* 678 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61097,7 +61174,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 678 */
+/* 679 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61110,12 +61187,12 @@ var __extends = (this && this.__extends) || function (d, b) {
 var isArray_1 = __webpack_require__(228);
 var isPromise_1 = __webpack_require__(377);
 var PromiseObservable_1 = __webpack_require__(367);
-var IteratorObservable_1 = __webpack_require__(679);
+var IteratorObservable_1 = __webpack_require__(680);
 var ArrayObservable_1 = __webpack_require__(365);
-var ArrayLikeObservable_1 = __webpack_require__(677);
+var ArrayLikeObservable_1 = __webpack_require__(678);
 var iterator_1 = __webpack_require__(224);
 var Observable_1 = __webpack_require__(14);
-var observeOn_1 = __webpack_require__(683);
+var observeOn_1 = __webpack_require__(684);
 var observable_1 = __webpack_require__(225);
 var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 /**
@@ -61219,7 +61296,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 679 */
+/* 680 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61382,7 +61459,7 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 680 */
+/* 681 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61481,7 +61558,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ },
-/* 681 */
+/* 682 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61635,7 +61712,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ },
-/* 682 */
+/* 683 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61759,7 +61836,7 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 683 */
+/* 684 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61770,7 +61847,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(32);
-var Notification_1 = __webpack_require__(673);
+var Notification_1 = __webpack_require__(674);
 /**
  * @see {@link Notification}
  *
@@ -61840,7 +61917,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 684 */
+/* 685 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61958,7 +62035,7 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 685 */
+/* 686 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -61989,7 +62066,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 686 */
+/* 687 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -62001,7 +62078,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ },
-/* 687 */
+/* 688 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -62013,7 +62090,7 @@ exports.isScheduler = isScheduler;
 //# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-/* 688 */
+/* 689 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62038,7 +62115,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 689 */
+/* 690 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62063,8 +62140,8 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 690 */,
-/* 691 */
+/* 691 */,
+/* 692 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {/**
@@ -63494,15 +63571,15 @@ if (_global['navigator'] && _global['navigator'].geolocation) {
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49), __webpack_require__(647)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49), __webpack_require__(648)))
 
 /***/ },
-/* 692 */
+/* 693 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(379);
 
 
 /***/ }
-],[692]);
+],[693]);
 //# sourceMappingURL=main.map

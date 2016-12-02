@@ -1,30 +1,38 @@
-<div class="task">
-	<div class="task__leftColumn">
-		<div class="task__header">
-			<div class="task__teamName">
-				<a routerLink="/team/11">OneWayUp</a>
-			</div>
-			<div class="task__status">{{status}}</div>
+<div class="taskWrap">
+	<div class="task">
+		<button class="task__close" (click)="close()">
+			close
+		</button>
+		<div class="task__team">
+			{{task.team}}
 		</div>
 		<div class="task__text">
-			buy sweets in the shop
+			{{task.text}}
 		</div>
-	</div>
-	<div class="task__rightColumn">
-		<div class="task__info">
-			<table class="task__infoTable">
-				<tr>
-					<td>points</td>
-					<td>15</td>
-				</tr>
-				<tr>
-					<td>deadline</td>
-					<td>17.11.2016</td>
-				</tr>
-			</table>
+		<div class="task__options">
+			<div class="option">
+				<div class="option__name">
+					status
+				</div>
+				<div class="option__value">
+					{{task.status}}
+				</div>
+			</div>
+			<div class="option">
+				<div class="option__name">
+					deadline
+				</div>
+				<div class="option__value">
+					{{task.deadline}}
+				</div>
+			</div>
+			<div class="option option--inline">
+				{{task.points}} points
+			</div>
 		</div>
 		<div class="task__actions">
-			<a href="#" class="task__btn">take</a>
+			<button class="action action--take">take</button>
+			<button class="action action--done">done</button>
 		</div>
 	</div>
 </div>

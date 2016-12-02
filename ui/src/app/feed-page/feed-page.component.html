@@ -2,54 +2,15 @@
 <main class="main">
     <div class="container">
         <div class="taskList">
-            <div class="taskList__header">
-                <div class="task__text">task</div>
-                <div class="task__team">team</div>
-                <div class="task__deadline">deadline</div>
-                <div class="task__points">points</div>
-                <div class="task__status">status</div>
-                <div class="task__actions">action</div>
-            </div>
-            <div class="task">
-                <div class="task__text">do dive dishes</div>
-                <div class="task__team">OneWayUp</div>
-                <div class="task__deadline">15.04.2016</div>
-                <div class="task__points">10</div>
-                <div class="task__status">new</div>
-                <div class="task__actions">
-                    <button class="btn--taskAction btn--takeTask">take</button>
+            <div class="task" *ngFor="let task of tasks; let i = index" (click)="onTaskSelect(task)">
+                <div class="task__number">
+                    {{i}}
                 </div>
-            </div>
-            <div class="task">
-                <div class="task__text">go for a walk</div>
-                <div class="task__team">Bayern Munich</div>
-                <div class="task__deadline">09.01.2016</div>
-                <div class="task__points">100</div>
-                <div class="task__status">new</div>
-                <div class="task__actions">
-                    <button class="btn--taskAction btn--takeTask">take</button>
-                </div>
-            </div>
-            <div class="task">
-                <div class="task__text">make a pineapple</div>
-                <div class="task__team">Apple</div>
-                <div class="task__deadline">05.04.2016</div>
-                <div class="task__points">1</div>
-                <div class="task__status">new</div>
-                <div class="task__actions">
-                    <button class="btn--taskAction btn--takeTask">take</button>
-                </div>
-            </div>
-            <div class="task">
-                <div class="task__text">win a challenge</div>
-                <div class="task__team">OneWayUp</div>
-                <div class="task__deadline">31.04.2016</div>
-                <div class="task__points">2</div>
-                <div class="task__status">new</div>
-                <div class="task__actions">
-                    <button class="btn--taskAction btn--takeTask">take</button>
+                <div class="task__text">
+                    {{task.text}}
                 </div>
             </div>
         </div>
     </div>
 </main>
+<app-task *ngIf="selectedTask" [task]="selectedTask" (taskClose)="selectedTask = null"></app-task>
