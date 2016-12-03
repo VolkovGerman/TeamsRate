@@ -1,14 +1,14 @@
-<app-header [activeMenuItem]="'settings'"></app-header>
+<app-header [activeMenuItem]="1"></app-header>
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="sectionBlock bio">
-                    <div class="sectionBlock__header">
+            <div class="col-md-4">
+                <div class="bio formBlock">
+                    <div class="formBlock__header"> 
                         bio
                     </div>
-                    <form action="#" class="sectionBlock__form">
-                        <div class="sectionBlock__body clearfix">
+                    <form action="#" class="formBlock__form">
+                        <div class="formBlock__main">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -42,22 +42,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sectionBlock__footer">
-                            <div class="sectionBlock__actions">
-                                <button type="reset" class="sectionBlock__btn">clear</button>
-                                <button type="submit" class="sectionBlock__btn">confirm</button>
-                            </div>
-                        </div>
+                        <footer class="formBlock__footer">
+                            <button type="reset" class="formBlock__action">clear</button>
+                            <button type="submit" class="formBlock__action">confirm</button>
+                        </footer>
                     </form>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="sectionBlock contacts">
-                    <div class="sectionBlock__header">
+            <div class="col-md-4">
+                <div class="contacts formBlock">
+                    <div class="formBlock__header">
                         contacts
                     </div>
-                    <form action="" class="sectionBlock__form">
-                        <div class="sectionBlock__body">
+                    <form action="" class="formBlock__form">
+                        <div class="formBlock__main">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -79,11 +77,9 @@
                                 </div>
                             </div>    
                         </div>
-                        <div class="sectionBlock__footer">
-                            <div class="sectionBlock__actions">
-                                <button type="reset" class="sectionBlock__btn">clear</button>
-                                <button type="submit" class="sectionBlock__btn">confirm</button>
-                            </div>
+                        <div class="formBlock__footer">
+                            <button type="reset" class="formBlock__action">clear</button>
+                            <button type="submit" class="formBlock__action">confirm</button>
                         </div>
                     </form>
                 </div> 

@@ -1,0 +1,25 @@
+@import '../_variables';
+
+.section {
+
+    &__header {
+        margin-bottom: 20px;
+
+        font-size: 1.2em;
+        font-weight: bold;
+        color: @red;
+    }
+
+    &__main { 
+
+        &--bordered {
+            padding: 15px;
+            border: 1px solid @borderColor;
+
+            &:hover {
+                border: 1px solid @black;
+            }
+        }       
+    }
+    
+}

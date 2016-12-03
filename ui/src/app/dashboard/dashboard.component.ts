@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../shared/Task';
 
 @Component({
-  selector: 'app-todos-page',
-  templateUrl: './todos-page.component.html',
-  styleUrls: ['./todos-page.component.less']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.less']
 })
-export class TodosPageComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   tasks: Task[];
   selectedTask: Task;
 
@@ -47,4 +47,3 @@ export class TodosPageComponent implements OnInit {
   }
 
 }
-

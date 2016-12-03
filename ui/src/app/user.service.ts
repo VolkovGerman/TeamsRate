@@ -7,7 +7,7 @@ import { User } from './shared/User';
 
 @Injectable()
 export class UserService implements OnInit {
-  private baseUrl = 'http://localhost:9000';
+  private baseUrl = 'http://teamsrate.herokuapp.com/api';
 
   constructor(private http: Http) { } 
 
@@ -16,16 +16,11 @@ export class UserService implements OnInit {
   }
 
   getUsers(): Promise<User[]> {
-    return this.http.get(this.baseUrl + '/users/all')
+    return this.http.get(this.baseUrl + '/users')
                .toPromise()
                .then(response => response.json())
                .catch(this.handleError);
   }
-
-  /*login(): Promise<number> {
-
-    
-  }*/
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

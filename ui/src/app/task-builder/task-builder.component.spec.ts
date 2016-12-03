@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { TodosPageComponent } from './todos-page.component';
+import { TaskBuilderComponent } from './task-builder.component';
 
-describe('TodosPageComponent', () => {
-  let component: TodosPageComponent;
-  let fixture: ComponentFixture<TodosPageComponent>;
+describe('TaskBuilderComponent', () => {
+  let component: TaskBuilderComponent;
+  let fixture: ComponentFixture<TaskBuilderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodosPageComponent ]
+      declarations: [ TaskBuilderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TodosPageComponent);
+    fixture = TestBed.createComponent(TaskBuilderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

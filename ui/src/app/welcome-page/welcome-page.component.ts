@@ -28,10 +28,10 @@ export class WelcomePageComponent implements OnInit {
       result.me().done(function(data) {
         console.log(data);
 
-        that.router.navigate(['/feed']);
+        that.router.navigate(['/dashboard']);
       })
     });
-  }
+  } 
 
   authClick() {
     this.authButton_google = !this.authButton_google;

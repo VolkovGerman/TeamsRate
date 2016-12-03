@@ -7,32 +7,38 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent } from './app.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HeaderComponent } from './header/header.component';
-import { FeedPageComponent } from './feed-page/feed-page.component';
 import { TeamPageComponent } from './team-page/team-page.component';
-import { TeamsListPageComponent } from './teams-list-page/teams-list-page.component';
-import { TodosPageComponent } from './todos-page/todos-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { TaskComponent } from './task/task.component';
-import { TeamCardComponent } from './team-card/team-card.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamsListComponent } from './teams-list/teams-list.component';
+import { FullTaskComponent } from './full-task/full-task.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskBuilderComponent } from './task-builder/task-builder.component';
+import { MembersRateComponent } from './members-rate/members-rate.component';
+import { TeamSettingsComponent } from './team-settings/team-settings.component';
+import { TeamsSearchComponent } from './teams-search/teams-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     HeaderComponent,
-    FeedPageComponent,
     TeamPageComponent,
-    TeamsListPageComponent,
-    TodosPageComponent,
     SettingsPageComponent,
-    TaskComponent,
-    TeamCardComponent,
     SearchPageComponent,
-    CreateTaskComponent
+    CreateTaskComponent,
+    DashboardComponent,
+    TeamsListComponent,
+    FullTaskComponent,
+    TaskListComponent,
+    TaskBuilderComponent,
+    MembersRateComponent,
+    TeamSettingsComponent,
+    TeamsSearchComponent
   ],
   imports: [
     BrowserModule,

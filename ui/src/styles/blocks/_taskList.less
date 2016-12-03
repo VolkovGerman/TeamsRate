@@ -1,0 +1,37 @@
+.taskList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .task {
+        margin-bottom: 10px;
+
+        font-size: 1.1em;
+
+        cursor: pointer;
+
+        &__team {
+            color: grey;
+        }
+
+        &__text {
+            color: @black;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover, &.active {
+            .task__team {
+                color: #ea8a8a;
+            }
+            
+            .task__text {
+                color: @red;
+            }
+        }
+    }
+
+
+}

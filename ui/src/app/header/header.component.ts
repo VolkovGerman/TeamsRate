@@ -1,47 +1,45 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+class MenuItem {
+  name: string;
+  link: string;
+  active: boolean;
+}
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  menu: Object;
-  @Input() activeMenuItem: string;
+  menu: Array<MenuItem>;
+  @Input() activeMenuItem: number;
 
-  constructor() {
-    //this.activeMenuItem = 'feed';
-    
-    this.menu = {
-      search: {
-        link: '/search',
+  constructor() {    
+    this.menu = [
+      {
+        name: 'dashboard',
+        link: '/dashboard',
         active: false
       },
-      settings: {
+      {
+        name: 'settings',
         link: '/settings',
         active: false
-      },
-      exit: {
+      }, 
+      {
+        name: 'exit',
         link: '/exit',
         active: false
-      },
-      feed: {
-        link: '/feed',
-        active: false
-      },
-      todos: {
-        link: '/todos',
-        active: false
-      },
-      teams: {
-        link: '/teams',
-        active: false
       }
-    }
+    ]
   }
 
   ngOnInit() {
-    this.menu[this.activeMenuItem].active = true;
+    if (this.menu[this.activeMenuItem] != undefined) {
+      this.menu[this.activeMenuItem].active = true; 
+    }
   }
 
 }
+ 

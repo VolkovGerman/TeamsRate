@@ -1,0 +1,27 @@
+<div class="taskBuilder formBlock">
+  <header class="formBlock__header">
+    create new task
+  </header>
+  <form class="formBlock__form">
+    <div class="formBlock__main">
+      <textarea name="taskText" id="taskText" rows="4" placeholder="new task goes here"></textarea>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="form-group">
+            <label for="deadline">deadline</label>
+            <input type="date" id="deadline" class="form-control" placeholder="01.01.2016">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="points">points</label>
+            <input type="number" id="points" class="form-control">
+          </div>
+        </div>
+      </div> 
+    </div>
+    <footer class="formBlock__footer">
+      <button type="submit" class="formBlock__action">create</button>
+    </footer>
+  </form>
+</div>

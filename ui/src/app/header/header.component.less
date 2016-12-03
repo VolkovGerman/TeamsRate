@@ -1,6 +1,8 @@
+@import '../../styles/_variables';
+
 .headerWrap {
 	min-height: 80px;
-	background-color: #16a085;
+	background-color: @red;
 }
 
 .header {
@@ -16,16 +18,13 @@
 	text-transform: uppercase;
 
 	a {
-		color: white;
+		color: #fff;
 		text-decoration: none;
-
-		&:hover {
-			color: #d5f6ff;
-		}
 	}
 }
 
 .headerMenu {
+	flex-basis: 0;
 	flex-grow: 1;
 
 	&__ul {
@@ -50,58 +49,21 @@
 			padding: 0 20px;
 			
 			font-size: 1.2em;
-			color: white;
+			color: #fff;
     		text-transform: uppercase;
 			text-decoration: none;
 
 			outline: none;
 
-			transition: background-color 0.3s, color 0.3s;
-
 			&:hover, &:focus {
-				background-color: #2e8271;
+				color: #fff;
+				background-color: #dc8680;
 			}
 
 			&.active {
-				color: #fff;
-				background-color: #2e8271;
+				color: @red;
+				background-color: #fff;
 			}
-		}
-	}
-}
-
-.mainNav {
-	display: flex;
-	flex-wrap: wrap;
-
-	background-color: #f5f5f5;
-
-	&__item {
-		flex-grow: 1;
-		text-align: center;
-
-		a {
-			display: block;
-			padding: 10px;
-
-			font-size: 1.2em;
-			color: #252525;
-    		letter-spacing: 1px;
-			text-decoration: none;
-			transition: background-color 0.3s;
-
-			outline: none;
-
-			&:hover, &:focus {
-				color: #fff;
-				background-color: #16a085;
-			}
-
-			&.active {
-				color: #fff;
-				background-color: #16a085;
-			}
-
 		}
 	}
 }
