@@ -11,7 +11,6 @@ import { TeamPageComponent } from './team-page/team-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { SearchPageComponent } from './search-page/search-page.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TeamsListComponent } from './teams-list/teams-list.component';
@@ -29,7 +28,6 @@ import { TeamsSearchComponent } from './teams-search/teams-search.component';
     HeaderComponent,
     TeamPageComponent,
     SettingsPageComponent,
-    SearchPageComponent,
     CreateTaskComponent,
     DashboardComponent,
     TeamsListComponent,

@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-md-3">
             <app-teams-list></app-teams-list>
-            <app-teams-search></app-teams-search>
+            <app-teams-search [teams]="teams"></app-teams-search>
           </div>
           <div class="col-md-5">
             <app-task-list [listHeader]="'new tasks'"></app-task-list>

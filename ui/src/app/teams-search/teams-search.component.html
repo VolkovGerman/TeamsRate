@@ -7,35 +7,11 @@
       <input type="text" placeholder="team name">
     </div>
     <div class="search__results">
-      <div class="team">
+      <div class="team" *ngFor="let team of teams">
         <div class="team__name">
-          <a href="#">OneWayUp</a>
+          <a routerLink="/team/{{team.id}}">{{team.name}}</a>
         </div>
-        <div class="team__creator">by <a href="#">Volkov German</a></div>
-      </div>
-      <div class="team">
-        <div class="team__name">
-          <a href="#">Bayern Munich</a>
-        </div>
-        <div class="team__creator">by <a href="#">Thomas Muller</a></div>
-      </div>
-      <div class="team">
-        <div class="team__name">
-          <a href="#">BSUIR FKSIS</a>
-        </div>
-        <div class="team__creator">by <a href="#">Volkov German</a></div>
-      </div>
-      <div class="team">
-        <div class="team__name">
-          <a href="#">Bayern Munich</a>
-        </div>
-        <div class="team__creator">by <a href="#">Thomas Muller</a></div>
-      </div>
-      <div class="team">
-        <div class="team__name">
-          <a href="#">BSUIR FKSIS</a>
-        </div>
-        <div class="team__creator">by <a href="#">Volkov German</a></div>
+        <div class="team__creator">by <a href="#">{{team.creator_id}}</a></div>
       </div>
     </div>
   </div>
