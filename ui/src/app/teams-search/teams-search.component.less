@@ -14,34 +14,37 @@
         }
     }
 
-    &__results {
-        padding: 10px 15px;
-
-        max-height: 200px;
-        
-        border: 1px solid @borderColor;
-        overflow-y: scroll;
+    &__results {        
 
         .team {
             margin-bottom: 15px;
+            padding: 10px 15px;
+
+            display: block;
+
+            border: 1px solid @borderColor;
 
             &:hover {
-                .team__name a {
+                .team__name {
                     color: @black;
                 }
             }
 
             &__name {
-                font-size: 1em;
+                display: block;
 
-                a {
-                    color: grey;
-                    text-decoration: none;
-                }
-                
+                margin-bottom: 5px;
+
+                font-size: 1.1em;
+                color: grey;
+                text-decoration: none;
             }
 
             &__creator {
+                font-size: 0.8em;
+            }
+
+            &__descr {
                 font-size: 0.8em;
             }
 

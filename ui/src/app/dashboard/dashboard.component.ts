@@ -4,60 +4,42 @@ import { Task } from '../classes/Task';
 import { Team } from '../classes/Team';
 
 import { TeamService } from '../services/team.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.less'],
   providers: [
-    TeamService
+    TeamService,
+    UserService
   ]
 })
 export class DashboardComponent implements OnInit {
   teams: Team[];
-  
-  tasks: Task[];
-  selectedTask: Task;
+  teamsForUser: Team[];
+  todos: Task[];
 
-  constructor(private teamService: TeamService) {
-    /*this.tasks = [
-      {
-        id: 1,
-        text: 'do dishes',
-        deadline: '01.12.2016',
-        status: 'new',
-        points: 20,
-        team: "OneWayUp"
-      },
-      {
-        id: 2,
-        text: 'win a game of thrones',
-        deadline: '01.12.2016',
-        status: 'new',
-        points: 20,
-        team: "OneWayUp"
-      },
-      {
-        id: 3,
-        text: 'go to the shop',
-        deadline: '01.12.2016',
-        status: 'new',
-        points: 20,
-        team: "OneWayUp"
-      }
-    ];*/
+  constructor(private teamService: TeamService, private userService: UserService) {
+    this.updateTeams();
 
-    this.teamService.getAll().then(teams => {
-      console.log(teams);
-      this.teams = teams;
+    this.userService.getTasks().then(tasks => {
+      this.todos = tasks;
     });
   }
 
   ngOnInit() {
   }
 
-  onTaskSelect(task: Task): void {
-    this.selectedTask = task;
+  updateTeams() {
+    this.teamService.getAll().then(teams => {
+      console.log(teams);
+      this.teams = teams;
+    });
+
+    this.teamService.getTeamsForUser().then(teams => {
+      this.teamsForUser = teams;
+    });
   }
 
 }

@@ -6,18 +6,17 @@
     <div class="membersRate">
       <div class="membersRate__header">
         <div class="member__num">№</div>
+        <div class="member__photo">photo</div>
         <div class="member__name">name</div>
-        <div class="member__points">points</div>
       </div>
-      <div class="member">
-        <div class="member__num">1</div>
-        <div class="member__name">German Volkov</div>
-        <div class="member__points">12</div>
-      </div>
-      <div class="member">
-        <div class="member__num">2</div>
-        <div class="member__name">Vadim Benkovski</div>
-        <div class="member__points">22</div>
+      <div class="member" *ngFor="let member of members; let i = index;">
+        <div class="member__num">{{i + 1}}</div>
+        <div class="member__photo">
+          <img src="{{member.photo_url}}" alt="member photo">
+        </div>
+        <div class="member__name">
+          <a href="https://plus.google.com/{{member.gp_id}}" target="_blank">{{member.name}} {{member.surname}}</a>
+        </div>
       </div>
     </div>
   </div>

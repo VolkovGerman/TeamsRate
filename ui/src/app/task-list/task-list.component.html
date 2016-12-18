@@ -1,25 +1,13 @@
 <section class="teams section">
-  <app-full-task></app-full-task>
+  <app-full-task [selectedTask]="selectedTask" (closeTaskEvent)="unselectTask()" (updateTaskEvent)="updateTasksEvent()"></app-full-task>
   <header class="section__header">
     {{listHeader}}
   </header>
   <div class="section__main--bordered">
     <ul class="taskList">
-      <li class="task">
-        <span class="task__team">OneWayUp</span>
-        <span class="task__text">make bed and find some cookies</span>
-      </li>
-      <li class="task">
-        <span class="task__team">OneWayUp</span>
-        <span class="task__text">go shopping</span>
-      </li>
-      <li class="task">
-        <span class="task__team">Bayern Munich</span>
-        <span class="task__text">make two more exercises</span>
-      </li>
-      <li class="task">
-        <span class="task__team">BSUIR</span>
-        <span class="task__text">2 homework task left</span>
+      <li class="task" *ngFor="let task of tasks" (click)="selectTask(task)">
+        <span class="task__team">{{task.team_name}}</span>
+        <span class="task__text">{{task.text}}</span>
       </li>
     </ul>
   </div>

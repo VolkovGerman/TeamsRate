@@ -7,12 +7,13 @@ CREATE TABLE USER (
   id integer NOT NULL DEFAULT nextval('user_id_seq') PRIMARY KEY,
   NAME VARCHAR NOT NULL,
   SURNAME VARCHAR NOT NULL,
-  VK VARCHAR NOT NULL
+  PHOTO_URL VARCHAR NOT NULL,
+  GP VARCHAR NOT NULL
 );
 
-INSERT INTO USER (name, surname, vk) VALUES ('German', 'Volkov', '11111');
-INSERT INTO USER (name, surname, vk) VALUES ('Vadim', 'Benkovski', '22222');
-INSERT INTO USER (name, surname, vk) VALUES ('Rita', 'Alnordovna', '33333');
+INSERT INTO USER (name, surname, photo_url, gp) VALUES ('German', 'Volkov', 'nourl', '11111');
+INSERT INTO USER (name, surname, photo_url, gp) VALUES ('Vadim', 'Benkovski', 'nourl', '22222');
+INSERT INTO USER (name, surname, photo_url, gp) VALUES ('Rita', 'Alnordovna', 'nourl', '33333');
 
 CREATE SEQUENCE team_id_seq;
 CREATE TABLE TEAM (
@@ -50,10 +51,10 @@ CREATE TABLE TASK (
   POINTS INTEGER NOT NULL
 );
 
-INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('do dishes', '02.04.2016', 2, 1, 1, 0, 10);
-INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('make description of teamsrate', '05.04.2016', 2, 1, 1, 0, 10);
-INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('make first page styles', '02.04.2016', 3, 1, 2, 0, 10);
-INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('link bio with smth', '03.04.2016', 3, 1, 2, 0, 10);
+INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('do dishes', '02.04.2016', 2, 1, 0, 0, 10);
+INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('make description of teamsrate', '05.04.2016', 2, 1, 0, 0, 10);
+INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('make first page styles', '02.04.2016', 3, 1, 0, 0, 10);
+INSERT INTO TASK (TEXT, DEADLINE, TEAM_ID, CREATOR_ID, PERFORMER_ID, STATUS, POINTS) VALUES ('link bio with smth', '03.04.2016', 3, 1, 0, 0, 10);
 
 # --- !Downs
 

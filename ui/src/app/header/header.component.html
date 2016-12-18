@@ -6,8 +6,14 @@
 			</div>
 			<div class="headerMenu">
 				<ul class="headerMenu__ul">
-					<li class="headerMenu__li" *ngFor="let menuItem of menu">
-						<a routerLink="{{menuItem.link}}" class="headerMenu__link" [class.active]="menuItem.active">{{menuItem.name}}</a>
+					<li class="headerMenu__li">
+						<a routerLink="/dashboard" class="headerMenu__link" [class.active]="page == 'dashboard'">dashboard</a>
+					</li>
+					<li class="headerMenu__li">
+						<div class="extra" [class.active]="page == 'team'">team</div>
+					</li>
+					<li class="headerMenu__li">
+						<div class="extra">exit</div>
 					</li>
 				</ul>
 			</div>

@@ -1,24 +1,37 @@
-<div class="fullTask">
-  <div class="fullTask__close">close</div>
+<div class="fullTask" *ngIf="selectedTask">
+  <div class="fullTask__close" (click)="close()">close</div>
   <div class="fullTask__text">
-    wash dishes and take a shower in the bathroom
+    {{selectedTask.text}}
   </div>
   <div class="fullTask__props">
     <div class="prop">
       <span class="prop__name">status</span>
-      <span class="prop__value">new</span>
+      <span class="prop__value">{{selectedTask.status_text}}</span>
+    </div>
+    <div class="prop" *ngIf="selectedTask.performer">
+      <span class="prop__name">performer</span>
+      <span class="prop__value">
+        <a href="#">
+          Volkov German
+        </a>
+      </span>
     </div>
     <div class="prop">
       <span class="prop__name">team</span>
-      <span class="prop__value">OneWayUp</span>
+      <span class="prop__value">{{selectedTask.team_name}}</span>
     </div>
     <div class="prop">
       <span class="prop__name">deadline</span>
-      <span class="prop__value">15.06.2016</span>
+      <span class="prop__value">{{selectedTask.deadline}}</span>
     </div>
     <div class="prop">
       <span class="prop__name">points</span>
-      <span class="prop__value">15</span>
+      <span class="prop__value">{{selectedTask.points}}</span>
     </div>
+  </div>
+  <div class="fullTask__actions">
+    <button *ngIf="selectedTask.status == 0" class="action" (click)="setAsPerformer()">take</button>
+    <button *ngIf="selectedTask.status == 1" class="action" (click)="setAsDone()">done</button>
+    <button class="action" (click)="removeTask()">remove</button>
   </div>
 </div>

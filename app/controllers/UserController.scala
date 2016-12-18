@@ -32,14 +32,16 @@ class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO, taskDAO:
     (JsPath \ "id").write[Long] and
     (JsPath \ "name").write[String] and
     (JsPath \ "surname").write[String] and
-    (JsPath \ "vk_id").write[String]
+    (JsPath \ "photo_url").write[String] and
+    (JsPath \ "gp_id").write[String]
   ) (unlift(User.unapply))
 
   implicit val userReads: Reads[User] = (
     (JsPath \ "id").read[Long] and
     (JsPath \ "name").read[String] and
     (JsPath \ "surname").read[String] and
-    (JsPath \ "vk_id").read[String]
+    (JsPath \ "photo_url").read[String] and
+    (JsPath \ "gp_id").read[String]
   )(User.apply _)
 
   implicit val teamWrites: Writes[Team] = (
@@ -97,7 +99,23 @@ class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO, taskDAO:
 
   // GET /users/:id/tasks
   def getTasks(id: Long) = Action.async {
-    taskDAO.getUserTasks(id).map { tasks => Ok(Json.toJson(tasks)) }
+    taskDAO.getUserTasks1(id) map {
+      results => {
+        val jsonArr = results map {
+          result => Json.obj(
+            "id" -> result._1,
+            "text" -> result._2,
+            "deadline" -> result._3,
+            "status" -> result._4,
+            "points" -> result._5,
+            "team_id" -> result._6,
+            "team_name" -> result._7
+          )
+        }
+
+        Ok(Json.toJson(jsonArr))
+      }
+    }
   }
 
   // POST /users

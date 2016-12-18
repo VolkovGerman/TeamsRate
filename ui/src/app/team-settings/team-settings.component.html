@@ -6,11 +6,15 @@
     <div class="formBlock__main">
       <div class="form-group">
         <label for="teamName">name</label>
-        <input type="text" id="teamName" class="form-control" placeholder="OneWayUp">
-      </div>   
+        <input #name type="text" id="teamName" class="form-control" value="{{teamName}}" required>
+      </div>  
+      <div class="form-group">
+        <label for="teamDescr">description</label>
+        <input #descr type="text" id="teamDescr" class="form-control" value="{{teamDescr}}" required>
+      </div>  
     </div>
     <footer class="formBlock__footer">
-      <button type="submit" class="formBlock__action">submit</button>
+      <button type="submit" class="formBlock__action" (click)="updateTeam(name.value, descr.value)">submit</button>
     </footer>
   </form>
 </div>

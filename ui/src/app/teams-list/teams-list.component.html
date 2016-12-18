@@ -3,8 +3,11 @@
     my teams
   </header>
   <div class="section__main">
-    <a routerLink="/team/2" class="teamCard">
-      <div class="teamCard__name">OneWayUp</div>
+    <div class="empty" *ngIf="teams">
+      
+    </div>
+    <a routerLink="/team/{{team.id}}" class="teamCard" *ngFor="let team of teams">
+      <div class="teamCard__name">{{team.name}}</div>
     </a>
   </div>
 </section>

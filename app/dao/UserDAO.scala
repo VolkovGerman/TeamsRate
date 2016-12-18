@@ -17,9 +17,10 @@ class UserDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
     def name = column[String]("NAME")
     def surname = column[String]("SURNAME")
-    def vk_id = column[String]("VK")
+    def photo_url = column[String]("PHOTO_URL")
+    def gp_id = column[String]("GP")
 
-    def * = (id, name, surname, vk_id) <> (User.tupled, User.unapply _)
+    def * = (id, name, surname, photo_url, gp_id) <> (User.tupled, User.unapply _)
   }
 
   private val users = TableQuery[UsersTable]
@@ -48,7 +49,7 @@ class UserDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
   // Insert new user only if it exists
   def insertIfNotExists(newUser: User): Future[Long] = {
     val action = users.filter {
-      user => user.vk_id.toLowerCase like newUser.vk_id.toLowerCase
+      user => user.gp_id.toLowerCase like newUser.gp_id.toLowerCase
     }.result.headOption.flatMap {
       case Some(user) => DBIO.successful(user.id)
       case None => users returning users.map(_.id) += newUser
@@ -64,8 +65,8 @@ class UserDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
   // Update a user.
   def update(id: Long, user: User): Future[Unit] = {
     val action = users.filter(_.id === id)
-      .map(user => (user.name, user.surname))
-      .update(user.name, user.surname)
+      .map(user => (user.name, user.surname, user.photo_url))
+      .update(user.name, user.surname, user.photo_url)
       .map(_ => ())
 
     db.run(action)

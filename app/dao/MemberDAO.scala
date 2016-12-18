@@ -16,9 +16,10 @@ class MemberDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvide
     def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
     def name = column[String]("NAME")
     def surname = column[String]("SURNAME")
-    def vk_id = column[String]("VK")
+    def photo_url = column[String]("PHOTO_URL")
+    def gp_id = column[String]("GP")
 
-    def * = (id, name, surname, vk_id) <> (User.tupled, User.unapply _)
+    def * = (id, name, surname, photo_url, gp_id) <> (User.tupled, User.unapply _)
   }
 
   private class TeamsTable(tag: Tag) extends Table[Team](tag, "TEAM") {
@@ -50,4 +51,20 @@ class MemberDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvide
     db.run(innerJoin.result)
   }
 
+  def getUsersForTeam(activeTeamId: Long): Future[Seq[User]] = {
+    val innerJoin = for {
+      (m, u) <- members.filter(_.team_id === activeTeamId) join users on (_.user_id === _.id)
+    } yield u
+
+    db.run(innerJoin.result)
+  }
+
+  def addUserToTeam(member: Member): Future[Long] =
+    db.run(members returning members.map(_.id) += member)
+
+  def isMember(member: Member): Future[Option[Member]] =
+    db.run(members.filter(_.user_id === member.user_id).filter(_.team_id === member.team_id).result.headOption)
+
+  def removeUserFromTeam(member: Member): Future[Int] =
+    db.run(members.filter(_.user_id === member.user_id).filter(_.team_id === member.team_id).delete)
 }

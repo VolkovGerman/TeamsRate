@@ -72,6 +72,7 @@
     }
     
     &__sections {
+        margin-bottom: 20px;
         background-color: #fff;
 
         border: 1px solid @borderColor;
@@ -93,6 +94,21 @@
         &.active {
             color: @red;
         }
+    }
+
+    &__subscription {
+        display: block;
+        padding: 10px 20px;
+
+        width: 100%;
+
+        background: transparent;
+
+        text-transform: uppercase;
+        text-align: center;
+        outline: none;
+
+        border: 1px solid @borderColor;
     }
 
 }
@@ -125,4 +141,22 @@
 
     }
 
+}
+
+.noAccess {
+
+    &__block {
+        display: block;
+        padding: 10px 20px;
+
+        width: 100%;
+
+        background: transparent;
+
+        text-transform: uppercase;
+        text-align: center;
+        outline: none;
+
+        border: 1px solid @borderColor;
+    }
 }

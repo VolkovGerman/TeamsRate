@@ -1,6 +1,6 @@
 <div class="teamsSearch section">
   <div class="section__header">
-    search for teams
+    all teams
   </div>
   <div class="section__main search">
     <div class="search__control">
@@ -8,10 +8,13 @@
     </div>
     <div class="search__results">
       <div class="team" *ngFor="let team of teams">
-        <div class="team__name">
-          <a routerLink="/team/{{team.id}}">{{team.name}}</a>
+        <a routerLink="/team/{{team.id}}" class="team__name">
+          {{team.name}}
+        </a>
+        <div class="team__creator">by <a href="https://plus.google.com/{{team.cr_gp}}" target="_blank">{{team.cr_name}} {{team.cr_surname}}</a></div>
+        <div class="team__descr">
+          {{team.descr}}
         </div>
-        <div class="team__creator">by <a href="#">{{team.creator_id}}</a></div>
       </div>
     </div>
   </div>

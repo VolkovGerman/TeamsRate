@@ -1,4 +1,8 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Team } from '../classes/Team';
+
+import { TeamService } from '../services/team.service';
 
 @Component({
   selector: 'app-teams-list',
@@ -6,10 +10,10 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./teams-list.component.less']
 })
 export class TeamsListComponent implements OnInit {
+  @Input() teams: Team[];
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

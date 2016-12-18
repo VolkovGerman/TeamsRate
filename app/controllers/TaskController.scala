@@ -66,6 +66,15 @@ class TaskController @Inject() (taskDAO: TaskDAO) (val messagesApi: MessagesApi)
     }
   }
 
+  // POST /tasks/:id/done
+  def done(id: Long) = Action.async(parse.json) { implicit request =>
+    (request.body \ "status").asOpt[Long].map { status =>
+      taskDAO.updateStatus(id, status).map(_ => Ok(resOk))
+    }.getOrElse {
+      Future.successful(Ok(resError))
+    }
+  }
+
   // PUT /tasks/:id
   def update(id: Long) = Action.async(parse.json) {
     implicit request => request.body.validate[Task] match {
@@ -77,6 +86,14 @@ class TaskController @Inject() (taskDAO: TaskDAO) (val messagesApi: MessagesApi)
   // DELETE /tasks/:id
   def delete(id: Long) = Action.async {
     taskDAO.delete(id).map(_ => Ok(resOk))
+  }
+
+  def setPerformer(id: Long) = Action.async(parse.json) { implicit request =>
+    (request.body \ "performer_id").asOpt[Long].map { performer_id =>
+      taskDAO.updatePerformer(id, performer_id).map(_ => Ok(resOk))
+    }.getOrElse {
+      Future.successful(Ok(resError))
+    }
   }
 
 }

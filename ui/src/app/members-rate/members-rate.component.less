@@ -16,6 +16,11 @@
     font-size: 1.1em;
     color: grey;
     font-weight: bold;
+
+    & > div {
+        font-size: 1em;
+        text-transform: lowercase;
+    }
 }
 
 .member {
@@ -24,8 +29,32 @@
         width: 10%;
     }
 
-    &__points {
-        width: 30%;
+    &__photo {
+        width: 20%;
+
+        img {
+            max-width: 40px;
+            max-height: 40px;
+
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__name {
+        padding: 10px 0;
+
+        text-transform: uppercase;
+
+        a {
+            font-weight: bold;
+            color: #737373;
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 1px solid #737373;
+            }
+        }
     }
 
 }

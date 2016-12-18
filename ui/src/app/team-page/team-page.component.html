@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [page]="'team'"></app-header>
 <main>
     <div class="container">
 		<div class="row">
@@ -9,42 +9,57 @@
 							<img src="images/profile.jpg" alt="Team Photo" width="200" height="200">
 						</div>
 						<div class="teamMenu__name">
-							OneWayUp
+							{{teamName}}
 						</div>
 					</div>
 					<div class="teamMenu__sections">
 						<a href="#" class="teamMenu__section" [class.active]="activeTab == 'tasks'" (click)="activateTab('tasks')">tasks</a>
 						<a href="#" class="teamMenu__section" [class.active]="activeTab == 'members'" (click)="activateTab('members')">members</a>
 					</div>
+					<button class="teamMenu__subscription" (click)="subscribe()">
+						<span *ngIf="!access">enter group</span>
+						<span *ngIf="access">leave group</span>
+					</button>
 				</div>
 			</div>
-			<div class="col-md-5">
-				<div class="teamTasksSection"  *ngIf="activeTab == 'tasks'">
-					<div class="teamTodo">
-						<div class="teamTodo__panel panel">
-							<div class="panel__item active">
-								new 
-								<span class="panel__count">9</span>
-							</div>
-							<div class="panel__item">
-								running
-								<span class="panel__count">5</span>
-							</div>
-							<div class="panel__item">
-								done
-								<span class="panel__count">2</span>
-							</div>
-						</div>
-						<app-task-list></app-task-list>
+			<div class="noAccess" *ngIf="!access">
+				<div class="col-md-9">
+					<div class="noAccess__block">
+						you must be a member to see team's tasks
 					</div>
 				</div>
-				<div class="teamMembers" *ngIf="activeTab == 'members'">
-					<app-members-rate></app-members-rate>
-				</div>
 			</div>
-			<div class="col-md-4">
-				<app-team-settings></app-team-settings>
-				<app-task-builder></app-task-builder>
+			<div class="teamBlocks" *ngIf="access">
+				<div class="col-md-5">
+					<div class="teamTasksSection"  *ngIf="activeTab == 'tasks'">
+						<div class="teamTodo">
+							<div class="teamTodo__panel panel">
+								<div class="panel__item" (click)="tasksTab = 'new'" [class.active]="tasksTab == 'new'">
+									new 
+									<span class="panel__count">{{tasks.new.length}}</span>
+								</div>
+								<div class="panel__item" (click)="tasksTab = 'running'" [class.active]="tasksTab == 'running'">
+									running
+									<span class="panel__count">{{tasks.running.length}}</span>
+								</div>
+								<div class="panel__item" (click)="tasksTab = 'done'" [class.active]="tasksTab == 'done'">
+									done
+									<span class="panel__count">{{tasks.done.length}}</span>
+								</div>
+							</div>
+							<app-task-list *ngIf="tasksTab == 'new'" [tasks]="tasks.new" (updateTaskEvent)="updateTasks()"></app-task-list>
+							<app-task-list *ngIf="tasksTab == 'running'" [tasks]="tasks.running" (updateTaskEvent)="updateTasks()"></app-task-list>
+							<app-task-list *ngIf="tasksTab == 'done'" [tasks]="tasks.done" (updateTaskEvent)="updateTasks()"></app-task-list>
+						</div>
+					</div>
+					<div class="teamMembers" *ngIf="activeTab == 'members'">
+						<app-members-rate [pageID]="pageID"></app-members-rate>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<app-team-settings [teamName]="teamName" [teamDescr]="teamDescr" [teamID]="pageID" (teamInfoUpdated)="teamInfoUpdated($event)"></app-team-settings>
+					<app-task-builder [teamID]="pageID" (taskCreated)="updateTasks()"></app-task-builder>
+				</div> 
 			</div>
 		</div>
     </div>

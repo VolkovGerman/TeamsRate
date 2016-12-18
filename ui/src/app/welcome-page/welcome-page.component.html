@@ -1,15 +1,17 @@
 <div class="welcome">
 
-    <div class="welcome__logo">
-        <span class="prefix">It's</span> TeamsRate<span class="prefix">!</span>
+    <div class="welcome__enterBlock">
+        <div class="welcome__logo">
+            <span class="prefix">It's</span> TeamsRate<span class="prefix">!</span>
+        </div>
+        <div class="welcome__words">
+            Team's management<br>was never so easy!
+        </div>
+        <div class="welcome__actions">
+            <button class="authBtn" [class.loading]="authButton_google" (click)="authClick();">
+                Google+
+            </button>
+        </div>
     </div>
-    <div class="welcome__actions">
-        <a href="#" class="authBtn" [class.loading]="authButton_google" (click)="authClick();">
-            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGZpbGw9IiNjMTFkMWQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU2LjY5MyA1Ni42OTMiIGhlaWdodD0iNTYuNjkzcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1Ni42OTMgNTYuNjkzIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjMuNzYxLDI3Ljk2YzAuNjI5LDAsMS4xNi0wLjI0OCwxLjU3LTAuNzE3YzAuNjQ1LTAuNzMyLDAuOTI4LTEuOTM2LDAuNzYtMy4yMTVjLTAuMzAxLTIuMjg3LTEuOTMyLTQuMTg2LTMuNjM3LTQuMjM2ICAgaC0wLjA2OGMtMC42MDQsMC0xLjE0MSwwLjI0Ni0xLjU1MSwwLjcxNWMtMC42MzcsMC43MjUtMC45MDMsMS44NzEtMC43MzYsMy4xNDZjMC4yOTksMi4yODMsMS45NjUsNC4yNTYsMy42MzUsNC4zMDdIMjMuNzYxeiIvPjxwYXRoIGQ9Ik0yNS42MjIsMzQuODQ3Yy0wLjE2OC0wLjExMy0wLjM0Mi0wLjIzMi0wLjUyMS0wLjM1NWMtMC41MjUtMC4xNjItMS4wODQtMC4yNDYtMS42NTQtMC4yNTRoLTAuMDcyICAgYy0yLjYyNSwwLTQuOTI5LDEuNTkyLTQuOTI5LDMuNDA2YzAsMS45NzEsMS45NzIsMy41MTgsNC40OTEsMy41MThjMy4zMjIsMCw1LjAwNi0xLjE0NSw1LjAwNi0zLjQwNCAgIGMwLTAuMjE1LTAuMDI1LTAuNDM2LTAuMDc2LTAuNjU2QzI3LjY0MiwzNi4yMjIsMjYuODM3LDM1LjY3NSwyNS42MjIsMzQuODQ3eiIvPjxwYXRoIGQ9Ik0yOC4zNDcsNS4xNTdjLTEzLjYwMSwwLTI0LjYyNSwxMS4wMjMtMjQuNjI1LDI0LjYyM3MxMS4wMjUsMjQuNjI1LDI0LjYyNSwyNC42MjVjMTMuNTk4LDAsMjQuNjIzLTExLjAyNSwyNC42MjMtMjQuNjI1ICAgUzQxLjk0NCw1LjE1NywyOC4zNDcsNS4xNTd6IE0yNi4xMDYsNDMuMTc5Yy0wLjk4MiwwLjI4My0yLjA0MSwwLjQyOC0zLjE1NCwwLjQyOGMtMS4yMzgsMC0yLjQzLTAuMTQzLTMuNTQtMC40MjQgICBjLTIuMTUtMC41NDEtMy43NC0xLjU3LTQuNDgtMi44OTVjLTAuMzItMC41NzQtMC40ODItMS4xODQtMC40ODItMS44MTZjMC0wLjY1MiwwLjE1Ni0xLjMxMiwwLjQ2My0xLjk2NyAgIGMxLjE4LTIuNTEsNC4yODMtNC4xOTcsNy43MjItNC4xOTdjMC4wMzUsMCwwLjA2OCwwLDAuMSwwYy0wLjI3OS0wLjQ5Mi0wLjQxNi0xLjAwMi0wLjQxNi0xLjUzN2MwLTAuMjY4LDAuMDM1LTAuNTM5LDAuMTA1LTAuODE0ICAgYy0zLjYwNi0wLjA4NC02LjMwNi0yLjcyNS02LjMwNi02LjIwN2MwLTIuNDYxLDEuOTY1LTQuODU1LDQuNzc2LTUuODI0YzAuODQyLTAuMjkxLDEuNjk5LTAuNDM5LDIuNTQzLTAuNDM5aDcuNzEzICAgYzAuMjY0LDAsMC40OTQsMC4xNywwLjU3NiwwLjQyYzAuMDg0LDAuMjUyLTAuMDA4LDAuNTI1LTAuMjIxLDAuNjhsLTEuNzI1LDEuMjQ4Yy0wLjEwNCwwLjA3NC0wLjIyOSwwLjExNS0wLjM1NywwLjExNWgtMC42MTcgICBjMC43OTksMC45NTUsMS4yNjYsMi4zMTYsMS4yNjYsMy44NDhjMCwxLjY5MS0wLjg1NSwzLjI4OS0yLjQxLDQuNTA2Yy0xLjIwMSwwLjkzNi0xLjI1LDEuMTkxLTEuMjUsMS43MjkgICBjMC4wMTYsMC4yOTUsMC44NTQsMS4yNTIsMS43NzUsMS45MDRjMi4xNTIsMS41MjMsMi45NTMsMy4wMTQsMi45NTMsNS41MDhDMzEuMTQsNDAuMDQsMjkuMTYzLDQyLjI5MiwyNi4xMDYsNDMuMTc5eiAgICBNNDMuNTI4LDI5Ljk0OGMwLDAuMzM0LTAuMjczLDAuNjA1LTAuNjA3LDAuNjA1aC00LjM4M3Y0LjM4NWMwLDAuMzM2LTAuMjcxLDAuNjA3LTAuNjA3LDAuNjA3aC0xLjI0OCAgIGMtMC4zMzYsMC0wLjYwNy0wLjI3MS0wLjYwNy0wLjYwN3YtNC4zODVIMzEuNjljLTAuMzMyLDAtMC42MDUtMC4yNzEtMC42MDUtMC42MDV2LTEuMjVjMC0wLjMzNCwwLjI3My0wLjYwNywwLjYwNS0wLjYwN2g0LjM4NSAgIHYtNC4zODNjMC0wLjMzNiwwLjI3MS0wLjYwNywwLjYwNy0wLjYwN2gxLjI0OGMwLjMzNiwwLDAuNjA3LDAuMjcxLDAuNjA3LDAuNjA3djQuMzgzaDQuMzgzYzAuMzM0LDAsMC42MDcsMC4yNzMsMC42MDcsMC42MDcgICBWMjkuOTQ4eiIvPjwvZz48L3N2Zz4=" alt="Google Plus">
-        </a>
-    </div>
-    <div class="welcome__words">
-        Team's management<br>was never so easy!
-    </div>
-
+    
 </div>

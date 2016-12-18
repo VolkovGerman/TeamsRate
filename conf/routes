@@ -19,12 +19,18 @@ DELETE  /api/users/:id                       controllers.UserController.delete(i
 GET     /api/teams                           controllers.TeamController.getAll
 GET     /api/teams/:id                       controllers.TeamController.get(id: Long)
 GET     /api/teams/:id/tasks                 controllers.TeamController.getTasks(id: Long)
+GET     /api/teams/:id/users                 controllers.TeamController.getMembers(id: Long)
 POST    /api/teams                           controllers.TeamController.add
-PUT     /api/teams/:id                       controllers.TeamController.update(id: Long)
+POST    /api/teams/user                      controllers.TeamController.addUser
+POST    /api/teams/check_member              controllers.TeamController.isMember
+DELETE  /api/teams/:teamID/user/:userID      controllers.TeamController.removeUser(teamID: Long, userID: Long)
+PUT     /api/teams                           controllers.TeamController.update
 DELETE  /api/teams/:id                       controllers.TeamController.delete(id: Long)
 
 GET     /api/tasks                           controllers.TaskController.getAll
 GET     /api/tasks/:id                       controllers.TaskController.get(id: Long)
 POST    /api/tasks                           controllers.TaskController.add
+POST    /api/tasks/:id                       controllers.TaskController.setPerformer(id: Long)
+POST    /api/tasks/:id/done                  controllers.TaskController.done(id: Long)
 PUT     /api/tasks/:id                       controllers.TaskController.update(id: Long)
 DELETE  /api/tasks/:id                       controllers.TaskController.delete(id: Long)
