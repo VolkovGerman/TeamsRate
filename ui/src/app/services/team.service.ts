@@ -9,7 +9,7 @@ import { User } from '../classes/User';
 
 @Injectable()
 export class TeamService implements OnInit {
-  private baseUrl = 'http://localhost:9000/api';//'http://teamsrate.herokuapp.com/api';
+  private baseUrl = 'https://teamsrate.herokuapp.com/api';
 
   constructor(private http: Http) { } 
 
