@@ -1,10 +1,10 @@
 <section class="teams section">
-  <app-full-task [selectedTask]="selectedTask" (closeTaskEvent)="unselectTask()" (updateTaskEvent)="updateTasksEvent()"></app-full-task>
   <header class="section__header">
     {{listHeader}}
   </header>
-  <div class="section__main--bordered">
-    <app-empty-box *ngIf="emptyList" [typeOfImage]="'list'" [text]="'you have zero tasks'"></app-empty-box>
+  <app-full-task [selectedTask]="selectedTask" (closeTaskEvent)="unselectTask()" (updateTaskEvent)="updateTasksEvent()"></app-full-task>
+  <app-empty-box *ngIf="emptyList" [typeOfImage]="'list'" [text]="'you have zero tasks'"></app-empty-box>
+  <div class="section__main--bordered" *ngIf="!emptyList"> 
     <ul class="taskList">
       <li class="task" *ngFor="let task of tasks" (click)="selectTask(task)">
         <span class="task__team">{{task.team_name}}</span>

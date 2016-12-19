@@ -31,9 +31,11 @@ export class TaskService implements OnInit{
       .catch(this.handleError);
   }
 
-  setDone(taskID: number): Promise<void> {
+  setDone(taskID: number, teamID: number, addPoints: number): Promise<void> {
     return this.http.post(this.baseUrl + '/tasks/' + taskID + '/done', {
-      status: 2
+      user_id: JSON.parse(window.localStorage.getItem('user')).id,
+      team_id: teamID,
+      points: addPoints
     })
       .toPromise()
       .then(response => response.json())

@@ -8,6 +8,7 @@
         <div class="member__num">№</div>
         <div class="member__photo">photo</div>
         <div class="member__name">name</div>
+        <div class="member__points">points</div>
       </div>
       <div class="member" *ngFor="let member of members; let i = index;">
         <div class="member__num">{{i + 1}}</div>
@@ -16,6 +17,9 @@
         </div>
         <div class="member__name">
           <a href="https://plus.google.com/{{member.gp_id}}" target="_blank">{{member.name}} {{member.surname}}</a>
+        </div>
+        <div class="member__points">
+          {{member.points}}
         </div>
       </div>
     </div>

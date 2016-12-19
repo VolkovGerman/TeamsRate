@@ -67,12 +67,12 @@ class TaskController @Inject() (taskDAO: TaskDAO) (val messagesApi: MessagesApi)
   }
 
   // POST /tasks/:id/done
-  def done(id: Long) = Action.async(parse.json) { implicit request =>
-    (request.body \ "status").asOpt[Long].map { status =>
-      taskDAO.updateStatus(id, status).map(_ => Ok(resOk))
-    }.getOrElse {
-      Future.successful(Ok(resError))
-    }
+  def done(taskID: Long) = Action.async(parse.json) { implicit request =>
+    val userID = (request.body \ "user_id").asOpt[Long].get
+    val teamID = (request.body \ "team_id").asOpt[Long].get
+    val points = (request.body \ "points").asOpt[Long].get
+
+    taskDAO.done(taskID, teamID, userID, points).map(_ => Ok(resOk))
   }
 
   // PUT /tasks/:id

@@ -78,13 +78,15 @@ class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO, taskDAO:
   implicit val memberWrites: Writes[Member] = (
     (JsPath \ "id").write[Long] and
     (JsPath \ "user_id").write[Long] and
-    (JsPath \ "team_id").write[Long]
+    (JsPath \ "team_id").write[Long] and
+    (JsPath \ "points").write[Long]
   ) (unlift(Member.unapply))
 
   implicit val memberReads: Reads[Member] = (
     (JsPath \ "id").read[Long] and
     (JsPath \ "user_id").read[Long] and
-    (JsPath \ "team_id").read[Long]
+    (JsPath \ "team_id").read[Long] and
+    (JsPath \ "points").read[Long]
   ) (Member.apply _)
 
   // REST
@@ -116,7 +118,7 @@ class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO, taskDAO:
 
   // GET /teams/:id/tasks
   def getTasks(id: Long) = Action.async {
-    taskDAO.getTeamTasks1(id) map {
+    taskDAO.getTeamTasks(id) map {
       results => {
         val jsonArr = results map {
           result => Json.obj(
@@ -129,7 +131,8 @@ class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO, taskDAO:
             "team_name" -> result._7,
             "performer_name" -> result._8,
             "performer_surname" -> result._9,
-            "performer_gp" -> result._10
+            "performer_gp" -> result._10,
+            "creator_id" -> result._11
           )
         }
 
@@ -140,7 +143,22 @@ class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO, taskDAO:
 
   // GET /teams/:id/users
   def getMembers(id: Long) = Action.async {
-    memberDAO.getUsersForTeam(id).map { members => Ok(Json.toJson(members)) }
+    memberDAO.getUsersForTeam(id) map {
+      results => {
+        val jsonArr = results map {
+          result => Json.obj(
+            "id" -> result._1,
+            "name" -> result._2,
+            "surname" -> result._3,
+            "photo_url" -> result._4,
+            "gp_id" -> result._5,
+            "points" -> result._6
+          )
+        }
+
+        Ok(Json.toJson(jsonArr))
+      }
+    }
   }
 
   // POST /teams
@@ -170,7 +188,7 @@ class TeamController @Inject() (teamDAO: TeamDAO, memberDAO: MemberDAO, taskDAO:
 
   // DELETE /teams/:teamID/user/:userID
   def removeUser(teamID: Long, userID: Long) = Action.async {
-      memberDAO.removeUserFromTeam(Member(0, userID, teamID)).map(_ => Ok(resOk))
+      memberDAO.removeUserFromTeam(Member(0, userID, teamID, 0)).map(_ => Ok(resOk))
   }
 
   // PUT /teams/:id

@@ -1,27 +1,27 @@
 <div class="taskBuilder formBlock">
-  <header class="formBlock__header">
+  <header class="formBlock__header" (click)="trigger()">
     create new task
   </header>
-  <form class="formBlock__form" (ngSubmit)="onSubmit($event)">
+  <form class="formBlock__form" (ngSubmit)="onSubmit($event);"  *ngIf="opened">
     <div class="formBlock__main">
-      <textarea #taskText name="taskText" id="taskText" rows="4" placeholder="new task goes here"></textarea>
+      <textarea [(ngModel)]="createTaskForm.text" name="text" id="taskText" rows="4" placeholder="new task goes here" required></textarea>
       <div class="row">
         <div class="col-md-7">
           <div class="form-group">
             <label for="deadline">deadline</label>
-            <input #taskDeadline type="date" id="deadline" class="form-control" placeholder="01.01.2016">
+            <input [(ngModel)]="createTaskForm.deadline" name="deadline" type="date" id="deadline" class="form-control" placeholder="01.01.2016" required>
           </div>
         </div>
         <div class="col-md-5">
           <div class="form-group">
             <label for="points">points</label>
-            <input #taskPoints type="number" id="points" class="form-control">
+            <input [(ngModel)]="createTaskForm.points" name="points" type="number" id="points" class="form-control" value="0" min=0 max=1000 required>
           </div>
         </div>
       </div> 
     </div>
     <footer class="formBlock__footer">
-      <button type="submit" class="formBlock__action" (click)="createTask(taskText.value, taskDeadline.value, taskPoints.value)">create</button>
+      <button type="submit" class="formBlock__action">create</button>
     </footer>
   </form>
 </div>

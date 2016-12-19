@@ -1,6 +1,11 @@
 @import '../_variables';
 
 .section {
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: @screen-medium) {
+		margin-bottom: 40px;
+	}
 
     &__header {
         margin-bottom: 20px;

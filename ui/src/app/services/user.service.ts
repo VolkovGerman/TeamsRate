@@ -59,6 +59,13 @@ export class UserService implements OnInit {
       .catch(this.handleError);
   }
 
+  getTotalPoints(): Promise<number> {
+    return this.http.get(this.baseUrl + '/users/' + JSON.parse(window.localStorage.getItem('user')).id + '/points')
+      .toPromise()
+      .then(response => +response.text())
+      .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);

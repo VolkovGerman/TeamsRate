@@ -3,12 +3,20 @@
 .headerWrap {
 	min-height: 80px;
 	background-color: @red;
+
+	@media only screen and (max-width: @screen-medium) {
+		min-height: 0;
+	}
 }
 
 .header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+	@media only screen and (max-width: @screen-medium) {
+		display: block;
+	}
 }
 
 .logo {
@@ -20,6 +28,12 @@
 	a {
 		color: #fff;
 		text-decoration: none;
+	}
+
+	@media only screen and (max-width: @screen-medium) {
+		text-align: center;
+		font-size: 1em;
+		line-height: 30px;
 	}
 }
 
@@ -36,6 +50,10 @@
 		list-style: none;
 		
 		font-size: 0;
+
+		@media only screen and (max-width: @screen-medium) {
+			float: none;
+		}
 	}
 
 	&__li {
@@ -43,6 +61,13 @@
 		
 		font-size: 14px;
 		line-height: 80px;
+
+		@media only screen and (max-width: @screen-medium) {
+			display: inline-block;
+			line-height: 30px;
+			text-align: center;
+			width: 33%;
+		}
 
 		a, .extra {
 			display: block;
@@ -55,6 +80,10 @@
 
 			outline: none;
 			cursor: pointer;
+
+			@media only screen and (max-width: @screen-medium) {
+				font-size: 1em;
+			}
 
 			&:hover, &:focus {
 				color: #fff;

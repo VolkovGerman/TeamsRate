@@ -1,0 +1,43 @@
+@import "../../styles/_variables.less";
+
+.user {
+    margin-bottom: 20px;
+    padding: 0 0 20px;
+
+    border: 1px solid #cecece;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &__photo {
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: top;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__info {
+        display: inline-block;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+    
+    &__name {
+        font-size: 1.2em;
+        display: block;
+        color: @red;
+
+        &:hover, &:active, &:focus {
+            color: red;
+        }
+    }
+
+    &__points {
+        color: #777777;
+    }
+
+}

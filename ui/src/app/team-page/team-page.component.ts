@@ -23,6 +23,7 @@ export class TeamPageComponent implements OnInit, CanActivate {
   teamName: string;
   teamDescr: string;
   access: boolean;
+  isAdmin: boolean;
   tasks = {
     new: [],
     running: [],
@@ -31,6 +32,7 @@ export class TeamPageComponent implements OnInit, CanActivate {
 
   constructor(private route: ActivatedRoute, private router: Router, private teamService: TeamService) {
     this.access = false;
+    this.isAdmin = false;
     this.activeTab = 'tasks';
     this.tasksTab = 'new';
   }
@@ -41,9 +43,14 @@ export class TeamPageComponent implements OnInit, CanActivate {
     this.checkAccess();
 
     this.teamService.getTeamInfo(this.pageID).then(teamInfo => {
+      let userID = JSON.parse(window.localStorage.getItem('user')).id;
+
       if (teamInfo) {
         this.teamName = teamInfo.name;
         this.teamDescr = teamInfo.descr;
+
+        console.log("isAdmin: " + (teamInfo.cr_id == userID) + " " + teamInfo.cr_id);
+        this.isAdmin = (teamInfo.creator_id == userID);
       } else {
         this.router.navigate(['404']);
       }
@@ -65,7 +72,7 @@ export class TeamPageComponent implements OnInit, CanActivate {
 
   checkAccess() {
     this.teamService.checkAccess(this.pageID).then(result => {
-      console.log(result);
+      console.log("Result  -- ---" + result)
       this.access = result
     });
   }
@@ -86,6 +93,12 @@ export class TeamPageComponent implements OnInit, CanActivate {
         this.checkAccess();
       });
     }
+  }
+
+  remove() {
+    this.teamService.delete(this.pageID).then(() => {
+      this.router.navigate(['']);
+    });
   }
 
   teamInfoUpdated(newTeamInfo) {

@@ -34,10 +34,18 @@ export class FullTaskComponent implements OnInit {
   }
 
   setAsDone() {
-    this.taskService.setDone(this.selectedTask.id).then(() => {
+    this.taskService.setDone(this.selectedTask.id, this.selectedTask.team_id, this.selectedTask.points).then(() => {
       this.updateTaskEvent.emit();
       this.close();
     });
+  }
+
+  canRemove() { 
+    if (this.selectedTask.creator_id == JSON.parse(window.localStorage.getItem('user')).id) {
+      return true;
+    }
+
+    return false;
   }
 
   removeTask() {

@@ -16,23 +16,34 @@ export class TaskBuilderComponent implements OnInit {
   @Input() teamID: number;
   @Output() taskCreated = new EventEmitter();
   newTask: Task;
+  opened: boolean;
+  createTaskForm = {
+    text: '',
+    deadline: '',
+    points: 0
+  };
 
-  constructor(private taskService: TaskService) {    
+  constructor(private taskService: TaskService) {  
+    this.opened = false;  
   }
 
   ngOnInit() {
   }
 
-  createTask(text, deadline, points) {
+  trigger() {
+    this.opened = !this.opened;
+  }
+
+  createTask() {
     this.newTask = new Task(
       0, 
       this.teamID, 
       JSON.parse(window.localStorage.getItem('user')).id, 
       -1,
-      text, 
-      deadline, 
+      this.createTaskForm.text, 
+      this.createTaskForm.deadline, 
       0, 
-      +points
+      +this.createTaskForm.points
     );
 
     this.taskService.add(this.newTask).then(() => {
@@ -42,6 +53,7 @@ export class TaskBuilderComponent implements OnInit {
   }
 
   onSubmit(event:any): void {
+    this.createTask();
     event.target.reset();
   }
 

@@ -18,7 +18,9 @@
     </div>
     <div class="prop">
       <span class="prop__name">team</span>
-      <span class="prop__value">{{selectedTask.team_name}}</span>
+      <span class="prop__value">
+        <a routerLink="/team/{{selectedTask.team_id}}">{{selectedTask.team_name}}</a>
+      </span>
     </div>
     <div class="prop">
       <span class="prop__name">deadline</span>
@@ -32,6 +34,6 @@
   <div class="fullTask__actions">
     <button *ngIf="selectedTask.status == 0" class="action" (click)="setAsPerformer()">take</button>
     <button *ngIf="selectedTask.status == 1" class="action" (click)="setAsDone()">done</button>
-    <button class="action" (click)="removeTask()">remove</button>
+    <button *ngIf="canRemove()" class="action" (click)="removeTask()">remove</button>
   </div>
 </div>

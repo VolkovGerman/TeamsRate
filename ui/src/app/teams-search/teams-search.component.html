@@ -3,9 +3,6 @@
     all teams
   </div>
   <div class="section__main search">
-    <div class="search__control">
-      <input type="text" placeholder="team name">
-    </div>
     <div class="search__results">
       <div class="team" *ngFor="let team of teams">
         <a routerLink="/team/{{team.id}}" class="team__name">

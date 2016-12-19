@@ -35,8 +35,9 @@ class MemberDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvide
     def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
     def user_id = column[Long]("USER_ID")
     def team_id = column[Long]("TEAM_ID")
+    def points = column[Long]("POINTS")
 
-    def * = (id, user_id, team_id) <> (Member.tupled, Member.unapply _)
+    def * = (id, user_id, team_id, points) <> (Member.tupled, Member.unapply _)
   }
 
   private val members = TableQuery[MembersTable]
@@ -51,12 +52,19 @@ class MemberDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvide
     db.run(innerJoin.result)
   }
 
-  def getUsersForTeam(activeTeamId: Long): Future[Seq[User]] = {
+  def getUsersForTeam(activeTeamId: Long): Future[Seq[(Long, String, String, String, String, Long)]] = {
     val innerJoin = for {
       (m, u) <- members.filter(_.team_id === activeTeamId) join users on (_.user_id === _.id)
-    } yield u
+    } yield (u.id, u.name, u.surname, u.photo_url, u.gp_id, m.points)
 
     db.run(innerJoin.result)
+  }
+
+  // Get total points of the user
+  def getPoints(id: Long): Future[Option[Long]] = {
+    val q = members.filter(_.user_id === id).map(_.points).sum
+
+    db.run(q.result)
   }
 
   def addUserToTeam(member: Member): Future[Long] =

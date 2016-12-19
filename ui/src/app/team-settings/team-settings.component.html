@@ -1,8 +1,8 @@
 <div class="taskBuilder formBlock">
-  <header class="formBlock__header">
+  <header class="formBlock__header" (click)="trigger()">
     team settings
   </header>
-  <form class="formBlock__form">
+  <form class="formBlock__form" *ngIf="opened">
     <div class="formBlock__main">
       <div class="form-group">
         <label for="teamName">name</label>

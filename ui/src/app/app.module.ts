@@ -25,6 +25,7 @@ import { EmptyBoxComponent } from './empty-box/empty-box.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { UserService } from './services/user.service';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserBlockComponent } from './user-block/user-block.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     TeamsSearchComponent,
     TeamBuilderComponent,
     EmptyBoxComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserBlockComponent
   ],
   imports: [
     BrowserModule,

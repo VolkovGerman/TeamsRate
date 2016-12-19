@@ -14,14 +14,27 @@ import { TeamService } from '../services/team.service';
 })
 export class TeamBuilderComponent implements OnInit {
   @Output() teamCreatedEvent = new EventEmitter(); 
+  opened: boolean;
+  createdTeam = {
+    name: '',
+    descr: ''
+  };
 
-  constructor(private teamService: TeamService) { }
+  constructor(private teamService: TeamService) {
+    this.opened = false;
+  }
 
   ngOnInit() {
   }
 
-  createTeam(name, descr) {
-    this.teamService.add(name, descr).then(result => {
+  trigger() {
+    this.opened = !this.opened;
+  }
+
+  createTeam() {
+    this.teamService.add(this.createdTeam.name, this.createdTeam.descr).then(result => {
+      
+      console.log(result);
       this.teamCreatedEvent.emit();
 
       this.teamService.subscribeForTeam(result.id).then(() => {
@@ -31,6 +44,7 @@ export class TeamBuilderComponent implements OnInit {
   }
 
   onSubmit(event:any): void {
+    this.createTeam();
     event.target.reset();
   }
 

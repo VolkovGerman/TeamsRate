@@ -92,24 +92,31 @@ class UserController @Inject() (userDAO: UserDAO, memberDAO: MemberDAO, taskDAO:
     userDAO.findById(id).map { user => Ok(Json.toJson(user)) }
   }
 
+  // GET /users/:id/points
+  def getPoints(id: Long) = Action.async {
+    memberDAO.getPoints(id).map { points => Ok(points.get.toString) }
+  }
+
   // GET /users/:id/teams
   def getTeams(id: Long) = Action.async {
     memberDAO.getTeamsForUser(id).map { teams => Ok(Json.toJson(teams)) }
   }
 
   // GET /users/:id/tasks
+  // show only running
   def getTasks(id: Long) = Action.async {
-    taskDAO.getUserTasks1(id) map {
+    taskDAO.getUserTasks(id) map {
       results => {
         val jsonArr = results map {
           result => Json.obj(
             "id" -> result._1,
-            "text" -> result._2,
-            "deadline" -> result._3,
-            "status" -> result._4,
-            "points" -> result._5,
-            "team_id" -> result._6,
-            "team_name" -> result._7
+            "creator_id" -> result._2,
+            "text" -> result._3,
+            "deadline" -> result._4,
+            "status" -> result._5,
+            "points" -> result._6,
+            "team_id" -> result._7,
+            "team_name" -> result._8
           )
         }
 

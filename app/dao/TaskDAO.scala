@@ -2,7 +2,9 @@ package dao
 
 import javax.inject.{Inject, Singleton}
 
-import models.{Task, Team, User}
+import slick.driver.H2Driver.api._
+
+import models.{Member, Task, Team, User}
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import slick.driver.JdbcProfile
@@ -46,6 +48,16 @@ class TaskDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     def * = (id, name, descr, creator_id) <> (Team.tupled, Team.unapply _)
   }
 
+  private class MembersTable(tag: Tag) extends Table[Member](tag, "MEMBER") {
+    def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
+    def user_id = column[Long]("USER_ID")
+    def team_id = column[Long]("TEAM_ID")
+    def points = column[Long]("POINTS")
+
+    def * = (id, user_id, team_id, points) <> (Member.tupled, Member.unapply _)
+  }
+
+  private val members = TableQuery[MembersTable]
   private val tasks = TableQuery[TasksTable]
   private val users = TableQuery[UsersTable]
   private val teams = TableQuery[TeamsTable]
@@ -81,24 +93,19 @@ class TaskDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     db.run(tasks.filter(_.id === id).delete).map(_ => ())
 
   // Get user's tasks
-  def getUserTasks(id: Long): Future[Seq[Task]] =
-    db.run(tasks.filter(_.performer_id === id).result)
-
-  def getUserTasks1(id: Long): Future[Seq[(Long, String, String, Long, Long, Long, String)]] = {
+  def getUserTasks(id: Long): Future[Seq[(Long, Long, String, String, Long, Long, Long, String)]] = {
     val innerJoin = for {
-      (task, team) <- tasks.filter(_.performer_id === id) join teams on (_.team_id === _.id)
-    } yield (task.id, task.text, task.deadline, task.status, task.points, team.id, team.name)
+      (task, team) <- tasks.filter(x => x.performer_id === id && x.status === 1.toLong) join teams on (_.team_id === _.id)
+    } yield (task.id, task.creator_id, task.text, task.deadline, task.status, task.points, team.id, team.name)
 
     db.run(innerJoin.result)
   }
 
-  def getTeamTasks(id: Long): Future[Seq[Task]] =
-    db.run(tasks.filter(_.team_id === id).result)
-
-  def getTeamTasks1(id: Long): Future[Seq[(
+  def getTeamTasks(id: Long): Future[Seq[(
     Long, String, String, Long, Long,
     Long, String,
-    Option[String], Option[String], Option[String]
+    Option[String], Option[String], Option[String],
+    Long
   )]] = {
     val monadicInnerJoin = for {
       (ta, performer) <- tasks.filter(_.team_id === id) joinLeft users on (_.performer_id === _.id)
@@ -106,7 +113,8 @@ class TaskDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     } yield (
       ta.id, ta.text, ta.deadline, ta.status, ta.points,
       te.id, te.name,
-      performer.map(_.name), performer.map(_.surname), performer.map(_.gp_id)
+      performer.map(_.name), performer.map(_.surname), performer.map(_.gp_id),
+      ta.creator_id
     )
 
     db.run(monadicInnerJoin.result)
@@ -120,11 +128,22 @@ class TaskDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     db.run(action)
   }
 
-  def updateStatus(taskID: Long, status: Long): Future[Any] = {
-    val action = tasks.filter(_.id === taskID)
+  def done(taskID: Long, teamID: Long, userID: Long, points: Long): Future[Any] = {
+    val action1 = tasks.filter(_.id === taskID)
       .map(task => task.status)
-      .update(status)
+      .update(2.toLong)
 
-    db.run(action)
+    val action2 = members.filter {
+      x => x.team_id === teamID && x.user_id === userID
+    }.result.headOption.flatMap {
+      case Some(m) => {
+        val newPoints = m.points + points
+        members.filter(x => x.team_id === teamID && x.user_id === userID).map(member => member.points).update(newPoints)
+      }
+      case None => DBIO.successful(())
+    }.transactionally
+
+    db.run(action1)
+    db.run(action2)
   }
 }

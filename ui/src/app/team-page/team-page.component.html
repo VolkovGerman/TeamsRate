@@ -16,9 +16,12 @@
 						<a href="#" class="teamMenu__section" [class.active]="activeTab == 'tasks'" (click)="activateTab('tasks')">tasks</a>
 						<a href="#" class="teamMenu__section" [class.active]="activeTab == 'members'" (click)="activateTab('members')">members</a>
 					</div>
-					<button class="teamMenu__subscription" (click)="subscribe()">
+					<button class="teamMenu__action" (click)="subscribe()">
 						<span *ngIf="!access">enter group</span>
 						<span *ngIf="access">leave group</span>
+					</button>
+					<button class="teamMenu__action" (click)="remove()" *ngIf="isAdmin">
+						delete group
 					</button>
 				</div>
 			</div>
@@ -57,7 +60,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<app-team-settings [teamName]="teamName" [teamDescr]="teamDescr" [teamID]="pageID" (teamInfoUpdated)="teamInfoUpdated($event)"></app-team-settings>
+					<app-team-settings *ngIf="isAdmin" [teamName]="teamName" [teamDescr]="teamDescr" [teamID]="pageID" (teamInfoUpdated)="teamInfoUpdated($event)"></app-team-settings>
 					<app-task-builder [teamID]="pageID" (taskCreated)="updateTasks()"></app-task-builder>
 				</div> 
 			</div>

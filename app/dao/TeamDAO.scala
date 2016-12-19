@@ -2,7 +2,7 @@ package dao
 
 import javax.inject.{Inject, Singleton}
 
-import models.{Team, User}
+import models.{Member, Team, User}
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import slick.driver.JdbcProfile
@@ -33,6 +33,16 @@ class TeamDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
     def * = (id, name, surname, photo_url, gp_id) <> (User.tupled, User.unapply _)
   }
 
+  private class MembersTable(tag: Tag) extends Table[Member](tag, "MEMBER") {
+    def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
+    def user_id = column[Long]("USER_ID")
+    def team_id = column[Long]("TEAM_ID")
+    def points = column[Long]("POINTS")
+
+    def * = (id, user_id, team_id, points) <> (Member.tupled, Member.unapply _)
+  }
+
+  private val members = TableQuery[MembersTable]
   private val teams = TableQuery[TeamsTable]
   private val users = TableQuery[UsersTable]
 
@@ -79,7 +89,14 @@ class TeamDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
   }
 
   // Delete a team.
-  def delete(id: Long): Future[Unit] =
-    db.run(teams.filter(_.id === id).delete).map(_ => ())
+  def delete(id: Long): Future[Unit] = {
+    val actions = for {
+      t <- teams.filter(_.id === id).delete
+      m <- members.filter(_.team_id === id).delete
+    } yield ()
+
+    db.run(actions)
+  }
+
 
 }

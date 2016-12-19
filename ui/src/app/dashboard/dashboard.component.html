@@ -1,17 +1,18 @@
 <app-header [page]="'dashboard'"></app-header>
 <main class="main">
     <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <app-teams-search [teams]="teams"></app-teams-search>
-          </div>
-          <div class="col-md-3">
-            <app-teams-list [teams]="teamsForUser"></app-teams-list>
-            <app-team-builder (teamCreatedEvent)="updateTeams()"></app-team-builder>
-          </div>
-          <div class="col-md-5">
-            <app-task-list [listHeader]="'my todos'" [tasks]="todos"></app-task-list>
-          </div>
+      <app-user-block></app-user-block>
+      <div class="row">
+        <div class="col-md-4">
+          <app-teams-search [teams]="teams"></app-teams-search>
+          <app-team-builder (teamCreatedEvent)="updateTeams()"></app-team-builder>
         </div>
+        <div class="col-md-3">
+          <app-teams-list [teams]="teamsForUser"></app-teams-list>
+        </div>
+        <div class="col-md-5">
+          <app-task-list [listHeader]="'my todos'" [tasks]="todos" (updateTaskEvent)="updateTodos()"></app-task-list>
+        </div>
+      </div>
     </div>
 </main> 

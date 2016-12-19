@@ -41,18 +41,23 @@ export class TeamService implements OnInit {
       .catch(this.handleError);
   }
 
+  delete(teamID): Promise<void> {
+    return this.http.delete(this.baseUrl + '/teams/' + teamID)
+      .toPromise()
+      .then(response => response.json())
+      .catch(this.handleError);
+  }
+
   checkAccess(teamID): Promise<boolean> {
     return this.http.post(this.baseUrl + '/teams/check_member', {
       id: 0,
       user_id: JSON.parse(window.localStorage.getItem('user')).id,
-      team_id: teamID
+      team_id: teamID,
+      points: 0
     }).toPromise()
       .then(response => {
-        if (response.json() != null) {
-          return true;
-        }
-        
-        return false;
+        console.log("AAAAAAAA" + JSON.stringify(response.json()))
+        return response.json() ? true : false;
       })
       .catch(this.handleError);
   }
@@ -78,9 +83,13 @@ export class TeamService implements OnInit {
     return this.http.post(this.baseUrl + '/teams/user', {
       id: 0,
       user_id: JSON.parse(window.localStorage.getItem('user')).id,
-      team_id: teamID
+      team_id: teamID,
+      points: 0
     }).toPromise()
-      .then(response => response.json())
+      .then(response => {
+        console.log(response.json());
+        response.json()
+      })
       .catch(this.handleError);
   }
 

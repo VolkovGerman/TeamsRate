@@ -10,6 +10,7 @@ GET     /assets/*file                   controllers.Assets.versioned(path="/publ
 # REST
 GET     /api/users                           controllers.UserController.getAll
 GET     /api/users/:id                       controllers.UserController.get(id: Long)
+GET     /api/users/:id/points                controllers.UserController.getPoints(id: Long)
 GET     /api/users/:id/teams                 controllers.UserController.getTeams(id: Long)
 GET     /api/users/:id/tasks                 controllers.UserController.getTasks(id: Long)
 POST    /api/users                           controllers.UserController.add

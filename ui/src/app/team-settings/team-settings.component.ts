@@ -17,12 +17,18 @@ export class TeamSettingsComponent implements OnInit {
   @Input() teamDescr: string;
   @Input() teamID: number;
   @Output() teamInfoUpdated = new EventEmitter();
+  opened: boolean;
   newTeamInfo: Team;
 
-  constructor(private teamService: TeamService) {    
+  constructor(private teamService: TeamService) { 
+    this.opened = false;   
   }
 
   ngOnInit() {
+  }
+
+  trigger() {
+    this.opened = !this.opened;
   }
 
   updateTeam(name: string, descr: string) {

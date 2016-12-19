@@ -23,10 +23,7 @@ export class DashboardComponent implements OnInit, CanActivate {
 
   constructor(private teamService: TeamService, private userService: UserService, private router: Router) {
     this.updateTeams();
-
-    this.userService.getTasks().then(tasks => {
-      this.todos = tasks;
-    });
+    this.updateTodos();
   }
 
   ngOnInit() {
@@ -51,6 +48,12 @@ export class DashboardComponent implements OnInit, CanActivate {
 
     this.teamService.getTeamsForUser().then(teams => {
       this.teamsForUser = teams;
+    });
+  }
+
+  updateTodos() {
+    this.userService.getTasks().then(tasks => {
+      this.todos = tasks;
     });
   }
 

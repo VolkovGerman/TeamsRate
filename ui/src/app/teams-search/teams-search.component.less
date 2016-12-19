@@ -14,15 +14,21 @@
         }
     }
 
-    &__results {        
+    &__results {
+        padding: 0px 15px;
+        border: 1px solid grey;
+        max-height: 220px;
+        overflow-y: scroll;        
 
         .team {
-            margin-bottom: 15px;
-            padding: 10px 15px;
-
+            padding: 10px 0px;
             display: block;
+            border-bottom: 1px solid @borderColor;
 
-            border: 1px solid @borderColor;
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+            }
 
             &:hover {
                 .team__name {
@@ -46,10 +52,6 @@
 
             &__descr {
                 font-size: 0.8em;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
             }
         }
     }

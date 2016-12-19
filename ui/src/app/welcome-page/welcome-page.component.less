@@ -1,3 +1,5 @@
+@import "../../styles/_variables.less";
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -9,19 +11,35 @@
   min-height: 100vh;
 
   background: #ffffff url('../images/office.jpg') no-repeat 50% 50%; 
-  background-size: cover; 
+  background-size: cover;
+
+  @media only screen and (max-width: @screen-medium) {
+      background: #ffffff;
+      align-items: stretch;
+  } 
 
   &__enterBlock {
     margin-left: 80px;
     padding: 20px 40px 30px;
 
     background-color: rgba(255, 255, 255, 0.5);
+
+    @media only screen and (max-width: @screen-medium) {
+      margin-left: 0;
+      padding: 20px 40px;
+
+      background-color: #fff;
+    }
   }
          
   &__logo { 
     color: #ea3448;
     font-size: 4em;
     font-weight: bold;
+
+    @media only screen and (max-width: @screen-medium) {
+      font-size: 2em;
+    }
 
     .prefix {
       color: #3e3e3e;
@@ -34,6 +52,10 @@
     color: #3e3e3e;
     font-size: 2em;
     font-weight: bold;
+
+    @media only screen and (max-width: @screen-medium) {
+      font-size: 1.4em;
+    }
   }
 
   &__actions {
