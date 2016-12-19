@@ -8,7 +8,7 @@ import { Task } from '../classes/Task';
 
 @Injectable()
 export class UserService implements OnInit {
-  private baseUrl = 'http://teamsrate.herokuapp.com/api';
+  private baseUrl = '/api';
 
   constructor(private http: Http) { } 
 
