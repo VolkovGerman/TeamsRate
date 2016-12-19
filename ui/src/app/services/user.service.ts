@@ -31,6 +31,10 @@ export class UserService implements OnInit {
       .catch(this.handleError);
   }
 
+  isLoggedIn() {
+    return window.localStorage.getItem('user') ? true : false;
+  }
+
   getUsers(): Promise<User[]> {
     return this.http.get(this.baseUrl + '/users')
       .toPromise()

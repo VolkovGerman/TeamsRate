@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 import { Task } from '../classes/Task';
 import { Team } from '../classes/Team';
@@ -15,12 +16,12 @@ import { UserService } from '../services/user.service';
     UserService
   ]
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, CanActivate {
   teams: Team[];
   teamsForUser: Team[];
   todos: Task[];
 
-  constructor(private teamService: TeamService, private userService: UserService) {
+  constructor(private teamService: TeamService, private userService: UserService, private router: Router) {
     this.updateTeams();
 
     this.userService.getTasks().then(tasks => {
@@ -29,6 +30,17 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (localStorage.getItem('user')) {
+      return true;
+    }
+
+    // not logged in so redirect to login page with the return url
+    this.router.navigate(['']);
+    console.log("You are not logged in!");
+    return false;
   }
 
   updateTeams() {

@@ -3,9 +3,7 @@
     my teams
   </header>
   <div class="section__main">
-    <div class="empty" *ngIf="teams">
-      
-    </div>
+    <app-empty-box *ngIf="emptyBox" [text]="'you haven\'t got any teams'"></app-empty-box>
     <a routerLink="/team/{{team.id}}" class="teamCard" *ngFor="let team of teams">
       <div class="teamCard__name">{{team.name}}</div>
     </a>

@@ -1,0 +1,6 @@
+<div class="empty" *ngIf="!emptyBox">
+  <img *ngIf="!onlyText" src="images/empty_{{this.typeOfImage}}.svg" alt="empty box">
+  <div class="text">
+    {{text}}
+  </div>
+</div>

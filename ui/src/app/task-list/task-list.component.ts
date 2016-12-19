@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 import { Task } from '../classes/Task';
 
@@ -9,13 +9,20 @@ import { Task } from '../classes/Task';
 })
 export class TaskListComponent implements OnInit {
   @Input() listHeader: string;
-  @Input() tasks: Task[];
+  @Input() tasks: Task[] = [];
   @Output() updateTaskEvent = new EventEmitter();
   selectedTask: Task;
+  emptyList: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.emptyList = this.tasks ? (this.tasks.length ? false : true) : true; 
+  }
+
+  ngOnChanges() {
+    this.emptyList = this.tasks ? (this.tasks.length ? false : true) : true; 
   }
 
   selectTask(task) {

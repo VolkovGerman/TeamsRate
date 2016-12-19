@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute, Params, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 import { Team } from '../classes/Team';
 import { Task } from '../classes/Task';
@@ -16,7 +16,7 @@ import 'rxjs/add/operator/switchMap';
     TeamService
   ]
 })
-export class TeamPageComponent implements OnInit {
+export class TeamPageComponent implements OnInit, CanActivate {
   activeTab: string;
   tasksTab: string;
   pageID: number;
@@ -41,11 +41,26 @@ export class TeamPageComponent implements OnInit {
     this.checkAccess();
 
     this.teamService.getTeamInfo(this.pageID).then(teamInfo => {
-      this.teamName = teamInfo.name;
-      this.teamDescr = teamInfo.descr;
+      if (teamInfo) {
+        this.teamName = teamInfo.name;
+        this.teamDescr = teamInfo.descr;
+      } else {
+        this.router.navigate(['404']);
+      }
     });
 
     this.updateTasks();
+  }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (localStorage.getItem('user')) {
+      return true;
+    }
+
+    // not logged in so redirect to login page with the return url
+    this.router.navigate(['']);
+    console.log("You are not logged in!");
+    return false;
   }
 
   checkAccess() {

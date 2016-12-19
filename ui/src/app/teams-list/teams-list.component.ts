@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
-import { Team } from '../classes/Team';
+import { Team } from '../classes/Team'; 
 
 import { TeamService } from '../services/team.service';
 
@@ -10,10 +10,17 @@ import { TeamService } from '../services/team.service';
   styleUrls: ['./teams-list.component.less']
 })
 export class TeamsListComponent implements OnInit {
-  @Input() teams: Team[];
+  @Input() teams: Team[] = [];
+  emptyBox: boolean;
 
-  constructor() { }
+  constructor() {};
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.emptyBox = this.teams ? (this.teams.length ? false : true) : true; 
+  }
+
+  ngOnChanges() {
+    this.emptyBox = this.teams ? (this.teams.length ? false : true) : true; 
+  }
 
 }

@@ -4,6 +4,7 @@
     {{listHeader}}
   </header>
   <div class="section__main--bordered">
+    <app-empty-box *ngIf="emptyList" [typeOfImage]="'list'" [text]="'you have zero tasks'"></app-empty-box>
     <ul class="taskList">
       <li class="task" *ngFor="let task of tasks" (click)="selectTask(task)">
         <span class="task__team">{{task.team_name}}</span>

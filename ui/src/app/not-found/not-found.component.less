@@ -1,0 +1,28 @@
+@import '../../styles/_variables';
+
+.notFound {
+    margin-top: 80px;
+
+    text-align: center;
+
+    .text {
+        margin-bottom: 20px;
+
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+    .link {
+        font-size: 1.4em;
+
+        a {
+            color: @red;
+            border-bottom: 2px solid @red;
+
+            &:hover, &:focus, &:active {
+                text-decoration: none;
+                color: #a71818;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() page: string;
 
-  constructor() {    
+  constructor(private route: ActivatedRoute, private router: Router) {    
   }
 
   ngOnInit() {
+  }
+
+  logout() {
+      localStorage.removeItem('user');
+
+      this.router.navigate(['/']);
   }
 
 }

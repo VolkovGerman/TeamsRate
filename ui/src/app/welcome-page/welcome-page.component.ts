@@ -23,16 +23,16 @@ export class WelcomePageComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.userService.isLoggedIn()) this.router.navigate(['/dashboard']);
   }
 
   auth() {
-    let that = this;
 
     OAuth.initialize('BqvOnNnWfVNBT6eESGzK0zuBtCo');
     OAuth.popup('google').done((result) => {
       console.log(result); 
 
-      result.me().done(function(data) {
+      result.me().done((data) => {
         console.log(data);
 
         let user = {
@@ -43,12 +43,12 @@ export class WelcomePageComponent implements OnInit {
           gp_id: data.id
         }
 
-        that.userService.auth(user).then(user => {
+        this.userService.auth(user).then(user => {
           console.log(user);
           
           window.localStorage.setItem('user', JSON.stringify(user));
 
-          that.router.navigate(['/dashboard']);
+          this.router.navigate(['/dashboard']);
         });
 
       })

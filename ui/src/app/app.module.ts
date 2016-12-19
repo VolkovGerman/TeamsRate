@@ -20,6 +20,11 @@ import { MembersRateComponent } from './members-rate/members-rate.component';
 import { TeamSettingsComponent } from './team-settings/team-settings.component';
 import { TeamsSearchComponent } from './teams-search/teams-search.component';
 import { TeamBuilderComponent } from './team-builder/team-builder.component';
+import { EmptyBoxComponent } from './empty-box/empty-box.component';
+
+import { AuthGuard } from './services/auth-guard.service';
+import { UserService } from './services/user.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,9 @@ import { TeamBuilderComponent } from './team-builder/team-builder.component';
     MembersRateComponent,
     TeamSettingsComponent,
     TeamsSearchComponent,
-    TeamBuilderComponent
+    TeamBuilderComponent,
+    EmptyBoxComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,10 @@ import { TeamBuilderComponent } from './team-builder/team-builder.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard, 
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
